@@ -17,7 +17,7 @@ env
 
 # Editor directories and files
 .vscode/*
-!.vscode/extensions.json
+
 .idea
 .DS_Store
 *.suo
@@ -25,3 +25,17 @@ env
 *.njsproj
 *.sln
 *.sw?
+node_modules
+/client/node_modules
+/server/node_modules
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+
+*.local
+
+
+.vscode/*
