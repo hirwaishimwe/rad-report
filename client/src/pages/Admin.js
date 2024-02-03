@@ -1,5 +1,5 @@
-export function Admin(){
+export function Admin() {
     return (
-    <h1>Admin</h1>
+        <h1>Admin</h1>
     )
 }
