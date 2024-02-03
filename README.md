@@ -1,29 +1,9 @@
-# Hack.Diversity Tech Dive Template
+# Rad-report (Radiology Report)
 
-## Getting Started
+## Project Summary
 
-This skeleton contains two different applications -- a front end, or "client," created with "Create React App," and a back end, or "API," created with Express. 
+This is a web application for doctors to use to track patient information.
 
-In order to make both of them work together, you'll need to run both, but you can run just one or the other to start. As you begin working on this project, you'll first focus on the client, so you can more or less ignore the API portion of the code for now.
+One of the tools used by doctors to assess the condition of patients with COVID-19 is an X-ray, which creates an image of the patient’s organs and structures within their body. This can help visualize infections such as pneumonia within a patient’s lungs. After performing an x-ray, doctors need a way to record information about what they discovered, so that they can look back at it.
 
-## Client
-In order to run the client, you'll run the following commands:
-
-```bash
-cd client/
-npm i
-npm start
-```
-
-You should then be able to visit `localhost:3000` in your browser and see the client running. If you make changes in the `App.js` file, you should see them reflected.
-
-## API
-In order to run the server, you'll run the following commands:
-
-```bash
-cd api/
-npm i
-npm start
-```
-
-You should then be able to visit `localhost:9000` in your browser and see the server running.
+The purpose of this project is to create a web application that allows doctors to Create, Read, Update, and Delete (CRUD) structured radiology reports as an assessment of X-ray images for exams of patients with COVID-19.
