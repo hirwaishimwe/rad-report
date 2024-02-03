@@ -18,7 +18,7 @@ const PatientExamInfo = ({ exam }) => {
         <div className="exam-image-container">
           <img src={exam.imageURL} alt="Exam Image" />
         </div>
-        <p><strong>Date:</strong> {}</p>
+        <p><strong>Date:</strong> { }</p>
         <p><strong>Key Findings:</strong> {exam.keyFindings}</p>
         <p><strong>Brixia Score:</strong> {exam.brixiaScores}</p>
       </div>
