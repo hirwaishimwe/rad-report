@@ -1,0 +1,2 @@
+- Swc: <a href="https://swc.rs/"><i>Rust-based compiler </i></a>
+- Volta: <a href="https://volta.sh/"><i>Rust-based JS tool manager</i></a>
