@@ -1,30 +1,9 @@
 import ExamsTable from './components/ExamsTable'
-import React, { useEffect, useState } from 'react';
-export function Exams() {
-    const [examsData, setExamsData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+import React, { useContext } from 'react';
+import { ExamContext } from '../contexts/ExamContext';
 
-    useEffect(() => {
-        const fetchExams = async () => {
-            try {
-                const response = await fetch(`https://czi-covid-lypkrzry4q-uc.a.run.app/api/exams`);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                setExamsData(data.exams);
-
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchExams();
-    }, []);
-
+function Exams({ exams }) {
+    const { examsData, loading, error } = useContext(ExamContext);
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -40,3 +19,5 @@ export function Exams() {
         <ExamsTable exams={examsData} />
     )
 }
+
+export default Exams;
