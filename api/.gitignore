@@ -33,3 +33,6 @@ yarn.log
 # Visual Studio Code
 .vscode/*
 !.vscode/extensions.json
+
+.idea
+idea
