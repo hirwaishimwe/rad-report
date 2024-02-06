@@ -1,0 +1,64 @@
+.create-exam-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-height: 510px;
+}
+
+.form-column {
+    padding: 10px 50px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-height: 5px;
+}
+
+.form-actions button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    opacity: 0.8;
+}
+
+.add-exam-btn {
+    color: white;
+    background-color: green;
+}
+
+.cancel-btn {
+    color: white;
+    background-color: red;
+}
+
+.create-exam {
+    max-height: 0px;
+}

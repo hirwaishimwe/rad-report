@@ -1,9 +1,23 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 import './ExamsTable.css';
+import { ExamContext } from '../../contexts/ExamContext';
 
-function ExamsTable({ exams }) {
+function ExamsTable({ exams, isAdmin }) {
+  const { fetchExams } = useContext(ExamContext);
+  const navigate = useNavigate();
 
+  function handleUpdate(id) {
+    navigate(`/update-exam/${id}`);
+  }
+
+  /*******NEEDS TO BE UPDATED *****/
+  function handleDelete(id) {
+    console.log('Delete', id);
+    fetchExams()
+
+    //Needs logic to delete the exam
+  }
   return (
 
     <div className="exams-table-container">
@@ -19,6 +33,9 @@ function ExamsTable({ exams }) {
             <th>Sex</th>
             <th>BMI</th>
             <th>Zip Code</th>
+            {isAdmin && (
+              <th></th>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -45,6 +62,15 @@ function ExamsTable({ exams }) {
                 <td>{exam.sex.toUpperCase()}</td>
                 <td>{exam.bmi}</td>
                 <td>{exam.zipCode}</td>
+                {isAdmin && (
+                  <td>
+                    <td>
+                      <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
+                      <button className="btn delete-btn" onClick={() => handleDelete(exam.id)}>Delete</button>
+                    </td>
+
+                  </td>
+                )}
               </tr>
             );
           })}
@@ -53,5 +79,4 @@ function ExamsTable({ exams }) {
     </div>
   );
 }
-
 export default ExamsTable;

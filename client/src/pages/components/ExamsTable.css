@@ -1,6 +1,6 @@
 .exams-table-container {
   padding: 10px 30px;
-  background-color: #ffffff;
+  background-color:#ffffff;
   color: #000000;
   overflow-x: auto;
 }
@@ -9,6 +9,8 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.8em;
+  box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.1), 15px 8px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 .exams-table th,

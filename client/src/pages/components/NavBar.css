@@ -3,8 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #333333;
-  color: #ecf0f1;
+  background-image: linear-gradient(to bottom, #000000 0%, #9d9d9d 100%);
+  /*background-image: linear-gradient(to bottom, #333131 0%, #b4acaa 100%);
+  /*background-image: linear-gradient(to right, #333131 0%, #ff9c7e 100%);*/
+  color: #fdfdfd;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+
 }
 
 .nav-group {
@@ -15,14 +19,14 @@
 .nav-group ul {
   list-style-type: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 30px;
 }
 
 .nav-group a,
 .nav-group a:visited {
-  color: #ecf0f1;
+  color: #ffffff;
   text-decoration: none;
   padding: 0 10px;
 }
