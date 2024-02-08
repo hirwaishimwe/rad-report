@@ -1,34 +1,31 @@
-const mongoose = require("mongoose");
-
 const examSchema = mongoose.Schema(
   {
     patient_id: {
       type: String,
       required: [true, "Please enter a valid patient identification"],
-      minLength: 8,
       unique: true,
     },
     age: {
       type: Number,
       required: [true, "Please enter the patient's age"],
-      maxLength: 3,
+      min: 0,
+      max: 120,
     },
     sex: {
       type: String,
       required: [true, "Please enter the patient's sex"],
-      maxLength: 1,
+      enum: ['M', 'F'],
     },
     zip_code: {
-      type: Number,
+      type: String,
       required: [true, "Please enter the patient's ZIP Code"],
-      minLength: 3,
     },
     latest_bmi: {
       type: Number,
       required: [true, "Please enter the patient's most recent BMI"],
     },
     latest_weight: {
-      type: String,
+      type: Number,
       required: [true, "Please enter the patient's most recent weight"],
     },
     png_filename: {
@@ -39,21 +36,22 @@ const examSchema = mongoose.Schema(
       type: String,
       required: [true, "Please enter the patient's exam identification"],
     },
-    icu: {
+    icu_admit: {
       type: String,
       required: [true, "Please confirm need for an ICU transfer (Y/N)"],
+      enum: ['Y', 'N'],
     },
-    icu_admit: {
+    icu_admits_count: {
       type: Number,
       required: [true, "Please specify the total instances of ICU transfers"],
     },
     mortality: {
       type: String,
       required: [true, "Please indicate the mortality status (Y/N)"],
+      enum: ['Y', 'N'],
     },
   },
   { timestamps: true }
 )
-
 
 module.exports = mongoose.model("Exam", examSchema)
