@@ -24,7 +24,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use("/", express.static(path.join(__dirname, "client")));
+app.use("/", express.static(path.join(__dirname, "Client", "src")));
 
 app.use("/", require("./routes/root"));
 
