@@ -1,53 +1,119 @@
-require('dotenv').config()
-const express = require("express");
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+import express, { static as expressStatic } from "express";
+import { format, transports } from "winston";
+
+import { MongoDB } from "winston-mongodb";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import dotenv from "dotenv";
+import expressWinston from "express-winston";
+import helmet from "helmet";
+import mongoose from "mongoose";
+import passport from "passport";
+import rateLimit from "express-rate-limit";
+import session from "express-session";
+import router from "./routes/indexRoute.js";
+import errorHandler from "./middleware/errorMiddleWare.js";
+
+dotenv.config();
+
+const PORT = process.env.PORT || 5000;
+
 const app = express();
-const path = require("path");
-const { logger } = require("./middleware/logger");
-const errorHandler = require("./middleware/errorHandler");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const corsOptions = require("./config/corsOptions");
-const connectDB = require('./config/dbConn')
-const mongoose = require('mongoose')
-const { logEvents } = require('./middleware/logger')
-const PORT = process.env.PORT || 3500;
-
-console.log(process.env.NODE_ENV)
-
-connectDB()
-
-app.use(logger);
-
-app.use(cors(corsOptions));
-
-app.use(express.json());
+const URL = process.env.FRONTEND_URL;
 
 app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use("/", express.static(path.join(__dirname, "Client", "src")));
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: true,
+    saveUninitialized: true,
+  }),
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.use("/", require("./routes/root"));
-
-app.all("*", (req, res) => {
-  res.status(404);
-  if (req.accepts("html")) {
-    res.sendFile(path.join(__dirname, "views", "404.html"));
-  } else if (req.accepts("json")) {
-    res.json({ message: "404 Not Found" });
-  } else {
-    res.type("txt").send("404 Not Found");
-  }
+const limiter = rateLimit({
+  windowMs: 5 * 60 * 1000, // 100 req per 5 minutes
+  max: 100,
 });
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(expressStatic(join(__dirname, "public")));
+
+app.use(limiter);
+
+app.use(
+  cors({
+    origin: [URL, `http://localhost:${PORT}`],
+    credentials: true,
+  }),
+);
+
+/* logger */
+app.use(
+  expressWinston.logger({
+    transports: [
+      new transports.Console(),
+      new transports.File({
+        level: "warn",
+        filename: "logs/logsWarnings.log",
+      }),
+
+      new transports.File({
+        level: "error",
+        filename: "logs/logErrors.log",
+      }),
+      new transports.File({
+        level: "success",
+        filename: "logs/logSuccess.log",
+      }),
+      new transports.Console(),
+      new MongoDB({
+        db: process.env.MONGO_URI,
+        collection: "logs",
+        level: "info",
+        options: { useUnifiedTopology: true },
+        filename: "logs/MongoDB.log",
+      }),
+    ],
+    format: format.combine(
+      format.json(),
+      format.timestamp(),
+      format.prettyPrint(),
+    ),
+    statusLevels: true,
+  }),
+);
+
+/* logger end */
+
 app.use(errorHandler);
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
-mongoose.connection.once('open', () => {
-  console.log(process.env.DB_Message)
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
-})
+// routes
+app.use("/", router);
 
-mongoose.connection.on( 'error', err => {
-  console.log(err)
-  logEvents(`${err.no}: ${err.code}\t${err.syscall}\t${err.hostname}`,
-  'mongoErrLog.log')
-})
+async function connect() {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Database connected");
+  } catch (e) {
+    console.log("Error connecting to database:", e.message);
+  }
+}
+
+app.listen(PORT, () => {
+  try {
+    connect();
+    console.log(`Server up on port ${PORT}`);
+  } catch (e) {
+    console.error("Error starting the server:", e.message);
+  }
+});

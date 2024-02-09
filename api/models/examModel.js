@@ -1,4 +1,6 @@
-const examSchema = mongoose.Schema(
+import mongoose from "mongoose";
+
+const examSchema = new mongoose.Schema(
   {
     patient_id: {
       type: String,
@@ -14,7 +16,7 @@ const examSchema = mongoose.Schema(
     sex: {
       type: String,
       required: [true, "Please enter the patient's sex"],
-      enum: ['M', 'F'],
+      enum: ["M", "F"],
     },
     zip_code: {
       type: String,
@@ -39,7 +41,7 @@ const examSchema = mongoose.Schema(
     icu_admit: {
       type: String,
       required: [true, "Please confirm need for an ICU transfer (Y/N)"],
-      enum: ['Y', 'N'],
+      enum: ["Y", "N"],
     },
     icu_admits_count: {
       type: Number,
@@ -48,10 +50,10 @@ const examSchema = mongoose.Schema(
     mortality: {
       type: String,
       required: [true, "Please indicate the mortality status (Y/N)"],
-      enum: ['Y', 'N'],
+      enum: ["Y", "N"],
     },
   },
-  { timestamps: true }
-)
+  { timestamps: true },
+);
 
-module.exports = mongoose.model("Exam", examSchema)
+export default mongoose.model("Exam", examSchema);
