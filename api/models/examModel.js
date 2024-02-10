@@ -30,7 +30,6 @@ const examSchema = new mongoose.Schema(
     latest_bmi: {
       type: Number,
       required: [true, "Please enter the patient's most recent BMI"],
-      enum: [],
     },
     latest_weight: {
       type: Number,

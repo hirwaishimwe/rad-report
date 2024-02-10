@@ -97,16 +97,30 @@ export const getUserById = asyncHandler(async (req, res) => {
 
 // Update a User's Record
 export const updateUserById = asyncHandler(async (req, res) => {
-  const { userId } = req.params;
-  const user = await Exam.findOneAndUpdate(
-    { _id: userId },
-    {
-      ...req.body,
-    },
-  );
-  if (!user) {
-    return res.status(404).json({ error: "User not found" });
-  } else res.status(200).json(user);
+  const userId = req.params.Id;
+  const userData = req.body;
+
+  try {
+    const update = await Exam.findByIdAndUpdate(userId, userData, {
+      new: true,
+    });
+
+    if (!update) {
+      return res.status(404).json({
+        error: "User was not found",
+        message: "User not found for the provided id",
+      });
+    }
+    res.status(200).json({
+      message: "user data was updated successfully",
+      user: update,
+    });
+  } catch (e) {
+    res.status(500).json({
+      error: "Server Error",
+      message: "There was a problem updating the user",
+    });
+  }
 });
 
 // Delete a User's Record
