@@ -1,5 +1,4 @@
 import { dirname, join } from "path";
-import { fileURLToPath } from "url";
 import express, { static as expressStatic } from "express";
 import { format, transports } from "winston";
 
@@ -8,14 +7,15 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
+import errorHandler from "./middleware/errorMiddleWare.js";
 import expressWinston from "express-winston";
+import { fileURLToPath } from "url";
 import helmet from "helmet";
 import mongoose from "mongoose";
 import passport from "passport";
 import rateLimit from "express-rate-limit";
-import session from "express-session";
 import router from "./routes/indexRoute.js";
-import errorHandler from "./middleware/errorMiddleWare.js";
+import session from "express-session";
 
 dotenv.config();
 
@@ -40,7 +40,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000, // 100 req per 5 minutes
+  windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
   max: 100,
 });
 
@@ -91,7 +91,6 @@ app.use(
     statusLevels: true,
   }),
 );
-
 /* logger end */
 
 app.use(errorHandler);
