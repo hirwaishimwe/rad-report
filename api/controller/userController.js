@@ -87,3 +87,25 @@ export const getUserById = asyncHandler(async (req, res) => {
     res.status(200).json(user);
   }
 });
+
+// Delete a User's Record
+export const deleteUserbyId = asyncHandler(async (req, res) => {
+  const { userId } = req.params;
+  const user = await Exam.findOneAndDelete({ _id: userId});
+  if (!user){
+  return res.status(404).json({error: "User not found"})
+  } else 
+   res.status(200).json(user)
+  })
+
+// Update a User's Record 
+export const updateUserbyId = asyncHandler(async (req, res) => {
+  const { userId } = req.params;
+  const user = await Exam.findOneAndUpdate({ _id: userId}, {
+    ...req.body
+  } );
+  if (!user){
+    return res.status(404).json({error: "User not found"})
+    } else 
+     res.status(200).json(user)  
+}) 
