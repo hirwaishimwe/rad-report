@@ -2,6 +2,8 @@ import {
   createUser,
   getAllUsers,
   getUserById,
+  deleteUserbyId,
+  updateUserbyId,
 } from "../controller/userController.js";
 
 import express from "express";
@@ -13,6 +15,8 @@ router.get("/api", getApiStatus);
 router.post("/users", createUser);
 router.get("/users", getAllUsers);
 router.get("/users/:userId", getUserById);
+router.delete("/users/:userId", deleteUserbyId);
+router.patch("/users/:userId", updateUserbyId);
 
 export default router;
 
