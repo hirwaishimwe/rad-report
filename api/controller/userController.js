@@ -1,12 +1,14 @@
 // Create User and validating user data
+
 import { body, validationResult } from "express-validator";
 
-import asyncHandler from "express-async-handler";
 import Exam from "../models/examModel.js";
+import asyncHandler from "express-async-handler";
 
+//creating user with test
 export const createUser = asyncHandler(async (req, res) => {
   await Promise.all([
-    body("patient_id")
+    body("medical_record_number")
       .notEmpty()
       .withMessage("Please enter a valid patient identification"),
     body("age")
@@ -16,6 +18,9 @@ export const createUser = asyncHandler(async (req, res) => {
       })
       .withMessage("Please enter a valid age between 0 and 120"),
     body("sex").isIn(["M", "F"]).withMessage("Please enter a valid sex (M/F)"),
+    body("pro_nouns")
+      .notEmpty()
+      .withMessage("Please provide the patient's pronouns"),
     body("zip_code")
       .notEmpty()
       .withMessage("Please enter the patient's ZIP Code"),
@@ -50,7 +55,9 @@ export const createUser = asyncHandler(async (req, res) => {
 
   // Proceed with user creation if validation passes
   const userData = req.body;
-  const userExists = await Exam.findOne({ patient_id: userData.patient_id });
+  const userExists = await Exam.findOne({
+    medical_record_number: userData.medical_record_number,
+  });
 
   if (userExists) {
     return res.status(400).json({
@@ -88,24 +95,25 @@ export const getUserById = asyncHandler(async (req, res) => {
   }
 });
 
-// Delete a User's Record
-export const deleteUserbyId = asyncHandler(async (req, res) => {
+// Update a User's Record
+export const updateUserById = asyncHandler(async (req, res) => {
   const { userId } = req.params;
-  const user = await Exam.findOneAndDelete({ _id: userId});
-  if (!user){
-  return res.status(404).json({error: "User not found"})
-  } else 
-   res.status(200).json(user)
-  })
+  const user = await Exam.findOneAndUpdate(
+    { _id: userId },
+    {
+      ...req.body,
+    },
+  );
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  } else res.status(200).json(user);
+});
 
-// Update a User's Record 
-export const updateUserbyId = asyncHandler(async (req, res) => {
+// Delete a User's Record
+export const deleteUserById = asyncHandler(async (req, res) => {
   const { userId } = req.params;
-  const user = await Exam.findOneAndUpdate({ _id: userId}, {
-    ...req.body
-  } );
-  if (!user){
-    return res.status(404).json({error: "User not found"})
-    } else 
-     res.status(200).json(user)  
-}) 
+  const user = await Exam.findOneAndDelete({ _id: userId });
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  } else res.status(200).json(user);
+});

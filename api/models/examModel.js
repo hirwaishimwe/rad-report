@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const examSchema = new mongoose.Schema(
   {
-    patient_id: {
+    medical_record_number: {
       type: String,
       required: [true, "Please enter a valid patient identification"],
       unique: true,
@@ -18,6 +18,11 @@ const examSchema = new mongoose.Schema(
       required: [true, "Please enter the patient's sex"],
       enum: ["M", "F"],
     },
+    pro_nouns: {
+      type: String,
+      required: [true, "Please provide the patient's pronouns"],
+      enum: ["He/Him", "She/Her", "They/Them", "Other"],
+    },
     zip_code: {
       type: String,
       required: [true, "Please enter the patient's ZIP Code"],
@@ -25,6 +30,7 @@ const examSchema = new mongoose.Schema(
     latest_bmi: {
       type: Number,
       required: [true, "Please enter the patient's most recent BMI"],
+      enum: [],
     },
     latest_weight: {
       type: Number,
