@@ -36,6 +36,7 @@ app.use(
     saveUninitialized: true,
   }),
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -60,7 +61,7 @@ app.use(
 app.use(
   expressWinston.logger({
     transports: [
-      new transports.Console(),
+      // new transports.Console(),
       new transports.File({
         level: "warn",
         filename: "logs/logsWarnings.log",
