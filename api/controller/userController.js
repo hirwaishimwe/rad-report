@@ -62,7 +62,7 @@ export const createUser = asyncHandler(async (req, res) => {
   if (userExists) {
     return res.status(400).json({
       error: "User already exists",
-      message: "User with the provided patient ID already exists",
+      message: "User with the provided patient Id already exists",
     });
   }
 
@@ -88,7 +88,7 @@ export const getUserById = asyncHandler(async (req, res) => {
   if (!user) {
     res.status(404).json({
       error: "User not found",
-      message: "User not found for the provided ID",
+      message: "User not found for the provided Id",
     });
   } else {
     res.status(200).json(user);
@@ -123,11 +123,49 @@ export const updateUserById = asyncHandler(async (req, res) => {
   }
 });
 
+//patch aka only update some of the ser data not all the data, save on operation cost and speed
+export const PatchUserById = asyncHandler(async (req, res) => {
+  const userId = req.params.userId;
+  const userData = req.body;
+
+  try {
+    const patchedUser = await Exam.findByIdAndUpdate(userId, userData, {
+      new: true,
+    });
+    if (!patchedUser) {
+      return res.status(404).json({
+        error: "User not found",
+        message: "User not found for the provided Id",
+      });
+    }
+    res
+      .status(200)
+      .json({ message: "User patched successfully", user: patchedUser });
+  } catch (e) {
+    res.status(500).json({
+      error: "Server Error",
+      message: "There was a problem patching the user",
+    });
+  }
+});
+
 // Delete a User's Record
 export const deleteUserById = asyncHandler(async (req, res) => {
-  const { userId } = req.params;
-  const user = await Exam.findOneAndDelete({ _id: userId });
-  if (!user) {
-    return res.status(404).json({ error: "User not found" });
-  } else res.status(200).json(user);
+  const userId = req.params.userId;
+
+  try {
+    const deletedUser = await Exam.findByIdAndDelete(userId);
+    if (!deletedUser) {
+      return res.status(404).json({
+        error: "User not found",
+        message: "User not found for the provided Id",
+      });
+    }
+    res.status(200).json({ message: "User deleted successfully" });
+  } catch (e) {
+    res.status(500).json({
+      error: "Server Error",
+      message: "There was a problem deleting the user",
+    });
+  }
 });

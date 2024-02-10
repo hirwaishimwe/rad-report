@@ -1,4 +1,5 @@
 import {
+  PatchUserById,
   createUser,
   deleteUserById,
   getAllUsers,
@@ -12,11 +13,12 @@ import getApiStatus from "../controller/indexController.js";
 const router = express.Router();
 
 router.get("/api", getApiStatus);
-router.post("/users", createUser);
-router.get("/users", getAllUsers);
-router.get("/users/:userId", getUserById);
-router.delete("/users/:userId", deleteUserById);
-router.patch("/users/:userId", updateUserById);
+router.post("/api/users", createUser);
+router.get("/api/users", getAllUsers);
+router.get("/api/users/:userId", getUserById);
+router.put("/api/users/:userID", updateUserById);
+router.patch("/api/users/:userId", PatchUserById);
+router.delete("/api/users/:userId", deleteUserById);
 
 export default router;
 
