@@ -16,6 +16,8 @@ import passport from "passport";
 import rateLimit from "express-rate-limit";
 import router from "./routes/indexRoute.js";
 import session from "express-session";
+import swaggerJSDoc from "swagger-jsdoc";
+import swaggerui from "swagger-ui-express";
 
 dotenv.config();
 
@@ -34,7 +36,7 @@ app.use(
     secret: "keyboard cat",
     resave: true,
     saveUninitialized: true,
-  }),
+  })
 );
 
 app.use(passport.initialize());
@@ -54,7 +56,7 @@ app.use(
   cors({
     origin: [URL, `http://localhost:${PORT}`],
     credentials: true,
-  }),
+  })
 );
 
 /* logger */
@@ -87,18 +89,33 @@ app.use(
     format: format.combine(
       format.json(),
       format.timestamp(),
-      format.prettyPrint(),
+      format.prettyPrint()
     ),
     statusLevels: true,
-  }),
+  })
 );
 /* logger end */
 
 app.use(errorHandler);
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    servers: [{ url: "http://localhost:8000/" }],
+    info: {
+      title: "rad-report-api",
+      version: "1.0.0",
+    },
+  },
+  apis: ["./routes/*.js"],
+};
+
+const openapiSpecification = swaggerJSDoc(options);
+
 // routes
 app.use("/", router);
+app.use("/", swaggerui.serve, swaggerui.setup(openapiSpecification));
 
 async function connect() {
   try {
