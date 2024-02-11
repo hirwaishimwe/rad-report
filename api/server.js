@@ -40,9 +40,9 @@ app.use(
 );
 
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.authenticate('session'));
 
-const limiter = rateLimit({
+const RateLimiterHandler = rateLimit({
   windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
   max: 100,
 });
@@ -50,7 +50,7 @@ const limiter = rateLimit({
 const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(expressStatic(join(__dirname, "public")));
 
-app.use(limiter);
+app.use(RateLimiterHandler);
 
 app.use(
   cors({
@@ -133,10 +133,11 @@ async function connect() {
 }
 
 app.listen(PORT, () => {
-  try {
-    connect();
-    console.log(`Server up on port ${PORT}`);
-  } catch (e) {
-    console.error("Error starting the server:", e.message);
-  }
+  connect()
+    .then(() => {
+      console.info(`Server up on port ${PORT}`);
+    })
+    .catch((error) => {
+      console.error("Error starting the server:", error.message);
+    });
 });
