@@ -27,11 +27,13 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Patient ID</th>
             <th>Exam ID</th>
             <th>Image</th>
-            <th>Key Findings</th>
-            <th>Brixia Score</th>
             <th>Age</th>
             <th>Sex</th>
             <th>BMI</th>
+            <th>Weight</th>
+            <th>ICU Admit</th>
+            <th>ICU Admits Count</th>
+            <th>Mortality</th>
             <th>Zip Code</th>
             {isAdmin && (
               <th></th>
@@ -48,20 +50,22 @@ function ExamsTable({ exams, isAdmin }) {
             return (
               <tr key={exam._id}>
                 <td>
-                  <Link to={`/patient/${exam.patientId}`}>{exam.patientId}</Link>
+                  <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
                 </td>
                 <td>
-                  <Link to={`/exam/${exam._id}`}>{exam.examId}</Link>
+                  <Link to={`/exam/${exam._id}`}>{exam.exam_id}</Link>
                 </td>
                 <td>
-                  <img src={exam.imageURL} alt={`Exam for ${exam.patientId}`} className="exam-image" />
+                  <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
                 </td>
-                <td>{exam.keyFindings}</td>
-                <td>{exam.brixiaScores}</td>
                 <td>{exam.age}</td>
                 <td>{exam.sex.toUpperCase()}</td>
-                <td>{exam.bmi}</td>
-                <td>{exam.zipCode}</td>
+                <td>{exam.latest_bmi}</td>
+                <td>{exam.latest_weight}</td>
+                <td>{exam.icu_admit}</td>
+                <td>{exam.icu_admits_count}</td>
+                <td>{exam.mortality}</td>
+                <td>{exam.zip_code}</td>
                 {isAdmin && (
                   <td>
                     <td>

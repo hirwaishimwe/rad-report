@@ -7,15 +7,15 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import errorHandler from "./middleWare/errorMiddleWare.js";
+import errorHandler from "./middleware/errorMiddleWare.js";
 import expressWinston from "express-winston";
 import { fileURLToPath } from "url";
-import indexRouter from "./routes/index.js";
+import helmet from "helmet";
 import mongoose from "mongoose";
 import passport from "passport";
 import rateLimit from "express-rate-limit";
+import router from "./routes/indexRoute.js";
 import session from "express-session";
-import usersRouter from "./routes/users.js";
 
 dotenv.config();
 
@@ -34,28 +34,46 @@ app.use(
     secret: "keyboard cat",
     resave: true,
     saveUninitialized: true,
-  })
+  }),
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000,
+  windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
   max: 100,
 });
 
-/* logger*/
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(expressStatic(join(__dirname, "public")));
+
+app.use(limiter);
+
+app.use(
+  cors({
+    origin: [URL, `http://localhost:${PORT}`],
+    credentials: true,
+  }),
+);
+
+/* logger */
 app.use(
   expressWinston.logger({
     transports: [
-      new transports.Console(),
+      // new transports.Console(),
       new transports.File({
         level: "warn",
         filename: "logs/logsWarnings.log",
       }),
+
       new transports.File({
         level: "error",
         filename: "logs/logErrors.log",
+      }),
+      new transports.File({
+        level: "success",
+        filename: "logs/logSuccess.log",
       }),
       new transports.Console(),
       new MongoDB({
@@ -69,42 +87,18 @@ app.use(
     format: format.combine(
       format.json(),
       format.timestamp(),
-      format.prettyPrint()
+      format.prettyPrint(),
     ),
     statusLevels: true,
-  })
+  }),
 );
-
 /* logger end */
-const __dirname = dirname(fileURLToPath(import.meta.url));
-app.use(expressStatic(join(__dirname, "public")));
-
-app.use(limiter);
-
-app.use(
-  cors({
-    origin: [URL, `http://localhost:${PORT}`],
-    credentials: true,
-  })
-);
-
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
-
-app.use("/", indexRouter);
-app.use("/api/users", usersRouter);
-
-app.get("/400", (req, res) => {
-  res.sendStatus(400);
-});
-
-app.get("/500", (req, res) => {
-  res.sendStatus(500);
-});
 
 app.use(errorHandler);
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+
+// routes
+app.use("/", router);
 
 async function connect() {
   try {
