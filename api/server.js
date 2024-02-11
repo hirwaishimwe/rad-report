@@ -57,6 +57,8 @@ app.use(
   }),
 );
 
+
+
 /* logger */
 app.use(
   expressWinston.logger({
@@ -103,7 +105,7 @@ app.use("/", router);
 async function connect() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Database connected");
+    console.log(process.env.DB_Message);
   } catch (e) {
     console.log("Error connecting to database:", e.message);
   }
