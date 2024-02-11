@@ -5,89 +5,208 @@ import { ExamContext } from '../contexts/ExamContext';
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
-    // State for each input field
-    const [patientId, setPatientId] = useState('');
-    const [age, setAge] = useState('');
-    const [sex, setSex] = useState('');
-    const [bmi, setBmi] = useState('');
-    const [zipCode, setZipCode] = useState('');
-    const [examId, setExamId] = useState('');
-    const [imageURL, setImageURL] = useState('');
-    const [date, setDate] = useState('');
-    const [keyFindings, setKeyFindings] = useState('');
     const navigate = useNavigate();
 
-    /*******NEEDS TO BE UPDATED *****/
+    const [medicalRecordNumber, setMedicalRecordNumber] = useState('');
+    const [age, setAge] = useState('');
+    const [sex, setSex] = useState('');
+    const [proNouns, setProNouns] = useState('');
+    const [zipCode, setZipCode] = useState('');
+    const [latestBmi, setLatestBmi] = useState('');
+    const [latestWeight, setLatestWeight] = useState('');
+    const [pngFilename, setPngFilename] = useState('');
+    const [examId, setExamId] = useState('');
+    const [icuAdmit, setIcuAdmit] = useState('');
+    const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
+    const [mortality, setMortality] = useState('');
+
     // Handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Construct the exam object
         const newExam = {
-            patientId,
+            medical_record_number: medicalRecordNumber,
             age,
             sex,
-            bmi,
-            zipCode,
-            examId,
-            imageURL,
-            date,
-            keyFindings,
+            pro_nouns: proNouns,
+            zip_code: zipCode,
+            latest_bmi: latestBmi,
+            latest_weight: latestWeight,
+            png_filename: pngFilename,
+            exam_id: examId,
+            icu_admit: icuAdmit,
+            icu_admits_count: icuAdmitsCount,
+            mortality
         };
-        console.log(newExam);
-        fetchExams()
-        // Submit logic here
-        navigate('/admin');
+        console.log(newExam); // For debugging
+
+        // Integrate with backend to actually create the exam
+        fetchExams();
+
+        navigate('/admin'); // Redirect to admin after form submission
+    };
+
+    // Function to handle input changes for all fields
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        switch (name) {
+            case 'medicalRecordNumber':
+                setMedicalRecordNumber(value);
+                break;
+            case 'age':
+                setAge(value);
+                break;
+            case 'sex':
+                setSex(value);
+                break;
+            case 'proNouns':
+                setProNouns(value);
+                break;
+            case 'zipCode':
+                setZipCode(value);
+                break;
+            case 'latestBmi':
+                setLatestBmi(value);
+                break;
+            case 'latestWeight':
+                setLatestWeight(value);
+                break;
+            case 'pngFilename':
+                setPngFilename(value);
+                break;
+            case 'examId':
+                setExamId(value);
+                break;
+            case 'icuAdmit':
+                setIcuAdmit(value);
+                break;
+            case 'icuAdmitsCount':
+                setIcuAdmitsCount(value);
+                break;
+            case 'mortality':
+                setMortality(value);
+                break;
+            default:
+                break;
+        }
     };
 
     return (
         <div className="create-exam-container">
-            <h2 class="create-exam">Create Exam</h2>
+            <h2 className="create-exam">Create Exam</h2>
             <form onSubmit={handleSubmit}>
-
                 <div className="form-content">
+                    {/* Column 1 */}
                     <div className="form-column">
-                        <div className="form-section patient-info">
-                            <label htmlFor="patientId">Patient ID:</label>
-                            <input type="text" id="patientId" value={patientId} onChange={(e) => setPatientId(e.target.value)} />
+                        <label htmlFor="medicalRecordNumber">Patient ID:</label>
+                        <input
+                            type="text"
+                            id="medicalRecordNumber"
+                            name="medicalRecordNumber"
+                            value={medicalRecordNumber}
+                            onChange={handleChange}
+                        />
 
-                            <label htmlFor="age">Age:</label>
-                            <input type="number" id="age" value={age} onChange={(e) => setAge(e.target.value)} />
+                        <label htmlFor="age">Age:</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            value={age}
+                            onChange={handleChange}
+                        />
 
-                            <label htmlFor="sex">Sex:</label>
-                            <select id="sex" value={sex} onChange={(e) => setSex(e.target.value)}>
-                                <option value="">Select</option>
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                                <option value="O">Other</option>
-                            </select>
+                        <label htmlFor="zipCode">Zip Code:</label>
+                        <input
+                            type="text"
+                            id="zipCode"
+                            name="zipCode"
+                            value={zipCode}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="icuAdmitsCount">ICU Admits Count:</label>
+                        <input
+                            type="number"
+                            id="icuAdmitsCount"
+                            name="icuAdmitsCount"
+                            value={icuAdmitsCount}
+                            onChange={handleChange}
+                        />
 
-                            <label htmlFor="bmi">BMI:</label>
-                            <input type="number" step="0.01" id="bmi" value={bmi} onChange={(e) => setBmi(e.target.value)} />
+                        <label htmlFor="sex">Sex:</label>
+                        <select id="sex" name="sex" value={sex} onChange={handleChange}>
+                            <option value="">Select</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="O">Other</option>
+                        </select>
 
-                            <label htmlFor="zipCode">Zip Code:</label>
-                            <input type="text" id="zipCode" value={zipCode} onChange={(e) => setZipCode(e.target.value)} />
-                        </div>
+                        <label htmlFor="proNouns">Pronouns:</label>
+                        <select id="proNouns" name="proNouns" value={proNouns} onChange={handleChange}>
+                            <option value="">Select</option>
+                            <option value="He/Him">He/Him</option>
+                            <option value="She/Her">She/Her</option>
+                            <option value="They/Them">They/Them</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
 
+                    {/* Column 2 */}
                     <div className="form-column">
-                        <div className="form-section exam-info">
-                            <label htmlFor="examId">Exam ID:</label>
-                            <input type="text" id="examId" value={examId} onChange={(e) => setExamId(e.target.value)} />
+                        <label htmlFor="examId">Exam ID:</label>
+                        <input
+                            type="text"
+                            id="examId"
+                            name="examId"
+                            value={examId}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="latestBmi">BMI:</label>
+                        <input
+                            type="number"
+                            step="0.01"
+                            id="latestBmi"
+                            name="latestBmi"
+                            value={latestBmi}
+                            onChange={handleChange}
+                        />
 
-                            <label htmlFor="imageURL">Image URL:</label>
-                            <input type="text" id="imageURL" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
+                        <label htmlFor="latestWeight">Weight:</label>
+                        <input
+                            type="number"
+                            id="latestWeight"
+                            name="latestWeight"
+                            value={latestWeight}
+                            onChange={handleChange}
+                        />
 
-                            <label htmlFor="date">Date:</label>
-                            <input type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
+                        <label htmlFor="pngFilename">Image:</label>
+                        <input
+                            type="text"
+                            id="pngFilename"
+                            name="pngFilename"
+                            value={pngFilename}
+                            onChange={handleChange}
+                        />
+                    
+                        <label htmlFor="icuAdmit">ICU Admit:</label>
+                        <select id="icuAdmit" name="icuAdmit" value={icuAdmit} onChange={handleChange}>
+                            <option value="">Select</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
 
-                            <label htmlFor="keyFindings">Key Findings:</label>
-                            <textarea id="keyFindings" value={keyFindings} onChange={(e) => setKeyFindings(e.target.value)} />
-                        </div>
+                        <label htmlFor="mortality">Mortality:</label>
+                        <select id="mortality" name="mortality" value={mortality} onChange={handleChange}>
+                            <option value="">Select</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
                     </div>
                 </div>
+
                 <div className="form-actions">
-                    <button class="add-exam-btn" type="submit">Add Exam</button>
-                    <button class="cancel-btn" type="button" onClick={() => navigate('/admin')}>Cancel</button>
+                    <button type="submit" className="btn add-exam-btn">Add Exam</button>
+                    <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>
         </div>
