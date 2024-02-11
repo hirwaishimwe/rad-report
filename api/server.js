@@ -40,7 +40,7 @@ app.use(
 );
 
 app.use(passport.initialize());
-app.use(passport.authenticate('session'));
+app.use(passport.authenticate("session"));
 
 const RateLimiterHandler = rateLimit({
   windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
@@ -137,7 +137,7 @@ app.listen(PORT, () => {
     .then(() => {
       console.info(`Server up on port ${PORT}`);
     })
-    .catch((error) => {
+    .catch(error => {
       console.error("Error starting the server:", error.message);
     });
 });

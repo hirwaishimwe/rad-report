@@ -6,6 +6,10 @@ dotenv.config();
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.info('MongoDB connected successfully');
+}).catch(error => {
+  console.error('Error connecting to MongoDB:', error);
 });
 
 export const deleteAllPatients = async () => {
@@ -15,7 +19,6 @@ export const deleteAllPatients = async () => {
   } catch (error) {
     console.error("Error deleting patients:", error);
   } finally {
-    mongoose.connection.close();
+    await mongoose.connection.close();
   }
-  deleteAllPatients();
 };

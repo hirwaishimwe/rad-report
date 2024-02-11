@@ -1,6 +1,6 @@
 const getApiStatus = async (req, res) => {
   const htmlResponse = `
-    <html>
+    <html lang="en-us">
     <head>
         <title>Rad-Report-API</title>
         <style>
