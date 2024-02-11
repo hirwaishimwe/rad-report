@@ -104,8 +104,14 @@ const options = {
     openapi: "3.0.0",
     servers: [{ url: "http://localhost:8000/" }],
     info: {
-      title: "rad-report-api",
+      title: "Radiology Report API",
       version: "1.0.0",
+      description: "",
+
+      contact: {
+        name: " S.W.I.F.T Team 6",
+        url: "https://github.com/hirwaishimwe/rad-report",
+      },
     },
   },
   apis: ["./routes/*.js"],

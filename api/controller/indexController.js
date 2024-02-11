@@ -27,7 +27,7 @@ h4{
     <body>
         <div>
             <h1>Rad-Report-API</h1>
-            <p>Developed and maintained by <b>S.W.I.F.TTeam 6. </b> </p>
+            <p>Developed and maintained by <b>S.W.I.F.T Team 6. </b> </p>
             <p>REST API built based on OPENAPI Specifications.</p>
             <h4>Supported specifications</h4>
             <p>OpenAPI 3.x</p>
