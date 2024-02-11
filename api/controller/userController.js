@@ -8,7 +8,7 @@ import asyncHandler from "express-async-handler";
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
   await Promise.all([
-    body("medical_record_number")
+    body("patient_id")
       .notEmpty()
       .withMessage("Please enter a valid patient identification"),
     body("age")
@@ -56,7 +56,7 @@ export const createUser = asyncHandler(async (req, res) => {
   // Proceed with user creation if validation passes
   const userData = req.body;
   const userExists = await Exam.findOne({
-    medical_record_number: userData.medical_record_number,
+    patient_id: userData.patient_id,
   });
 
   if (userExists) {

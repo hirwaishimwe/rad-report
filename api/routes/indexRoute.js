@@ -7,6 +7,7 @@ import {
   updateUserById,
 } from "../controller/userController.js";
 
+import { deleteAllPatients } from "../controller/deletePatients.js";
 import express from "express";
 import getApiStatus from "../controller/indexController.js";
 
@@ -16,9 +17,16 @@ router.get("/api", getApiStatus);
 router.post("/api/users", createUser);
 router.get("/api/users", getAllUsers);
 router.get("/api/users/:userId", getUserById);
-router.put("/api/users/:userID", updateUserById);
+router.put("/api/users/:userId", updateUserById);
 router.patch("/api/users/:userId", PatchUserById);
 router.delete("/api/users/:userId", deleteUserById);
+router.delete("/api/users/deleteDatabase/:secret_code", (req, res) => {
+  const { secret_code } = req.params;
+  if (secret_code !== process.env.DELETE_DATABASE_SECRET) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  deleteAllPatients(req, res);
+});
 
 export default router;
 

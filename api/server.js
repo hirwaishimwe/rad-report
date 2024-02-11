@@ -57,8 +57,6 @@ app.use(
   }),
 );
 
-
-
 /* logger */
 app.use(
   expressWinston.logger({
