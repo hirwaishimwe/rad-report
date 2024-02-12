@@ -21,10 +21,9 @@ import swaggerui from "swagger-ui-express";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const { FRONTEND_URL, PORT, DB_MESSAGE, MONGO_URI } = process.env;
 
 const app = express();
-const URL = process.env.FRONTEND_URL;
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -54,7 +53,7 @@ app.use(RateLimiterHandler);
 
 app.use(
   cors({
-    origin: [URL, `http://localhost:${PORT}`],
+    origin: [FRONTEND_URL, `http://localhost:${PORT}`],
     credentials: true,
   })
 );
@@ -125,8 +124,8 @@ app.use("/", swaggerui.serve, swaggerui.setup(openapiSpecification));
 
 async function connect() {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log(process.env.DB_Message);
+    await mongoose.connect(MONGO_URI);
+    console.log(DB_MESSAGE);
   } catch (e) {
     console.log("Error connecting to database:", e.message);
   }

@@ -63,7 +63,7 @@ const examSchema = new mongoose.Schema(
       enum: ["Y", "N"],
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 export default mongoose.model("Exam", examSchema);

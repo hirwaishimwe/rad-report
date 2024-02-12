@@ -14,7 +14,7 @@ dist-ssr/
 *.local/
 
 # Editor directories and files
-.vscode/
+
 .idea/
 .DS_Store
 *.suo
@@ -41,7 +41,6 @@ yarn.log
 # Local environment files
 .env.local
 .env.development.local
-.env.test.local
 .env.production.local
 
 # Visual Studio Code
