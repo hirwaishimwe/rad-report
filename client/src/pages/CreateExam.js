@@ -25,8 +25,8 @@ function CreateExam() {
         event.preventDefault();
         const newExam = {
             medical_record_number: medicalRecordNumber,
-            age,
-            sex,
+            age: age,
+            sex: sex,
             pro_nouns: proNouns,
             zip_code: zipCode,
             latest_bmi: latestBmi,
@@ -35,14 +35,29 @@ function CreateExam() {
             exam_id: examId,
             icu_admit: icuAdmit,
             icu_admits_count: icuAdmitsCount,
-            mortality
+            mortality: mortality
         };
-        console.log(newExam); // For debugging
+        console.log(newExam)
 
-        // Integrate with backend to actually create the exam
-        fetchExams();
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-        navigate('/admin'); // Redirect to admin after form submission
+        const raw = JSON.stringify(newExam);
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:8000/api/users", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        fetchExams()
+        navigate('/admin'); // Redirect after form submission
+
     };
 
     // Function to handle input changes for all fields
@@ -187,7 +202,7 @@ function CreateExam() {
                             value={pngFilename}
                             onChange={handleChange}
                         />
-                    
+
                         <label htmlFor="icuAdmit">ICU Admit:</label>
                         <select id="icuAdmit" name="icuAdmit" value={icuAdmit} onChange={handleChange}>
                             <option value="">Select</option>

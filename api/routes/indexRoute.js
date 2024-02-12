@@ -16,7 +16,7 @@ router.get("/api", getApiStatus);
 router.post("/api/users", createUser);
 router.get("/api/users", getAllUsers);
 router.get("/api/users/:userId", getUserById);
-router.put("/api/users/:userID", updateUserById);
+router.put("/api/users/:userId", updateUserById);
 router.patch("/api/users/:userId", PatchUserById);
 router.delete("/api/users/:userId", deleteUserById);
 

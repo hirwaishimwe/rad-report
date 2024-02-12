@@ -1,8 +1,9 @@
 .exams-table-container {
   padding: 10px 30px;
-  background-color:#ffffff;
+  background-color: #ffffff;
   color: #000000;
   overflow-x: auto;
+  padding-bottom: 50px;
 }
 
 .exams-table {
@@ -47,6 +48,9 @@ a:focus {
   text-decoration: underline;
 }
 
+.patient_id {
+  max-width: 85px;
+}
 
 @media screen and (max-width: 600px) {
   .exams-table-container {

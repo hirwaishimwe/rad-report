@@ -1,3 +1,7 @@
 .DS_Store
 node_modules/
 .env
+api/logs/logErrors.log
+api/logs/logErrors.log
+api/logs/logsWarnings.log
+logs/

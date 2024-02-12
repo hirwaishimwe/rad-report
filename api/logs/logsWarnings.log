@@ -160,3 +160,580 @@
   message: 'HTTP GET /',
   timestamp: '2024-02-11T03:52:52.097Z'
 }
+{
+  meta: {
+    req: {
+      url: '/api/users/65c9a3c642f6c0039124cd96',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '83a71493-3d1f-4734-b99b-7885d4fce6ca',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '578',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'PUT',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65c9a3c642f6c0039124cd96',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 47
+  },
+  level: 'warn',
+  message: 'HTTP PUT /api/users/65c9a3c642f6c0039124cd96',
+  timestamp: '2024-02-12T04:53:34.174Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'content-length': '232',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 130
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T05:03:26.766Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'content-length': '236',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 132
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T05:09:30.415Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users/65c909dbd9b9e417d14b76f4',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-ch-ua-platform': '"macOS"',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'DELETE',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65c909dbd9b9e417d14b76f4',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP DELETE /api/users/65c909dbd9b9e417d14b76f4',
+  timestamp: '2024-02-12T05:33:51.257Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users/65c909ead9b9e417d14b76fa',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-ch-ua-platform': '"macOS"',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'DELETE',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65c909ead9b9e417d14b76fa',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP DELETE /api/users/65c909ead9b9e417d14b76fa',
+  timestamp: '2024-02-12T05:35:50.725Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': 'e7956549-05c1-4044-aae8-8f1ffc6ad9b0',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '417',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T05:36:32.639Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '48c67fc6-ef57-4adc-9da7-368818008691',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '417',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 90
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T05:36:42.571Z'
+}
+{
+  meta: {
+    req: {
+      url: '/',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AqaWnHlGIPUDs4Yu3xirCnO_gF_oGTcdU.3%2F4%2Bg3lHyPFOQ4Z%2FWpnes8XmEWHN0gYdHzMPKHeGQZY'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP GET /',
+  timestamp: '2024-02-12T14:10:15.383Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'content-length': '335',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 577
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T14:17:18.483Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': 'ff188d31-a105-4d00-8a8e-b105ee65ec5d',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '359',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 311
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T14:52:28.952Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '719951fc-3996-4ce5-afcc-b9c02f53ec7a',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '348',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 42
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T14:53:31.723Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '95e15008-acc8-4978-bcf6-edf4bf019278',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '359',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 54
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T14:54:14.804Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': 'fb14fa15-5b4d-4984-8b29-3c5a8adecc31',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '381',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 66
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T14:54:45.414Z'
+}
+{
+  meta: {
+    req: {
+      url: '/',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-purpose': 'prefetch;prerender',
+        purpose: 'prefetch',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AgjhvjlEUkYLxLv1PObfUGheU39BwmMpr.P6jk9dg97gbnK11Uz3f9tNpfvVKQQpYUiT6VFAIaGQM'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 3
+  },
+  level: 'warn',
+  message: 'HTTP GET /',
+  timestamp: '2024-02-12T17:19:19.686Z'
+}
+{
+  meta: {
+    req: {
+      url: '/',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AyPiO5yJbGS-uDu1oE1dLQyUEwv27khe7.Gi6r2zt3NPwjCQtUFi%2FcRCVaKXjPFHjzSdMf5oqm1LA'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 1
+  },
+  level: 'warn',
+  message: 'HTTP GET /',
+  timestamp: '2024-02-12T17:19:20.192Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AyPiO5yJbGS-uDu1oE1dLQyUEwv27khe7.Gi6r2zt3NPwjCQtUFi%2FcRCVaKXjPFHjzSdMf5oqm1LA',
+        'if-none-match': 'W/"36a-X9YKhTfiyKavcjXvwZF3vt1JvJI"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10014
+  },
+  level: 'error',
+  message: 'HTTP GET /api/users',
+  timestamp: '2024-02-12T17:19:49.813Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '755ba32c-f893-4614-9196-9b9088ad4b9c',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '417',
+        cookie: 'connect.sid=s%3AXH3WS4ybRB5-n7OaZ4nX0mrbT1Q5Z_Pp.CTKFKbcF9IaDSJZdwTYHfBwBHIDIUR2pZT15CwzlHAQ'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10032
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T17:31:49.318Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '01f2d692-3e2d-4057-83e9-a1c86d5fdade',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '417',
+        cookie: 'connect.sid=s%3AFA-TgIJGwB2Xs3pEPQTPFAs3mTrWTUfo.HVReWNfCUJul6SV%2FghgDdFxo%2BA6V9063cq1o5Ki5RUk'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10059
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-12T17:37:52.638Z'
+}
+{
+  meta: {
+    req: {
+      url: '/',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AyPiO5yJbGS-uDu1oE1dLQyUEwv27khe7.Gi6r2zt3NPwjCQtUFi%2FcRCVaKXjPFHjzSdMf5oqm1LA'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 6
+  },
+  level: 'warn',
+  message: 'HTTP GET /',
+  timestamp: '2024-02-12T21:03:56.254Z'
+}

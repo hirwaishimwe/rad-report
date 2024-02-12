@@ -13,7 +13,15 @@ function ExamsTable({ exams, isAdmin }) {
 
   /*******NEEDS TO BE UPDATED *****/
   function handleDelete(id) {
-    console.log('Delete', id);
+    fetch(`http://localhost:8000/api/users/${id}`, {
+      method: 'DELETE', 
+    })
+      .then(message => {
+        console.log('Success:', message); 
+      })
+      .catch(error => {
+        console.error('Error:', error); // Handling any errors
+      });
     fetchExams()
 
     //Needs logic to delete the exam
@@ -31,10 +39,10 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Sex</th>
             <th>BMI</th>
             <th>Weight</th>
+            <th>Zip Code</th>
+            <th>Mortality</th>
             <th>ICU Admit</th>
             <th>ICU Admits Count</th>
-            <th>Mortality</th>
-            <th>Zip Code</th>
             {isAdmin && (
               <th></th>
             )}
@@ -49,7 +57,7 @@ function ExamsTable({ exams, isAdmin }) {
 
             return (
               <tr key={exam._id}>
-                <td>
+                <td class= "patient_id">
                   <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
                 </td>
                 <td>
@@ -62,15 +70,15 @@ function ExamsTable({ exams, isAdmin }) {
                 <td>{exam.sex.toUpperCase()}</td>
                 <td>{exam.latest_bmi}</td>
                 <td>{exam.latest_weight}</td>
+                <td>{exam.zip_code}</td>
+                <td>{exam.mortality}</td>
                 <td>{exam.icu_admit}</td>
                 <td>{exam.icu_admits_count}</td>
-                <td>{exam.mortality}</td>
-                <td>{exam.zip_code}</td>
                 {isAdmin && (
                   <td>
                     <td>
                       <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
-                      <button className="btn delete-btn" onClick={() => handleDelete(exam.id)}>Delete</button>
+                      <button className="btn delete-btn" onClick={() => handleDelete(exam._id)}>Delete</button>
                     </td>
 
                   </td>
