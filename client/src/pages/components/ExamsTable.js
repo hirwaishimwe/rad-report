@@ -11,12 +11,17 @@ function ExamsTable({ exams, isAdmin }) {
     navigate(`/update-exam/${id}`);
   }
 
-  /*******NEEDS TO BE UPDATED *****/
-  function handleDelete(id) {
-    console.log('Delete', id);
-    fetchExams()
+//need a function that deletes the selected exam entry from the database
+  async function handleDelete(id) {
+    const response = await fetch(`http://localhost:8000/api/users/${id}`, {
+      method: 'DELETE',
+    });
 
-    //Needs logic to delete the exam
+    if (response.ok) {
+      fetchExams();
+    } else {
+      console.error('Failed to delete exam');
+    }
   }
   return (
 
