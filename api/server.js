@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 import {dirname, join} from "path";
 import express, {static as expressStatic} from "express";
 import {format, transports} from "winston";
@@ -5,6 +9,7 @@ import {format, transports} from "winston";
 import {MongoClient} from "mongodb";
 import {MongoDB} from "winston-mongodb";
 import bodyParser from "body-parser";
+import chalk from "chalk";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -128,18 +133,35 @@ async function connect() {
             useNewURLParser: true,
         }).connect();
 
-        console.log(DB_MESSAGE);
+        console.log(chalk.cyan(DB_MESSAGE));
     } catch (e) {
-        console.log("Error connecting to database:", e.message);
+        console.log(
+            chalk.bgRedBright("Error connecting to database:", e.message),
+        );
     }
 }
 
 app.listen(PORT, () => {
     connect()
         .then(() => {
-            console.info(`Server up on port ${PORT}`);
+            console.info(
+                chalk.green(`API DOC ------> http://localhost:${PORT}`),
+            );
+            console.info(
+                chalk.blue(
+                    `Server BASE URL  ------> http://localhost:${PORT}/api`,
+                ),
+            );
+            console.info(
+                chalk.yellow(
+                    `DATABASE ------> http://localhost:${PORT}/api/users`,
+                ),
+            );
         })
         .catch((e) => {
-            console.error("Error starting the server:", e.message);
+            console.error(
+                chalk.bgRedBright("Error starting the server:"),
+                e.message,
+            );
         });
 });
