@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { ExamProvider } from './contexts/ExamContext';
+import { ExamProvider } from './context/ExamContext';
 import Exams from "./pages/Exams";
 import Admin from "./pages/Admin";
 import ExamDetails from "./pages/ExamDetails";
@@ -8,7 +8,6 @@ import Navbar from './pages/components/NavBar'
 import PatientDetails from './pages/PatientDetails';
 import CreateExam from './pages/CreateExam';
 import UpdateExam from './pages/UpdateExam';
-//import { useApi } from './hooks/use-api';
 import PageNotFound from './PageNotFound';
 
 function App() {

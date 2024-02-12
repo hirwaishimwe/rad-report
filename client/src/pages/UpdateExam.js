@@ -25,8 +25,6 @@ function UpdateExam() {
     async function getExamData(examId) {
         const exam = examsData.find(exam => exam._id.toString() === examId);
 
-        // Placeholder function to simulate fetching exam data
-        // Replace this with actual data fetching logic
         return {
             medical_record_number: exam.medical_record_number,
             age: exam.age,
@@ -58,28 +56,28 @@ function UpdateExam() {
             [name]: value
         }));
     };
-
+    /*******NEEDS TO BE UPDATED *****/
     const handleUpdateAndNavigate = async () => {
         await fetchExams(); // Wait for this to complete
         navigate('/admin'); // Then navigate
       };
-    /*******NEEDS TO BE UPDATED *****/
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         fetch(`http://localhost:8000/api/users/${examId}`, {
-            method: 'PATCH', // Specify the PUT method
+            method: 'PATCH', 
             headers: {
-                'Content-Type': 'application/json', // Indicate JSON content type
+                'Content-Type': 'application/json', 
             },
-            body: JSON.stringify(examData) // Convert the JavaScript object to a JSON string
+            body: JSON.stringify(examData) 
         })
-            .then(response => response.json()) // Parsing the JSON response body
+            .then(response => response.json()) 
             .then(updatedResource => {
-                console.log('Success:', updatedResource); // Handling the response with the updated resource
+                console.log('Success:', updatedResource); 
             })
             .catch(error => {
-                console.error('Error:', error); // Handling any errors
+                console.error('Error:', error); 
             });
         console.log('Updated exam data:', examData);
         // Send the update to the backend

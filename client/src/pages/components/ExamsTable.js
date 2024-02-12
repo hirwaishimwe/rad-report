@@ -20,11 +20,10 @@ function ExamsTable({ exams, isAdmin }) {
         console.log('Success:', message); 
       })
       .catch(error => {
-        console.error('Error:', error); // Handling any errors
+        console.error('Error:', error); 
       });
     fetchExams()
 
-    //Needs logic to delete the exam
   }
   return (
 

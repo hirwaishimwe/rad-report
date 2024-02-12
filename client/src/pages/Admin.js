@@ -1,4 +1,3 @@
-// Admin.js
 import { useNavigate } from 'react-router-dom';
 import ExamsTable from './components/ExamsTable';
 import './admin.css';
@@ -7,7 +6,7 @@ import { ExamContext } from '../contexts/ExamContext';
 
 function Admin() {
     const { examsData, loading, error } = useContext(ExamContext);
-    const navigate = useNavigate(); // useNavigate is called at the top level, not conditionally
+    const navigate = useNavigate(); 
 
     /*******NEEDS TO BE UPDATED *****/
     const handleCreateNewExam = () => {
