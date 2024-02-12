@@ -43,6 +43,3 @@ yarn.log
 .env.development.local
 .env.production.local
 
-# Visual Studio Code
-.vscode/*
-!.vscode/extensions.json
