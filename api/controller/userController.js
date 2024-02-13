@@ -8,9 +8,6 @@ import asyncHandler from "express-async-handler";
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
     await Promise.all([
-        body("patient_id")
-            .notEmpty()
-            .withMessage("Please enter a valid patient identification"),
         body("age")
             .isInt({
                 min: 0,
