@@ -2,13 +2,12 @@ import { useNavigate } from 'react-router-dom';
 import ExamsTable from './components/ExamsTable';
 import './admin.css';
 import React, { useContext } from 'react';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 
 function Admin() {
     const { examsData, loading, error } = useContext(ExamContext);
     const navigate = useNavigate(); 
 
-    /*******NEEDS TO BE UPDATED *****/
     const handleCreateNewExam = () => {
         navigate('/create-exam');
     };

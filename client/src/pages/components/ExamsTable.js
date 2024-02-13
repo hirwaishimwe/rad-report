@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import './ExamsTable.css';
-import { ExamContext } from '../../contexts/ExamContext';
+import { ExamContext } from '../../context/ExamContext';
 
 function ExamsTable({ exams, isAdmin }) {
   const { fetchExams } = useContext(ExamContext);
@@ -11,7 +11,6 @@ function ExamsTable({ exams, isAdmin }) {
     navigate(`/update-exam/${id}`);
   }
 
-  /*******NEEDS TO BE UPDATED *****/
   function handleDelete(id) {
     fetch(`http://localhost:8000/api/users/${id}`, {
       method: 'DELETE', 
@@ -41,7 +40,7 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Zip Code</th>
             <th>Mortality</th>
             <th>ICU Admit</th>
-            <th>ICU Admits Count</th>
+            <th>ICU Admits</th>
             {isAdmin && (
               <th></th>
             )}

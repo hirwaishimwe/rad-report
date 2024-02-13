@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 import './UpdateExam.css';
 
 function UpdateExam() {
@@ -56,10 +56,9 @@ function UpdateExam() {
             [name]: value
         }));
     };
-    /*******NEEDS TO BE UPDATED *****/
     const handleUpdateAndNavigate = async () => {
-        await fetchExams(); // Wait for this to complete
-        navigate('/admin'); // Then navigate
+        await fetchExams(); 
+        navigate('/admin'); 
       };
 
     const handleSubmit = (e) => {
@@ -80,7 +79,6 @@ function UpdateExam() {
                 console.error('Error:', error); 
             });
         console.log('Updated exam data:', examData);
-        // Send the update to the backend
         handleUpdateAndNavigate()
     };
 
@@ -90,7 +88,6 @@ function UpdateExam() {
             <form onSubmit={handleSubmit}>
                 <div className="form-content">
                     <div className="form-column">
-                        {/* Patient Info Fields with pre-filled values */}
                         <label htmlFor="patientId">Patient ID:</label>
                         <input type="text" id="patientId" name="medical_record_number" value={examData.medical_record_number} onChange={handleChange} />
 

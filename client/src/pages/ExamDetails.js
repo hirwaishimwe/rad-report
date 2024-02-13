@@ -1,7 +1,7 @@
 import PatientExamInfo from './components/PatientExamInfo'
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 
 function ExamDetails() {
   const { examId } = useParams();

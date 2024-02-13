@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreateExam.css';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
@@ -20,7 +20,6 @@ function CreateExam() {
     const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
     const [mortality, setMortality] = useState('');
 
-    // Handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
         const newExam = {
@@ -56,11 +55,10 @@ function CreateExam() {
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
         fetchExams()
-        navigate('/admin'); // Redirect after form submission
+        navigate('/admin'); 
 
     };
 
-    // Function to handle input changes for all fields
     const handleChange = (e) => {
         const { name, value } = e.target;
         switch (name) {
