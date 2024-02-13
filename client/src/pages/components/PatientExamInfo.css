@@ -1,0 +1,62 @@
+.patient-exam-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  flex-basis: 48%;
+}
+
+.info-section h2 {
+  margin-bottom: 10px;
+}
+
+.info-section p {
+  margin: 10px 100p;
+}
+
+.info-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-section a:hover {
+  text-decoration: underline;
+}
+
+.exam-image-container {
+  margin: 10px 0;
+}
+
+.exam-image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.exam-image-container img {
+  max-width: 60%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .patient-exam-info {
+    flex-direction: column;
+  }
+
+  .info-section {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}

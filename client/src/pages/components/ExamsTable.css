@@ -1,0 +1,70 @@
+.exams-table-container {
+  padding: 10px 40px;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: auto;
+  padding-bottom: 50px;
+}
+
+.exams-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.1), 15px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.exams-table th,
+.exams-table td {
+  text-align: left;
+  padding: 6px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.exams-table th {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.exams-table td {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.exams-table .exam-image {
+  width: 80px;
+  height: auto;
+}
+
+a:link,
+a:visited {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.patient_id {
+  max-width: 85px;
+}
+
+@media screen and (max-width: 600px) {
+  .exams-table-container {
+    padding: 5px;
+  }
+
+  .exams-table th,
+  .exams-table td {
+    padding: 3px;
+    font-size: 0.7em;
+  }
+
+  .exams-table .exam-image {
+    width: 50px;
+  }
+}

@@ -1,0 +1,4981 @@
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3Asvaj5UHH40q_qsbHZPMd-HdXP5YWOmQ7.IfEzFE27dyV7w%2Bglu711CzC2gVB%2BLvrw6vhJ2RgyXxY',
+        'if-none-match': 'W/"1ca-9wPFgIEVuwhdkrhAzKlEYu/XFrU"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10016
+  },
+  level: 'error',
+  message: 'HTTP GET /api/users',
+  timestamp: '2024-02-13T04:22:53.186Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AKHhW0brh__ueoSWtGx9MetxWmKelHg_4.g%2BIJkZMWe9W1L5AMJ8eAdrCmfdilqeE1hVjp8wqOVsU'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10005
+  },
+  level: 'error',
+  message: 'HTTP GET /api/users',
+  timestamp: '2024-02-13T04:24:14.120Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'cache-control': 'max-age=0',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AKHhW0brh__ueoSWtGx9MetxWmKelHg_4.g%2BIJkZMWe9W1L5AMJ8eAdrCmfdilqeE1hVjp8wqOVsU'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10005
+  },
+  level: 'error',
+  message: 'HTTP GET /api/users',
+  timestamp: '2024-02-13T04:26:30.541Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'cache-control': 'max-age=0',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'none',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        cookie: 'connect.sid=s%3AKHhW0brh__ueoSWtGx9MetxWmKelHg_4.g%2BIJkZMWe9W1L5AMJ8eAdrCmfdilqeE1hVjp8wqOVsU'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10004
+  },
+  level: 'error',
+  message: 'HTTP GET /api/users',
+  timestamp: '2024-02-13T04:51:10.010Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 111
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.444Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 32
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.562Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 31
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.604Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 30
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.646Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 32
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.692Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 33
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.735Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 33
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:49.776Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 219
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.005Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 31
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.046Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 30
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.084Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.121Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 38
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.167Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.205Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.248Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 42
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.302Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 119
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.431Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.469Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.508Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.546Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '368',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 37
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.624Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '368',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 39
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.679Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 30
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.716Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 38
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.764Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.803Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 31
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.842Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 119
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:50.975Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.016Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.054Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.096Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.134Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.172Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 36
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.220Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 32
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.261Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 34
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.307Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 54
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.368Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 108
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.488Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '359',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 34
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.529Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 24
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.563Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.601Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.641Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.675Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.715Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 26
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.752Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.788Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.825Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.861Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 126
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:51.999Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 63
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.073Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 31
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.116Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.152Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 26
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.186Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 51
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.247Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.286Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 35
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.332Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 34
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.375Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 134
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.521Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.560Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 45
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.616Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 43
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.668Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 33
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.714Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 44
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.772Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '359',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.807Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 40
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.857Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.895Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '368',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:52.932Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 129
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.071Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.126Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.167Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.202Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 26
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.236Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.271Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '368',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.303Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.338Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 39
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.383Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 24
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.415Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 22
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.444Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 120
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.577Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.616Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.653Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 32
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.695Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.733Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.769Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.806Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 27
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.844Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.881Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.919Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 30
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:53.963Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 123
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.097Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 29
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.139Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '363',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 25
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.174Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 26
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.209Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '359',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 32
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.252Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 30
+  },
+  level: 'error',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:09:54.292Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '362',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 38
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:18:18.596Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '367',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 35
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:20:12.347Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users/65cb082cc78d4739ca21cb2c',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-ch-ua-platform': '"macOS"',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'DELETE',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65cb082cc78d4739ca21cb2c',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 49
+  },
+  level: 'warn',
+  message: 'HTTP DELETE /api/users/65cb082cc78d4739ca21cb2c',
+  timestamp: '2024-02-13T06:43:42.584Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users/65cb082cc78d4739ca21cb2f',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-ch-ua-platform': '"macOS"',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'DELETE',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65cb082cc78d4739ca21cb2f',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP DELETE /api/users/65cb082cc78d4739ca21cb2f',
+  timestamp: '2024-02-13T06:43:48.482Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users/65cb082cc78d4739ca21cb32',
+      headers: {
+        host: 'localhost:8000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'sec-ch-ua-platform': '"macOS"',
+        accept: '*/*',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9'
+      },
+      method: 'DELETE',
+      httpVersion: '1.1',
+      originalUrl: '/api/users/65cb082cc78d4739ca21cb32',
+      query: {}
+    },
+    res: { statusCode: 404 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP DELETE /api/users/65cb082cc78d4739ca21cb32',
+  timestamp: '2024-02-13T06:43:51.543Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.567Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.608Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 116
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.733Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '362',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.865Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.906Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.945Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:39.995Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 36
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.045Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 33
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.115Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.157Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 110
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.278Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 33
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.324Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.366Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 42
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.423Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '369',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.459Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '369',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.495Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.526Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.558Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.590Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 24
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.621Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 23
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.652Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 118
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.783Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.816Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.857Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.901Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.940Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:40.975Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.013Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 45
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.069Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.120Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.155Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 34
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.197Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 121
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.326Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.362Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.401Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.440Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.476Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '367',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.512Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.544Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.580Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 42
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.632Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.668Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.700Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 122
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.834Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.866Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.899Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.935Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:41.973Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 36
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.017Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.053Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.092Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 75
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.188Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.234Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 115
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.357Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.398Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.438Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.476Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.511Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.557Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '369',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.597Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 25
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.629Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.664Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 22
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.693Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.733Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.766Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 107
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.879Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '369',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 43
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.931Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:42.966Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 33
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.006Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.040Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.077Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '366',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 31
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.128Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.162Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 27
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.196Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 47
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.250Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.298Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 129
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.435Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.476Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.516Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 30
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.559Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.598Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.637Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '367',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.670Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 40
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.722Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.761Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 28
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.800Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '360',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 123
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.931Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '367',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:43.972Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.008Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 35
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.050Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '367',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 26
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.084Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '365',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 35
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.127Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 29
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.166Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '361',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 60
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.234Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/users',
+      headers: {
+        host: 'localhost:8000',
+        'user-agent': 'python-requests/2.31.0',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        connection: 'keep-alive',
+        'content-length': '364',
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/users',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 36
+  },
+  level: 'warn',
+  message: 'HTTP POST /api/users',
+  timestamp: '2024-02-13T06:46:44.280Z'
+}
