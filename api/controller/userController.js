@@ -55,7 +55,7 @@ export const createUser = asyncHandler(async (req, res) => {
     // Proceed with user creation if validation passes
     const userData = req.body;
     const userExists = await Exam.findOne({
-        patient_id: userData.patient_id,
+        medical_record_number: userData.medical_record_number,
     });
 
     if (userExists) {

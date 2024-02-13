@@ -7,10 +7,6 @@ const examSchema = new mongoose.Schema(
             required: [true, "Please enter a valid patient identification"],
             unique: true,
         },
-        patient_id: {
-            type: String,
-            required: [false, "Please enter a valid patient identification"],
-        },
         age: {
             type: Number,
             required: [true, "Please enter the patient's age"],
