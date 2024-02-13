@@ -1,6 +1,6 @@
 // Create User and validating user data
 
-import {body, validationResult} from "express-validator";
+import { body, validationResult } from "express-validator";
 
 import Exam from "../models/examModel.js";
 import asyncHandler from "express-async-handler";
@@ -8,6 +8,9 @@ import asyncHandler from "express-async-handler";
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
     await Promise.all([
+        body("medical_record_number")
+            .notEmpty()
+            .withMessage("Please enter a valid patient identification"),
         body("age")
             .isInt({
                 min: 0,
@@ -49,7 +52,7 @@ export const createUser = asyncHandler(async (req, res) => {
     // Check for validation errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({errors: errors.array()});
+        return res.status(400).json({ errors: errors.array() });
     }
 
     // Proceed with user creation if validation passes
@@ -82,7 +85,7 @@ export const getAllUsers = asyncHandler(async (req, res) => {
 
 // Get User by ID
 export const getUserById = asyncHandler(async (req, res) => {
-    const {userId} = req.params;
+    const { userId } = req.params;
     const user = await Exam.findById(userId);
     if (!user) {
         res.status(404).json({
@@ -161,7 +164,7 @@ export const deleteUserById = asyncHandler(async (req, res) => {
                 message: "User not found for the provided Id",
             });
         }
-        res.status(200).json({message: "User deleted successfully"});
+        res.status(200).json({ message: "User deleted successfully" });
     } catch (e) {
         res.status(500).json({
             error: "Server Error",
