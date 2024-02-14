@@ -1,4 +1,4 @@
 .container {
-    display: flex; /* This line makes the container a flex container */
-    justify-content: space-around; /* This line spaces the <p> tags evenly within the container */
+    display: flex; 
+    justify-content: space-around;
 }

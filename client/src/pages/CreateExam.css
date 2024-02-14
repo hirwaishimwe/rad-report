@@ -1,64 +1,78 @@
 .create-exam-container {
     max-width: 1000px;
     margin: 50px auto;
+    margin-top: 0px;
     margin-bottom: 100px;
-    margin-top: 10px;
     padding: 30px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-exam {
+    text-align: center;
+    color: #000000;
 }
 
 .form-content {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    max-height: 510px;
 }
 
 .form-column {
-    padding: 10px 50px;
-    flex: 1;
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
 }
 
-.form-section {
-    margin-bottom: 20px;
-}
-
-.form-section label {
+.create-exam-container label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
 }
 
-.form-section input,
-.form-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    max-height: 5px;
+.create-exam-container input,
+.create-exam-container select,
+.create-exam-container textarea {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 400px;
+    height: 0px;
 }
 
-.form-actions button {
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
     padding: 10px 15px;
-    margin-right: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 30px;
+}
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.form-actions button:hover {
+.btn:hover {
     opacity: 0.8;
 }
 
 .add-exam-btn {
+    background-color: #28a745;
     color: white;
-    background-color: green;
 }
 
 .cancel-btn {
+    background-color: #f44336;
     color: white;
-    background-color: red;
-}
-
-.create-exam {
-    max-height: 0px;
 }

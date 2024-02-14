@@ -9,25 +9,41 @@ export const ExamProvider = ({ children }) => {
   const fetchExams = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://czi-covid-lypkrzry4q-uc.a.run.app/api/exams');
+      const response = await fetch('http://localhost:8000/api/users');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      setExamsData(data.exams);
+      setExamsData(data);
     } catch (error) {
       setError(error.message);
     } finally {
       setLoading(false);
     }
   };
+  const deleteUser = async (userId) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/users/${userId}`, {
+        method: 'DELETE',
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log(data);
+      fetchExams();
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
+  
 
   useEffect(() => {
     fetchExams();
   }, []);
 
   return (
-    <ExamContext.Provider value={{ examsData, loading, error, fetchExams }}>
+    <ExamContext.Provider value={{ examsData, loading, error, fetchExams, deleteUser}}>
       {children}
     </ExamContext.Provider>
   );

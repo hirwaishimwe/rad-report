@@ -4,27 +4,14 @@ import './ExamsTable.css';
 import { ExamContext } from '../../contexts/ExamContext';
 
 function ExamsTable({ exams, isAdmin }) {
-  const { fetchExams } = useContext(ExamContext);
+  const { deleteUser } = useContext(ExamContext);
   const navigate = useNavigate();
 
   function handleUpdate(id) {
     navigate(`/update-exam/${id}`);
   }
 
-//need a function that deletes the selected exam entry from the database
-  async function handleDelete(id) {
-    const response = await fetch(`http://localhost:8000/api/users/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      fetchExams();
-    } else {
-      console.error('Failed to delete exam');
-    }
-  }
   return (
-
     <div className="exams-table-container">
       <table className="exams-table">
         <thead>
@@ -32,56 +19,49 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Patient ID</th>
             <th>Exam ID</th>
             <th>Image</th>
-            <th>Key Findings</th>
-            <th>Brixia Score</th>
             <th>Age</th>
             <th>Sex</th>
             <th>BMI</th>
+            <th>Weight</th>
+            <th>ICU Admit</th>
+            <th>ICU Admits Count</th>
+            <th>Mortality</th>
             <th>Zip Code</th>
-            {isAdmin && (
-              <th></th>
-            )}
+            {isAdmin && <th>Actions</th>}
           </tr>
         </thead>
         <tbody>
-          {exams.map((exam, index) => {
-            if (!exam) {
-              console.warn(`Exam at index ${index} is`, exam);
-              return null;
-            }
-
-            return (
-              <tr key={exam._id}>
+          {exams.map((exam) => (
+            <tr key={exam._id}>
+              <td>
+                <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
+              </td>
+              <td>
+                <Link to={`/exam/${exam._id}`}>{exam.exam_id}</Link>
+              </td>
+              <td>
+                <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
+              </td>
+              <td>{exam.age}</td>
+              <td>{exam.sex.toUpperCase()}</td>
+              <td>{exam.latest_bmi}</td>
+              <td>{exam.latest_weight}</td>
+              <td>{exam.icu_admit}</td>
+              <td>{exam.icu_admits_count}</td>
+              <td>{exam.mortality}</td>
+              <td>{exam.zip_code}</td>
+              {isAdmin && (
                 <td>
-                  <Link to={`/patient/${exam.patientId}`}>{exam.patientId}</Link>
+                  <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
+                  <button className="btn delete-btn" onClick={() => deleteUser(exam._id)}>Delete</button>
                 </td>
-                <td>
-                  <Link to={`/exam/${exam._id}`}>{exam.examId}</Link>
-                </td>
-                <td>
-                  <img src={exam.imageURL} alt={`Exam for ${exam.patientId}`} className="exam-image" />
-                </td>
-                <td>{exam.keyFindings}</td>
-                <td>{exam.brixiaScores}</td>
-                <td>{exam.age}</td>
-                <td>{exam.sex.toUpperCase()}</td>
-                <td>{exam.bmi}</td>
-                <td>{exam.zipCode}</td>
-                {isAdmin && (
-                  <td>
-                    <td>
-                      <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
-                      <button className="btn delete-btn" onClick={() => handleDelete(exam.id)}>Delete</button>
-                    </td>
-
-                  </td>
-                )}
-              </tr>
-            );
-          })}
+              )}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
 }
+
 export default ExamsTable;
