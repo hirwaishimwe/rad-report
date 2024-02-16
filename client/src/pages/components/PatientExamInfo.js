@@ -39,7 +39,7 @@ const PatientExamInfo = ({ exam }) => {
           </a>
         </p>
         <div className="exam-image-container">
-          <img src={exam.png_filename} alt="Exam Image" />
+          <img src={exam.png_filename} alt="Exam_Image" />
         </div>
         <p>
           <strong>ICU Admit:</strong> {exam.icu_admit}

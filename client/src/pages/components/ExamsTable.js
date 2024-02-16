@@ -51,7 +51,7 @@ function ExamsTable({ exams, isAdmin }) {
 
             return (
               <tr key={exam._id}>
-                <td class="patient_id">
+                <td className="patient_id">
                   <Link to={`/patient/${exam.medical_record_number}`}>
                     {exam.medical_record_number}
                   </Link>
