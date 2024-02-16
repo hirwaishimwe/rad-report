@@ -30,7 +30,8 @@ Before installation, ensure you have Git, Node.js, and npm installed on your sys
    git clone https://github.com/hirwaishimwe/rad-report/
 ```
 
-2. Navigate to the client directory, install dependencies, and start the frontend server.
+2. Frontend Setup
+   Navigate to the client directory, install dependencies, and start the frontend server.
 
 ```bash
    cd client/
@@ -38,7 +39,8 @@ Before installation, ensure you have Git, Node.js, and npm installed on your sys
    npm start
 ```
 
-3. In a new terminal window, switch to the api directory, install dependencies, and initiate the backend server.
+3. Backend Setup
+   In a new terminal window, switch to the api directory, install dependencies, and initiate the backend server.
 
 ```bash
    cd api/
