@@ -1,6 +1,6 @@
 # Rad-report (Radiology Report)
 
-## Description
+## Overview
 
 This is a web application for doctors to use to track patient information.
 
@@ -10,12 +10,19 @@ The purpose of this project is to create a web application that allows doctors t
 
 ## Features
 
-- View all the exams in the exam or admin page
-- Create an exam with detailed description of the patient and images
-- Edit or Delete exisiting Exams in the admin page
-- Search for specific exams by patient ID
+- Exams Overview: Access a centralized dashboard to view all patient exams.
+- Exam Management: Create detailed exam entries with patient information and X-ray images.
+- Edit and Delete: Easily modify or remove existing exam records from the admin page.
+- Search Functionality: Quickly locate specific exams using patient ID for efficient retrieval.
+- Responsive Design: Accessible on various devices, ensuring critical information is always at hand.
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+Before installation, ensure you have Git, Node.js, and npm installed on your system.
+
+### Installation
 
 1. Clone the Repository
 
@@ -23,7 +30,7 @@ The purpose of this project is to create a web application that allows doctors t
    git clone https://github.com/hirwaishimwe/rad-report/
 ```
 
-2. Change into the client folder, install frontend dependencies, and start the frontend
+2. Navigate to the client directory, install dependencies, and start the frontend server.
 
 ```bash
    cd client/
@@ -31,7 +38,7 @@ The purpose of this project is to create a web application that allows doctors t
    npm start
 ```
 
-3. Open another terminal window, change into the api folder, install backend dependencies, and start the backend server
+3. In a new terminal window, switch to the api directory, install dependencies, and initiate the backend server.
 
 ```bash
    cd api/
@@ -41,9 +48,10 @@ The purpose of this project is to create a web application that allows doctors t
 
 ## Configuration
 
-Before running the application, you need to set up some configuration variables:
+To ensure the application runs smoothly, configure the necessary environment variables:
 
 - Create a .env file in the api directory and specify the required environment variables like database connection details and other settings.
+- Add the following configurations:
 
 ```plaintext
 MONGO_URI=mongodb+srv://rad:123@radreportapp.ksdi4qw.mongodb.net/?retryWrites=true&w=majority
@@ -53,7 +61,7 @@ PORT=8000
 NODE_ENV=DEVELOPMENT
 ```
 
-## Contact
+## Support
 
 If you have any questions or need support, feel free to reach out to one of the developers.
 
