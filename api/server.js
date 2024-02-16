@@ -23,8 +23,6 @@ import router from "./routes/indexRoute.js";
 import session from "express-session";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerui from "swagger-ui-express";
-import swaggerJSDoc from "swagger-jsdoc";
-import swaggerui from "swagger-ui-express";
 
 dotenv.config();
 
