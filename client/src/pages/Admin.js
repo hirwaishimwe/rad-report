@@ -23,7 +23,7 @@ function Admin() {
     return <div>No exams found</div>;
   }
   return (
-    <div class="admin">
+    <div className="admin">
       <button className="btn create-exam-btn" onClick={handleCreateNewExam}>
         Create Exam
       </button>
