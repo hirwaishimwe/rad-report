@@ -1,4 +1,4 @@
-# User Stories for RadReport
+# RadReport User Stories
 
 1. [x] Create an application for doctors to use to track patient information
 2. [x] A main (or “index”) page that allows users to view all of the exam records in the database.
