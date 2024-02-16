@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 import './UpdateExam.css';
 
 function UpdateExam() {
@@ -25,8 +25,6 @@ function UpdateExam() {
     async function getExamData(examId) {
         const exam = examsData.find(exam => exam._id.toString() === examId);
 
-        // Placeholder function to simulate fetching exam data
-        // Replace this with actual data fetching logic
         return {
             medical_record_number: exam.medical_record_number,
             age: exam.age,
@@ -58,13 +56,30 @@ function UpdateExam() {
             [name]: value
         }));
     };
-    /*******NEEDS TO BE UPDATED *****/
+    const handleUpdateAndNavigate = async () => {
+        await fetchExams(); 
+        navigate('/admin'); 
+      };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        fetch(`http://localhost:8000/api/users/${examId}`, {
+            method: 'PATCH', 
+            headers: {
+                'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify(examData) 
+        })
+            .then(response => response.json()) 
+            .then(updatedResource => {
+                console.log('Success:', updatedResource); 
+            })
+            .catch(error => {
+                console.error('Error:', error); 
+            });
         console.log('Updated exam data:', examData);
-        // Send the update to the backend
-        fetchExams()
-        navigate('/admin'); // Redirect to admin or confirmation page
+        handleUpdateAndNavigate()
     };
 
     return (
@@ -73,48 +88,46 @@ function UpdateExam() {
             <form onSubmit={handleSubmit}>
                 <div className="form-content">
                     <div className="form-column">
-                        {/* Patient Info Fields with pre-filled values */}
                         <label htmlFor="patientId">Patient ID:</label>
-                        <input type="text" id="patientId" name="patientId" value={examData.medical_record_number} onChange={handleChange} />
+                        <input type="text" id="patientId" name="medical_record_number" value={examData.medical_record_number} onChange={handleChange} />
 
                         <label htmlFor="age">Age:</label>
                         <input type="number" id="age" name="age" value={examData.age} onChange={handleChange} />
 
+                        <label htmlFor="zipCode">Zip Code:</label>
+                        <input type="text" id="zipCode" name="zip_code" value={examData.zip_code} onChange={handleChange} />
+
+                        <label htmlFor="IcuAdmitCount">ICU Admit Count:</label>
+                        <input type="number" id="IcuAdmitCount" name="icu_admits_count" value={examData.icu_admits_count} onChange={handleChange} />
+                        
                         <label htmlFor="sex">Sex:</label>
                         <select id="sex" name="sex" value={examData.sex} onChange={handleChange}>
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
                         </select>    
                         <label htmlFor="sex">Pronouns:</label>
-                        <select id="pronouns" name="pronouns" value={examData.pro_nouns} onChange={handleChange}>
+                        <select id="pronouns" name="pro_nouns" value={examData.pro_nouns} onChange={handleChange}>
                             <option value="He/Him">He/Him</option>
-                            <option value="She/Her">Female</option>
+                            <option value="She/Her">She/Her</option>
                             <option value="They/Them">They/Them</option>
                             <option value="Other">Other</option>
                         </select>
-
-                        <label htmlFor="zipCode">Zip Code:</label>
-                        <input type="text" id="zipCode" name="zipCode" value={examData.zip_code} onChange={handleChange} />
-
-                        <label htmlFor="IcuAdmitCount">ICU Admit Count:</label>
-                        <input type="number" id="IcuAdmitCount" name="IcuAdmitCount" value={examData.icu_admit} onChange={handleChange} />
-                        
                     </div>
                 
                     <div className="form-column">
                         <label htmlFor="examId">Exam ID:</label>
-                        <input type="text" id="examId" name="examId" value={examData.exam_id} onChange={handleChange} />
+                        <input type="text" id="examId" name="exam_id" value={examData.exam_id} onChange={handleChange} />
 
                         <label htmlFor="imageURL">Image URL:</label>
-                        <input type="text" id="imageURL" name="imageURL" value={examData.png_filename} onChange={handleChange} />
+                        <input type="text" id="imageURL" name="png_filename" value={examData.png_filename} onChange={handleChange} />
                         <label htmlFor="bmi">BMI:</label>
-                        <input type="text" id="bmi" name="bmi" value={examData.latest_bmi} onChange={handleChange} />
+                        <input type="text" id="bmi" name="latest_bmi" value={examData.latest_bmi} onChange={handleChange} />
 
                         <label htmlFor="weight">Weight:</label>
-                        <input type="number" id="weight" name="weight" value={examData.latest_weight} onChange={handleChange} />
+                        <input type="number" id="weight" name="latest_weight" value={examData.latest_weight} onChange={handleChange} />
 
                         <label htmlFor="IcuAdmit">ICU Admit:</label>
-                        <select id="IcuAdmit" name="IcuAdmit" value={examData.icu_admit} onChange={handleChange} >
+                        <select id="IcuAdmit" name="icu_admit" value={examData.icu_admit} onChange={handleChange} >
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
                         </select>

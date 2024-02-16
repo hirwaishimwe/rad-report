@@ -4,11 +4,11 @@
   align-items: center;
   padding: 10px;
   background-image: linear-gradient(to bottom, #000000 0%, #9d9d9d 100%);
+  /*  background-image: linear-gradient(to bottom, #000000 0%, #0747a1 100%);*/
   /*background-image: linear-gradient(to bottom, #333131 0%, #b4acaa 100%);
   /*background-image: linear-gradient(to right, #333131 0%, #ff9c7e 100%);*/
   color: #fdfdfd;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
-
 }
 
 .nav-group {

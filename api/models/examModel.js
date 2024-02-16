@@ -7,11 +7,6 @@ const examSchema = new mongoose.Schema(
       required: [true, "Please enter a valid patient identification"],
       unique: true,
     },
-    // patient_id: {
-    //   type: String,
-    //   required: [true, "Please enter a valid patient identification"],
-    //   unique: true,
-    // },
     age: {
       type: Number,
       required: [true, "Please enter the patient's age"],
@@ -63,7 +58,7 @@ const examSchema = new mongoose.Schema(
       enum: ["Y", "N"],
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 export default mongoose.model("Exam", examSchema);

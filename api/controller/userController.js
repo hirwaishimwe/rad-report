@@ -8,7 +8,7 @@ import asyncHandler from "express-async-handler";
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
   await Promise.all([
-    body("patient_id")
+    body("medical_record_number")
       .notEmpty()
       .withMessage("Please enter a valid patient identification"),
     body("age")
@@ -56,7 +56,7 @@ export const createUser = asyncHandler(async (req, res) => {
   // Proceed with user creation if validation passes
   const userData = req.body;
   const userExists = await Exam.findOne({
-    patient_id: userData.patient_id,
+    medical_record_number: userData.medical_record_number,
   });
 
   if (userExists) {
@@ -138,9 +138,10 @@ export const PatchUserById = asyncHandler(async (req, res) => {
         message: "User not found for the provided Id",
       });
     }
-    res
-      .status(200)
-      .json({ message: "User patched successfully", user: patchedUser });
+    res.status(200).json({
+      message: "User patched successfully",
+      user: patchedUser,
+    });
   } catch (e) {
     res.status(500).json({
       error: "Server Error",

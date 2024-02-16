@@ -35,6 +35,4 @@ router.delete("/api/users/deleteDatabase/:secret_code", async (req, res) => {
   }
 });
 
-
 export default router;
-
