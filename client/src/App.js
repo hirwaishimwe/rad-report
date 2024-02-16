@@ -1,9 +1,9 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Exams } from "./pages/Exams";
-import { Admin } from "./pages/Admin";
-import { Detail } from "./pages/Detail";
-import { useApi } from "./hooks/use-api";
+import { ExamProvider } from "./context/ExamContext";
+import Exams from "./pages/Exams";
+import Admin from "./pages/Admin";
+import ExamDetails from "./pages/ExamDetails";
 import Navbar from "./pages/components/NavBar";
 import PatientDetails from "./pages/PatientDetails";
 import CreateExam from "./pages/CreateExam";
