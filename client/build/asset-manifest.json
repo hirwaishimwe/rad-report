@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2667eb97.css",
+    "main.js": "/static/js/main.4d3346c5.js",
+    "static/media/Jerison Feliz.jpg": "/static/media/Jerison Feliz.32876530b494619739d9.jpg",
+    "static/media/Derinell Rojas.jpg": "/static/media/Derinell Rojas.3ed3765fe862458bf004.jpg",
+    "static/media/HirwaIshimwe.jpg": "/static/media/HirwaIshimwe.072398fb19ce1b96fdcc.jpg",
+    "static/media/Dimitri Legaspi.jpg": "/static/media/Dimitri Legaspi.bacad17751b6eea3f2b8.jpg",
+    "static/media/Christopher Alphonse.jpg": "/static/media/Christopher Alphonse.2f5a144d28d5e114ab86.jpg",
+    "static/media/logo.png": "/static/media/logo.47258c7e1cd8bf369775.png",
+    "index.html": "/index.html",
+    "main.2667eb97.css.map": "/static/css/main.2667eb97.css.map",
+    "main.4d3346c5.js.map": "/static/js/main.4d3346c5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2667eb97.css",
+    "static/js/main.4d3346c5.js"
+  ]
+}
