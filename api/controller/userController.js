@@ -55,10 +55,20 @@ export const createUser = asyncHandler(async (req, res) => {
         return res.status(400).json({errors: errors.array()});
     }
 
-    // Proceed with user creation if validation passes
     const userData = req.body;
+    userData.age = parseInt(userData.age);
     const userExists = await Exam.findOne({
         medical_record_number: userData.medical_record_number,
+        sex: userData.sex,
+        age: userData.age,
+        pro_nouns: userData.pro_nouns,
+        zip_code: userData.zip_code,
+        latest_bmi: userData.latest_bmi,
+        latest_weight: userData.latest_weight,
+        png_filename: userData.png_filename,
+        exam_id: userData.exam_id,
+        icu_admit: userData.icu_admit,
+        mortality: userData.mortality,
     });
 
     if (userExists) {
@@ -127,10 +137,12 @@ export const deleteUserById = asyncHandler(async (req, res) => {
 // PATCH
 export const patchUserById = asyncHandler(async (req, res) => {
     const userId = req.params.userId;
+    const userBody = req.body;
 
     try {
-        const user = await Exam.findByIdAndUpdate(userId, req.body, {
+        const user = await Exam.findByIdAndUpdate(userId, userBody, {
             new: true,
+            runValidators: true,
         });
 
         if (!user) {
@@ -143,7 +155,6 @@ export const patchUserById = asyncHandler(async (req, res) => {
             message: "User updated successfully",
             user: user,
         });
-        // res.status(200).json(user);
     } catch (error) {
         res.status(500).json({
             error: "Server Error",

@@ -21,7 +21,7 @@ import passport from "passport";
 import rateLimit from "express-rate-limit";
 import router from "./routes/indexRoute.js";
 import session from "express-session";
-import swaggerJSDoc from "swagger-jsdoc";
+import swaggerDoc from "./routes/swagger-output.json" assert {type: "json"};
 import swaggerui from "swagger-ui-express";
 
 dotenv.config();
@@ -47,8 +47,8 @@ app.use(passport.initialize());
 app.use(passport.authenticate("session"));
 
 const RateLimiterHandler = rateLimit({
-    windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
-    max: 100,
+    windowMs: 1 * 60 * 1000, // 15 request per 1 minute(s)
+    max: 15,
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -101,29 +101,9 @@ app.use(
 app.use(errorHandler);
 app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
 
-const options = {
-    definition: {
-        openapi: "3.0.0",
-        servers: [{url: "http://localhost:8000/"}],
-        info: {
-            title: "Radiology Report API",
-            version: "1.0.0",
-            description: "",
-
-            contact: {
-                name: " S.W.I.F.T Team 6",
-                url: "https://github.com/hirwaishimwe/rad-report",
-            },
-        },
-    },
-    apis: ["./routes/*.js"],
-};
-
-const openapiSpecification = swaggerJSDoc(options);
-
 // routes
 app.use("/", router);
-app.use("/", swaggerui.serve, swaggerui.setup(openapiSpecification));
+app.use("/", swaggerui.serve, swaggerui.setup(swaggerDoc));
 
 async function connect() {
     try {
