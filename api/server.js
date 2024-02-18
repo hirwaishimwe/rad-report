@@ -25,7 +25,6 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerui from "swagger-ui-express";
 
 dotenv.config();
-const log = console.log;
 
 const {FRONTEND_URL, PORT, DB_MESSAGE, MONGO_URI} = process.env;
 
@@ -132,10 +131,10 @@ async function connect() {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        log.log(chalk.cyan("Database connection successful ✅"));
+        console.log(chalk.cyan("✅ " + DB_MESSAGE));
     } catch (e) {
-        log.error(
-            chalk.bgRedBright("Error connecting to database: 💔", e.message),
+        console.error(
+            chalk.bgRedBright(" 🚫 Error connecting to database:", e.message),
         );
     }
 }
@@ -143,22 +142,22 @@ async function connect() {
 connect()
     .then(() => {
         app.listen(PORT, () => {
-            log.info(
-                chalk.green(
-                    `Server is running on http://localhost:${PORT}/api ✅`,
-                ),
+            console.info(
+                chalk.green(`✅ Server ------> http://localhost:${PORT}/api`),
             );
-            log.info(
+            console.info(
                 chalk.yellow(
-                    `DATABASE ------> http://localhost:${PORT}/api/users ✅`,
+                    `✅ DATABASE ------> http://localhost:${PORT}/api/users`,
                 ),
             );
-            log.info(chalk.blue(`API DOC ------> http://localhost:${PORT} ✅`));
+            console.info(
+                chalk.blue(`✅ API DOC ------> http://localhost:${PORT}`),
+            );
         });
     })
     .catch((e) => {
-        log.error(
-            chalk.bgRedBright("Error starting the server: 💔"),
+        console.error(
+            chalk.bgRedBright("🚫 Error starting the server:"),
             e.message,
         );
     });

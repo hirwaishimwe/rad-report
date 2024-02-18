@@ -139,8 +139,11 @@ export const patchUserById = asyncHandler(async (req, res) => {
                 message: "User not found for the provided Id",
             });
         }
-
-        res.status(200).json(user);
+        res.status(200).json({
+            message: "User updated successfully",
+            user: user,
+        });
+        // res.status(200).json(user);
     } catch (error) {
         res.status(500).json({
             error: "Server Error",
