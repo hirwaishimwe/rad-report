@@ -2,28 +2,25 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import './ExamsTable.css';
 import { ExamContext } from '../../context/ExamContext';
+import useApi from'../../hooks/useApi';
 
 function ExamsTable({ exams, isAdmin }) {
   const { fetchExams } = useContext(ExamContext);
   const navigate = useNavigate();
+  const { sendRequest } = useApi(); // Assuming useApi returns an object with a sendRequest function
 
   function handleUpdate(id) {
     navigate(`/update-exam/${id}`);
   }
 
-  function handleDelete(id) {
-    fetch(`http://localhost:8000/api/users/${id}`, {
-      method: 'DELETE', 
-    })
-      .then(message => {
-        console.log('Success:', message); 
-      })
-      .catch(error => {
-        console.error('Error:', error); 
-      });
-    fetchExams()
-
+  async function handleDelete(id) {
+    const response = await sendRequest(`users/${id}`, 'DELETE');
+    if (response) {
+      console.log(response);
+      fetchExams(); // Refresh the exams list after deletion
+    }
   }
+
   return (
 
     <div className="exams-table-container">
@@ -55,7 +52,7 @@ function ExamsTable({ exams, isAdmin }) {
 
             return (
               <tr key={exam._id}>
-                <td class= "patient_id">
+                <td class="patient_id">
                   <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
                 </td>
                 <td>
