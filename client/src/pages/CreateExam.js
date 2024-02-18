@@ -1,11 +1,13 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CreateExam.css';
 import { ExamContext } from '../context/ExamContext';
+import useApi from '../hooks/useApi';
+import './CreateExam.css';
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
+    const { sendRequest } = useApi();
 
     const [medicalRecordNumber, setMedicalRecordNumber] = useState('');
     const [age, setAge] = useState('');
@@ -20,7 +22,7 @@ function CreateExam() {
     const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
     const [mortality, setMortality] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const newExam = {
             medical_record_number: medicalRecordNumber,
@@ -36,27 +38,12 @@ function CreateExam() {
             icu_admits_count: icuAdmitsCount,
             mortality: mortality
         };
-        console.log(newExam)
-
-        const myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        const raw = JSON.stringify(newExam);
-
-        const requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-
-        fetch("http://localhost:8000/api/users", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-        fetchExams()
-        navigate('/admin'); 
-
+        const result = await sendRequest('users', 'POST', newExam);
+        if (result) {
+            console.log('Exam created:', result);
+            fetchExams();
+            navigate('/admin');
+        }
     };
 
     const handleChange = (e) => {

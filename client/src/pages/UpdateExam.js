@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { ExamContext } from '../context/ExamContext';
+import useApi from '../hooks/useApi';
 import './UpdateExam.css';
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
-    const { examId } = useParams(); 
+    const { sendRequest } = useApi();
+    const { examId } = useParams();
     const navigate = useNavigate();
     const [examData, setExamData] = useState({
         medical_record_number: '',
@@ -57,29 +59,18 @@ function UpdateExam() {
         }));
     };
     const handleUpdateAndNavigate = async () => {
-        await fetchExams(); 
-        navigate('/admin'); 
-      };
+        await fetchExams();
+        navigate('/admin');
+    };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:8000/api/users/${examId}`, {
-            method: 'PATCH', 
-            headers: {
-                'Content-Type': 'application/json', 
-            },
-            body: JSON.stringify(examData) 
-        })
-            .then(response => response.json()) 
-            .then(updatedResource => {
-                console.log('Success:', updatedResource); 
-            })
-            .catch(error => {
-                console.error('Error:', error); 
-            });
-        console.log('Updated exam data:', examData);
-        handleUpdateAndNavigate()
+        const updatedExam = await sendRequest(`users/${examId}`, 'PATCH', examData);
+        if (updatedExam) {
+            console.log('Success:', updatedExam);
+            handleUpdateAndNavigate();
+        }
     };
 
     return (
@@ -99,12 +90,12 @@ function UpdateExam() {
 
                         <label htmlFor="IcuAdmitCount">ICU Admit Count:</label>
                         <input type="number" id="IcuAdmitCount" name="icu_admits_count" value={examData.icu_admits_count} onChange={handleChange} />
-                        
+
                         <label htmlFor="sex">Sex:</label>
                         <select id="sex" name="sex" value={examData.sex} onChange={handleChange}>
                             <option value="M">M</option>
                             <option value="F">F</option>
-                        </select>    
+                        </select>
                         <label htmlFor="sex">Pronouns:</label>
                         <select id="pronouns" name="pro_nouns" value={examData.pro_nouns} onChange={handleChange}>
                             <option value="He/Him">He/Him</option>
@@ -113,7 +104,7 @@ function UpdateExam() {
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                
+
                     <div className="form-column">
                         <label htmlFor="examId">Exam ID:</label>
                         <input type="text" id="examId" name="exam_id" value={examData.exam_id} onChange={handleChange} />
@@ -135,7 +126,7 @@ function UpdateExam() {
                         <select id="mortality" name="mortality" value={examData.mortality} onChange={handleChange} >
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
-                        </select>                    
+                        </select>
                     </div>
                 </div>
 

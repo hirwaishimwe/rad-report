@@ -1,0 +1,57 @@
+.about-us-container {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(239, 239, 239);
+}
+
+.meet-text {
+    font-size: smaller;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member {
+    margin: 10px;
+}
+
+.member img {
+    width: 250px;
+    border-radius: 10%;
+}
+
+.member p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.member a {
+    margin: 0 5px;
+    color: #000;
+    font-size: 24px;
+}
+
+.member a:hover {
+    color: #0077b5;
+}
+
+.member strong {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.project-description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.member img {
+
+    box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.1), 15px 8px 15px rgba(0, 0, 0, 0.1);
+}

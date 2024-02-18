@@ -1,7 +1,49 @@
-.DS_Store
-node_modules/
-.env
-api/logs/logErrors.log
-api/logs/logErrors.log
-api/logs/logsWarnings.log
+# Logs
 logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+dist/
+dist-ssr/
+*.local/
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker
+docker-compose.yml
+*.env
+postgres/
+
+# Production
+/build/
+/dist/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.log
+
+# Local environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json

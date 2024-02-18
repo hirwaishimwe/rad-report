@@ -9,6 +9,8 @@ import PatientDetails from './pages/PatientDetails';
 import CreateExam from './pages/CreateExam';
 import UpdateExam from './pages/UpdateExam';
 import PageNotFound from './PageNotFound';
+import AboutUs from "./pages/AboutUs";
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Exams />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/exam/:examId" element={<ExamDetails />} />
           <Route path="/patient/:patientId" element={<PatientDetails />} />
           <Route path="/admin" element={<Admin />} />

@@ -1,20 +1,21 @@
 import React, { createContext, useState, useEffect } from 'react';
+import useApi from '../hooks/useApi'; // Adjust the path as necessary
 
 export const ExamContext = createContext();
+
 export const ExamProvider = ({ children }) => {
   const [examsData, setExamsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { sendRequest } = useApi();
 
   const fetchExams = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/users');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await sendRequest('users', 'GET');
+      if (data) {
+        setExamsData(data);
       }
-      const data = await response.json();
-      setExamsData(data);
     } catch (error) {
       setError(error.message);
     } finally {
