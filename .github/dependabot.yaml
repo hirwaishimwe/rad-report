@@ -1,14 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/Client"
-    schedule:
-      interval: "weekly"
+    - package-ecosystem: "npm"
+      directory: "/Client"
+      schedule:
+          interval: "daily"
 
-  - package-ecosystem: "npm"
-    directory: "/Server"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
+    - package-ecosystem: "npm"
+      directory: "/Server"
+      schedule:
+          interval: "daily"
+      open-pull-requests-limit: 5
 
-    # limiting the pull request
+      # limiting the pull request
