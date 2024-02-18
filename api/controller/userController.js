@@ -129,11 +129,9 @@ export const patchUserById = asyncHandler(async (req, res) => {
     const userId = req.params.userId;
 
     try {
-        const user = await Exam.findByIdAndUpdate(
-            userId,
-            req.body, // Update user's data based on request body
-            {new: true}, // Return the updated document
-        );
+        const user = await Exam.findByIdAndUpdate(userId, req.body, {
+            new: true,
+        });
 
         if (!user) {
             return res.status(404).json({
