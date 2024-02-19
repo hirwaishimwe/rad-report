@@ -48,6 +48,11 @@ function AboutUs() {
                     <a href="mailto:jerisonfeliz15@gmail.com"><AiOutlineMail /></a>
                     <a href="https://www.linkedin.com/in/jerison-feliz/" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
                 </div>
+                <div className="rifflene">
+                    <p>Rifflene Altidor</p>
+                    <a href="mailto:raltidor@falcon.bentley.edu"><AiOutlineMail /></a>
+                    <a href="https://www.linkedin.com/in/rifflene-altidor-23ba6520b/" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
+                </div>
             </div>
         </div>
     );

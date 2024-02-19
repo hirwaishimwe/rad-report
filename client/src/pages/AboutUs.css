@@ -16,9 +16,17 @@
 }
 
 .member {
-    margin: 10px;
+    margin: 50px;
 }
-
+.rifflene {
+    margin: 100px;
+    font-weight: bold
+}
+.rifflene a {
+    margin: 0 5px;
+    color: #000;
+    font-size: 24px;
+}
 .member img {
     width: 250px;
     border-radius: 10%;
