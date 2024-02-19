@@ -7,8 +7,6 @@ const useApi = () => {
     const sendRequest = async (path, method, body = null) => {
         try {
             const url = `${process.env.REACT_APP_API_URL}/${path}`;
-            console.log(`Sending request to ${url} with method ${method}`);
-            console.log('API URL:', process.env.REACT_APP_API_URL);
             const options = {
                 method: method,
                 headers: {
@@ -18,7 +16,6 @@ const useApi = () => {
             };
             const res = await fetch(url, options);
             const data = await res.json();
-            console.log('Response:', data);
             setResponse(data);
             return data;
         } catch (err) {
