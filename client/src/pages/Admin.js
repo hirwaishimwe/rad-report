@@ -1,15 +1,13 @@
-// Admin.js
 import { useNavigate } from 'react-router-dom';
 import ExamsTable from './components/ExamsTable';
 import './admin.css';
 import React, { useContext } from 'react';
-import { ExamContext } from '../contexts/ExamContext';
+import { ExamContext } from '../context/ExamContext';
 
 function Admin() {
     const { examsData, loading, error } = useContext(ExamContext);
-    const navigate = useNavigate(); // useNavigate is called at the top level, not conditionally
+    const navigate = useNavigate(); 
 
-    /*******NEEDS TO BE UPDATED *****/
     const handleCreateNewExam = () => {
         navigate('/create-exam');
     };
@@ -25,7 +23,7 @@ function Admin() {
         return <div>No exams found</div>;
     }
     return (
-        <div className = "admin">
+        <div class = "admin">
             <button className="btn create-exam-btn" onClick={handleCreateNewExam}>Create Exam</button>
             <ExamsTable exams={examsData} isAdmin={true} />
         </div>

@@ -1,17 +1,28 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import './ExamsTable.css';
-import { ExamContext } from '../../contexts/ExamContext';
+import { ExamContext } from '../../context/ExamContext';
+import useApi from'../../hooks/useApi';
 
 function ExamsTable({ exams, isAdmin }) {
-  const { deleteUser } = useContext(ExamContext);
+  const { fetchExams } = useContext(ExamContext);
   const navigate = useNavigate();
+  const { sendRequest } = useApi(); // Assuming useApi returns an object with a sendRequest function
 
   function handleUpdate(id) {
     navigate(`/update-exam/${id}`);
   }
 
+  async function handleDelete(id) {
+    const response = await sendRequest(`users/${id}`, 'DELETE');
+    if (response) {
+      console.log(response);
+      fetchExams(); // Refresh the exams list after deletion
+    }
+  }
+
   return (
+
     <div className="exams-table-container">
       <table className="exams-table">
         <thead>
@@ -23,45 +34,56 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Sex</th>
             <th>BMI</th>
             <th>Weight</th>
-            <th>ICU Admit</th>
-            <th>ICU Admits Count</th>
-            <th>Mortality</th>
             <th>Zip Code</th>
-            {isAdmin && <th>Actions</th>}
+            <th>Mortality</th>
+            <th>ICU Admit</th>
+            <th>ICU Admits</th>
+            {isAdmin && (
+              <th></th>
+            )}
           </tr>
         </thead>
         <tbody>
-          {exams.map((exam) => (
-            <tr key={exam._id}>
-              <td>
-                <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
-              </td>
-              <td>
-                <Link to={`/exam/${exam._id}`}>{exam.exam_id}</Link>
-              </td>
-              <td>
-                <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
-              </td>
-              <td>{exam.age}</td>
-              <td>{exam.sex.toUpperCase()}</td>
-              <td>{exam.latest_bmi}</td>
-              <td>{exam.latest_weight}</td>
-              <td>{exam.icu_admit}</td>
-              <td>{exam.icu_admits_count}</td>
-              <td>{exam.mortality}</td>
-              <td>{exam.zip_code}</td>
-              {isAdmin && (
-                <td>
-                  <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
-                  <button className="btn delete-btn" onClick={() => deleteUser(exam._id)}>Delete</button>
+          {exams.map((exam, index) => {
+            if (!exam) {
+              console.warn(`Exam at index ${index} is`, exam);
+              return null;
+            }
+
+            return (
+              <tr key={exam._id}>
+                <td class="patient_id">
+                  <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
                 </td>
-              )}
-            </tr>
-          ))}
+                <td>
+                  <Link to={`/exam/${exam._id}`}>{exam.exam_id}</Link>
+                </td>
+                <td>
+                  <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
+                </td>
+                <td>{exam.age}</td>
+                <td>{exam.sex.toUpperCase()}</td>
+                <td>{exam.latest_bmi}</td>
+                <td>{exam.latest_weight}</td>
+                <td>{exam.zip_code}</td>
+                <td>{exam.mortality}</td>
+                <td>{exam.icu_admit}</td>
+                <td>{exam.icu_admits_count}</td>
+                {isAdmin && (
+                  <td>
+                    <td>
+                      <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
+                      <button className="btn delete-btn" onClick={() => handleDelete(exam._id)}>Delete</button>
+                    </td>
+
+                  </td>
+                )}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
 }
-
 export default ExamsTable;

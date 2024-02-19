@@ -1,11 +1,13 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ExamContext } from '../context/ExamContext';
+import useApi from '../hooks/useApi';
 import './CreateExam.css';
-import { ExamContext } from '../contexts/ExamContext';
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
+    const { sendRequest } = useApi();
 
     const [medicalRecordNumber, setMedicalRecordNumber] = useState('');
     const [age, setAge] = useState('');
@@ -20,13 +22,12 @@ function CreateExam() {
     const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
     const [mortality, setMortality] = useState('');
 
-    // Handle form submission
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const newExam = {
             medical_record_number: medicalRecordNumber,
-            age,
-            sex,
+            age: age,
+            sex: sex,
             pro_nouns: proNouns,
             zip_code: zipCode,
             latest_bmi: latestBmi,
@@ -35,17 +36,16 @@ function CreateExam() {
             exam_id: examId,
             icu_admit: icuAdmit,
             icu_admits_count: icuAdmitsCount,
-            mortality
+            mortality: mortality
         };
-        console.log(newExam); // For debugging
-
-        // Integrate with backend to actually create the exam
-        fetchExams();
-
-        navigate('/admin'); // Redirect to admin after form submission
+        const result = await sendRequest('users', 'POST', newExam);
+        if (result) {
+            console.log('Exam created:', result);
+            fetchExams();
+            navigate('/admin');
+        }
     };
 
-    // Function to handle input changes for all fields
     const handleChange = (e) => {
         const { name, value } = e.target;
         switch (name) {
@@ -187,7 +187,7 @@ function CreateExam() {
                             value={pngFilename}
                             onChange={handleChange}
                         />
-                    
+
                         <label htmlFor="icuAdmit">ICU Admit:</label>
                         <select id="icuAdmit" name="icuAdmit" value={icuAdmit} onChange={handleChange}>
                             <option value="">Select</option>

@@ -1,8 +1,8 @@
 .exams-table-container {
-  padding: 10px 30px;
-  background-color:#ffffff;
-  color: #000000;
-  overflow-x: auto;
+  padding: 10px; 
+  background-color: #ffffff; 
+  color: #000000; 
+  overflow-x: auto; 
 }
 
 .exams-table {
@@ -16,8 +16,8 @@
 .exams-table th,
 .exams-table td {
   text-align: left;
-  padding: 6px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 6px; 
+  border-bottom: 1px solid #e0e0e0; 
 }
 
 .exams-table th {
@@ -34,19 +34,6 @@
   width: 80px;
   height: auto;
 }
-
-a:link,
-a:visited {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
 
 @media screen and (max-width: 600px) {
   .exams-table-container {

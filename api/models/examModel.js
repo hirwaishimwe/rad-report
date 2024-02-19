@@ -50,10 +50,7 @@ const examSchema = new mongoose.Schema(
         },
         icu_admits_count: {
             type: Number,
-            required: [
-                true,
-                "Please specify the total instances of ICU transfers",
-            ],
+            required: [true, "Please specify the total instances of ICU transfers"],
         },
         mortality: {
             type: String,
@@ -61,7 +58,7 @@ const examSchema = new mongoose.Schema(
             enum: ["Y", "N"],
         },
     },
-    {timestamps: true},
+    { timestamps: true },
 );
 
 export default mongoose.model("Exam", examSchema);
