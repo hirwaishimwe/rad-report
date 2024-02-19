@@ -43,3 +43,5 @@ yarn.log
 .env.development.local
 .env.production.local
 
+pnpm-lock.yaml
+package.lock.yaml
