@@ -17,15 +17,36 @@
 
 .member {
     margin: 50px;
+    margin-bottom: 10px;
 }
 .rifflene {
-    margin: 100px;
+    margin: 50px;
     font-weight: bold
 }
 .rifflene a {
     margin: 0 5px;
     color: #000;
     font-size: 24px;
+}
+
+.rifflene img {
+    width: 250px;
+    height: 175px;
+    border-radius: 10%;
+    box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.1), 15px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.rifflene p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.rifflene strong {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.rifflene a:hover {
+    color: #0077b5;
 }
 .member img {
     width: 250px;
