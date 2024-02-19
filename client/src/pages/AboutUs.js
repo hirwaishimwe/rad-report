@@ -22,7 +22,7 @@ function AboutUs() {
                 <div className="member">
                     <img src={member1Img} alt="Hirwa" />
                     <p>Hirwa Ishimwe</p>
-                    <a href="mailto:hirwaishimwe.com"><AiOutlineMail /></a>
+                    <a href="mailto:hirwaishimwe2@gmail.com"><AiOutlineMail /></a>
                     <a href="https://www.linkedin.com/in/hirwa-ishimwe" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
                 </div>
                 <div className="member">
