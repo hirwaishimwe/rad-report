@@ -12,7 +12,7 @@ function NavBar() {
         <ul>
           <li><Link to="/">Exams</Link></li>
           <li><Link to="/admin">Admin</Link></li>
-          <li><Link to="/about">About us</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
       </div>
       <div className="search-bar">
