@@ -1,26 +1,28 @@
-import { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ExamContext } from '../context/ExamContext';
-import useApi from '../hooks/useApi';
-import './CreateExam.css';
+import "./CreateExam.css";
+
+import { useContext, useState } from "react";
+
+import { ExamContext } from "../context/ExamContext";
+import useApi from "../hooks/useApi";
+import { useNavigate } from "react-router-dom";
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
     const { sendRequest } = useApi();
 
-    const [medicalRecordNumber, setMedicalRecordNumber] = useState('');
-    const [age, setAge] = useState('');
-    const [sex, setSex] = useState('');
-    const [proNouns, setProNouns] = useState('');
-    const [zipCode, setZipCode] = useState('');
-    const [latestBmi, setLatestBmi] = useState('');
-    const [latestWeight, setLatestWeight] = useState('');
-    const [pngFilename, setPngFilename] = useState('');
-    const [examId, setExamId] = useState('');
-    const [icuAdmit, setIcuAdmit] = useState('');
-    const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
-    const [mortality, setMortality] = useState('');
+    const [medicalRecordNumber, setMedicalRecordNumber] = useState("");
+    const [age, setAge] = useState("");
+    const [sex, setSex] = useState("");
+    const [proNouns, setProNouns] = useState("");
+    const [zipCode, setZipCode] = useState("");
+    const [latestBmi, setLatestBmi] = useState("");
+    const [latestWeight, setLatestWeight] = useState("");
+    const [pngFilename, setPngFilename] = useState("");
+    const [examId, setExamId] = useState("");
+    const [icuAdmit, setIcuAdmit] = useState("");
+    const [icuAdmitsCount, setIcuAdmitsCount] = useState("");
+    const [mortality, setMortality] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -36,53 +38,53 @@ function CreateExam() {
             exam_id: examId,
             icu_admit: icuAdmit,
             icu_admits_count: icuAdmitsCount,
-            mortality: mortality
+            mortality: mortality,
         };
-        const result = await sendRequest('users', 'POST', newExam);
+        const result = await sendRequest("users", "POST", newExam);
         if (result) {
-            console.log('Exam created:', result);
+            console.log("Exam created:", result);
             fetchExams();
-            navigate('/admin');
+            navigate("/admin");
         }
     };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         switch (name) {
-            case 'medicalRecordNumber':
+            case "medicalRecordNumber":
                 setMedicalRecordNumber(value);
                 break;
-            case 'age':
+            case "age":
                 setAge(value);
                 break;
-            case 'sex':
+            case "sex":
                 setSex(value);
                 break;
-            case 'proNouns':
+            case "proNouns":
                 setProNouns(value);
                 break;
-            case 'zipCode':
+            case "zipCode":
                 setZipCode(value);
                 break;
-            case 'latestBmi':
+            case "latestBmi":
                 setLatestBmi(value);
                 break;
-            case 'latestWeight':
+            case "latestWeight":
                 setLatestWeight(value);
                 break;
-            case 'pngFilename':
+            case "pngFilename":
                 setPngFilename(value);
                 break;
-            case 'examId':
+            case "examId":
                 setExamId(value);
                 break;
-            case 'icuAdmit':
+            case "icuAdmit":
                 setIcuAdmit(value);
                 break;
-            case 'icuAdmitsCount':
+            case "icuAdmitsCount":
                 setIcuAdmitsCount(value);
                 break;
-            case 'mortality':
+            case "mortality":
                 setMortality(value);
                 break;
             default:
@@ -123,7 +125,9 @@ function CreateExam() {
                             value={zipCode}
                             onChange={handleChange}
                         />
-                        <label htmlFor="icuAdmitsCount">ICU Admits Count:</label>
+                        <label htmlFor="icuAdmitsCount">
+                            ICU Admits Count:
+                        </label>
                         <input
                             type="number"
                             id="icuAdmitsCount"
@@ -133,7 +137,12 @@ function CreateExam() {
                         />
 
                         <label htmlFor="sex">Sex:</label>
-                        <select id="sex" name="sex" value={sex} onChange={handleChange}>
+                        <select
+                            id="sex"
+                            name="sex"
+                            value={sex}
+                            onChange={handleChange}
+                        >
                             <option value="">Select</option>
                             <option value="M">Male</option>
                             <option value="F">Female</option>
@@ -141,7 +150,12 @@ function CreateExam() {
                         </select>
 
                         <label htmlFor="proNouns">Pronouns:</label>
-                        <select id="proNouns" name="proNouns" value={proNouns} onChange={handleChange}>
+                        <select
+                            id="proNouns"
+                            name="proNouns"
+                            value={proNouns}
+                            onChange={handleChange}
+                        >
                             <option value="">Select</option>
                             <option value="He/Him">He/Him</option>
                             <option value="She/Her">She/Her</option>
@@ -189,14 +203,24 @@ function CreateExam() {
                         />
 
                         <label htmlFor="icuAdmit">ICU Admit:</label>
-                        <select id="icuAdmit" name="icuAdmit" value={icuAdmit} onChange={handleChange}>
+                        <select
+                            id="icuAdmit"
+                            name="icuAdmit"
+                            value={icuAdmit}
+                            onChange={handleChange}
+                        >
                             <option value="">Select</option>
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
                         </select>
 
                         <label htmlFor="mortality">Mortality:</label>
-                        <select id="mortality" name="mortality" value={mortality} onChange={handleChange}>
+                        <select
+                            id="mortality"
+                            name="mortality"
+                            value={mortality}
+                            onChange={handleChange}
+                        >
                             <option value="">Select</option>
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
@@ -205,8 +229,16 @@ function CreateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn add-exam-btn">Add Exam</button>
-                    <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
+                    <button type="submit" className="btn add-exam-btn">
+                        Add Exam
+                    </button>
+                    <button
+                        type="button"
+                        className="btn cancel-btn"
+                        onClick={() => navigate("/admin")}
+                    >
+                        Cancel
+                    </button>
                 </div>
             </form>
         </div>
