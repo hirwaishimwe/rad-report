@@ -7,8 +7,8 @@ import useApi from'../../hooks/useApi';
 function ExamsTable({ exams, isAdmin }) {
   const { fetchExams } = useContext(ExamContext);
   const navigate = useNavigate();
-  const { sendRequest } = useApi(); // Assuming useApi returns an object with a sendRequest function
-
+  const { sendRequest } = useApi(); 
+  
   function handleUpdate(id) {
     navigate(`/update-exam/${id}`);
   }
@@ -16,8 +16,7 @@ function ExamsTable({ exams, isAdmin }) {
   async function handleDelete(id) {
     const response = await sendRequest(`users/${id}`, 'DELETE');
     if (response) {
-      console.log(response);
-      fetchExams(); // Refresh the exams list after deletion
+      fetchExams(); 
     }
   }
 
