@@ -1,0 +1,210 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.1",
+        "title": "Radiology Report API",
+        "description": "Built and maintained by S.W.I.F.T Team 6"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "API endpoints"
+        }
+    ],
+    "paths": {
+        "/api": {
+            "get": {
+                "description": "Basic path",
+                "responses": {
+                    "default": {
+                        "description": "Expect a 200"
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "post": {
+                "description": "Used to fetch all user data",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "age": {
+                                        "example": "number"
+                                    },
+                                    "medical_record_number": {
+                                        "example": "string"
+                                    },
+                                    "sex": {
+                                        "example": "string"
+                                    },
+                                    "pro_nouns": {
+                                        "example": "string"
+                                    },
+                                    "zip_code": {
+                                        "example": "string"
+                                    },
+                                    "latest_bmi": {
+                                        "example": "number"
+                                    },
+                                    "latest_weight": {
+                                        "example": "number"
+                                    },
+                                    "png_filename": {
+                                        "example": "string"
+                                    },
+                                    "exam_id": {
+                                        "example": "string"
+                                    },
+                                    "icu_admit": {
+                                        "example": "number"
+                                    },
+                                    "mortality": {
+                                        "example": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/api/users/{userId}": {
+            "get": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "patch": {
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "userId",
+
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "age": {
+                                        "example": "number"
+                                    },
+                                    "medical_record_number": {
+                                        "example": "string"
+                                    },
+                                    "sex": {
+                                        "example": "string"
+                                    },
+                                    "pro_nouns": {
+                                        "example": "string"
+                                    },
+                                    "zip_code": {
+                                        "example": "string"
+                                    },
+                                    "latest_bmi": {
+                                        "example": "number"
+                                    },
+                                    "latest_weight": {
+                                        "example": "number"
+                                    },
+                                    "png_filename": {
+                                        "example": "string"
+                                    },
+                                    "exam_id": {
+                                        "example": "string"
+                                    },
+                                    "icu_admit": {
+                                        "example": "number"
+                                    },
+                                    "mortality": {
+                                        "example": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    }
+}
