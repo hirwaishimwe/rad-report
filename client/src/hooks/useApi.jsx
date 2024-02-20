@@ -10,7 +10,8 @@ const useApi = () => {
             const options = {
                 method: method,
                 headers: {
-                    "Content-Type": "application/json",
+                    "access-control-allow-origin": "*",
+                    "Content-type": "application/json; charset=UTF-8",
                 },
                 body: body ? JSON.stringify(body) : null,
             };

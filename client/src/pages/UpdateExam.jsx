@@ -1,14 +1,12 @@
 import "./UpdateExam.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import { Button, Spinner } from "flowbite-react";
+import { ToastContainer, toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { ExamContext } from "../context/ExamContext";
-import { HiFire } from "react-icons/hi";
-import { Toast } from "flowbite-react";
-import { toast } from "react-toastify";
+import { Spinner } from "flowbite-react";
 import useApi from "../hooks/useApi";
 import { useContext } from "react";
 
@@ -67,27 +65,14 @@ function UpdateExam() {
         }));
     };
     const handleUpdateAndNavigate = async () => {
-        setIsLoading(true); // Set loading state to true before navigating
+        setIsLoading(true);
         await fetchExams();
         setTimeout(() => {
-            setIsLoading(false); // Set loading state to false after 2 seconds
+            setIsLoading(false);
             navigate("/admin");
-        }, 2000); // Wait for 2000 milliseconds (2 seconds) before navigating
+        }, 3000); // Wait for 3ms
     };
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     const updatedExam = await sendRequest(
-    //         `users/${examId}`,
-    //         "PATCH",
-    //         examData,
-    //     );
-    //     if (updatedExam) {
-    //         console.log("Success:", updatedExam);
-    //         handleUpdateAndNavigate();
-    //     }
-    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -262,6 +247,7 @@ function UpdateExam() {
                     >
                         Cancel
                     </button>
+                    <ToastContainer />
                 </div>
             </form>
         </div>
