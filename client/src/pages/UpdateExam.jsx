@@ -1,19 +1,17 @@
 import "./UpdateExam.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import { ToastContainer, toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { ExamContext } from "../context/ExamContext";
-import { Spinner } from "flowbite-react";
 import useApi from "../hooks/useApi";
 import { useContext } from "react";
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
     const { sendRequest } = useApi();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const { examId } = useParams();
     const navigate = useNavigate();
     const [examData, setExamData] = useState({
@@ -70,7 +68,7 @@ function UpdateExam() {
         setTimeout(() => {
             setIsLoading(false);
             navigate("/admin");
-        }, 3000); // Wait for 3ms
+        }, 3000);
     };
 
     const handleSubmit = async (e) => {
@@ -85,15 +83,9 @@ function UpdateExam() {
             if (updatedExam) {
                 console.log("Success:", updatedExam);
                 handleUpdateAndNavigate();
-                toast.success("Exam updated successfully", {
-                    position: "top-right",
-                });
             }
         } catch (error) {
             console.error("Error updating exam:", error.message);
-            toast.error("Error updating exam. Please try again later.", {
-                position: "top-right",
-            });
         }
     };
 
@@ -229,15 +221,9 @@ function UpdateExam() {
                         disabled={isLoading}
                     >
                         {isLoading ? (
-                            <>
-                                <Spinner
-                                    aria-label="Spinner button example"
-                                    size="sm"
-                                />
-                                <span className="pl-3">Updating...</span>
-                            </>
+                            <span className="pl-3">Updating...</span>
                         ) : (
-                            "Update Exam"
+                            "Update Exam "
                         )}
                     </button>
                     <button
@@ -247,7 +233,6 @@ function UpdateExam() {
                     >
                         Cancel
                     </button>
-                    <ToastContainer />
                 </div>
             </form>
         </div>

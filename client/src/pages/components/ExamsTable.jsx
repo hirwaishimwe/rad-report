@@ -5,6 +5,8 @@ import React, { useContext, useState } from "react";
 
 import { ExamContext } from "../../context/ExamContext";
 import { LuChevronsUpDown } from "react-icons/lu";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { TbEdit } from "react-icons/tb";
 import useApi from "../../hooks/useApi";
 
 function ExamsTable({ exams, isAdmin }) {
@@ -48,10 +50,10 @@ function ExamsTable({ exams, isAdmin }) {
     });
 
     return (
-        <div className="overflow-x-auto">
-            <div className="w-full overflow-hidden overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200 ">
-                    <thead>
+        <div className="overflow-x-auto max-w-9xl ">
+            <div className="max-w-9xl overflow-hidden overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-400 ">
+                    <thead className="bg-gray-900">
                         <tr>
                             <th
                                 onClick={() =>
@@ -191,7 +193,7 @@ function ExamsTable({ exams, isAdmin }) {
                                 />
                             </th>
                             {isAdmin && (
-                                <th className="px-6 py-3 bg-gray-50"></th>
+                                <th className="px-6 py-3 bg-gray-200"></th>
                             )}
                         </tr>
                     </thead>
@@ -245,7 +247,7 @@ function ExamsTable({ exams, isAdmin }) {
                                         <img
                                             src={png_filename}
                                             alt={`Exam for ${medical_record_number}`}
-                                            className="h-12 w-12 rounded-full"
+                                            className="h-12 w-12 rounded"
                                         />
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
@@ -284,7 +286,10 @@ function ExamsTable({ exams, isAdmin }) {
                                                 type="button"
                                                 className="inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                             >
-                                                Update
+                                                Update{" "}
+                                                <span className="mx-1">
+                                                    <TbEdit />
+                                                </span>
                                             </button>
                                             <button
                                                 onClick={() =>
@@ -293,7 +298,11 @@ function ExamsTable({ exams, isAdmin }) {
                                                 type="button"
                                                 className="inline-flex items-center mx-2 px-7 py-2.5 text-sm font-medium text-center text-white bg-red-700  hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                                             >
-                                                Delete
+                                                Delete{" "}
+                                                <span className="mx-1">
+                                                    {" "}
+                                                    <RiDeleteBinLine />
+                                                </span>
                                             </button>
                                         </td>
                                     )}
