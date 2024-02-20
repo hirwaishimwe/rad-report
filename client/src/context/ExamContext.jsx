@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useMemo, useState } from "react";
 
 import useApi from "../hooks/useApi"; // Adjust the path as necessary
 
@@ -28,8 +28,18 @@ export const ExamProvider = ({ children }) => {
         fetchExams();
     }, []);
 
+    const contextValue = useMemo(
+        () => ({
+            examsData,
+            loading,
+            error,
+            fetchExams,
+        }),
+        [examsData, loading, error, fetchExams],
+    );
+
     return (
-        <ExamContext.Provider value={{ examsData, loading, error, fetchExams }}>
+        <ExamContext.Provider value={contextValue}>
             {children}
         </ExamContext.Provider>
     );

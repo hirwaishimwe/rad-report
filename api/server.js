@@ -6,7 +6,6 @@ import { dirname, join } from "path";
 import express, { static as expressStatic } from "express";
 import { format, transports } from "winston";
 
-import mongoose from 'mongoose';
 import { MongoDB } from "winston-mongodb";
 import bodyParser from "body-parser";
 import chalk from "chalk";
@@ -17,6 +16,7 @@ import errorHandler from "./middleware/errorMiddleWare.js";
 import expressWinston from "express-winston";
 import { fileURLToPath } from "url";
 import helmet from "helmet";
+import mongoose from "mongoose";
 import passport from "passport";
 import rateLimit from "express-rate-limit";
 import router from "./routes/indexRoute.js";
@@ -47,7 +47,7 @@ app.use(passport.initialize());
 app.use(passport.authenticate("session"));
 
 const RateLimiterHandler = rateLimit({
-    windowMs: 5 * 60 * 1000, // 100 request per 5 minutes
+    windowMs: 1 * 60 * 1000, // 100 request per 5 minutes
     max: 100,
 });
 
@@ -131,18 +131,35 @@ async function connect() {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log(chalk.cyan('Database connection successful'));
+        console.log(chalk.cyan("Database connection successful"));
     } catch (e) {
-        console.error(chalk.bgRedBright('Error connecting to database:', e.message));
+        console.error(
+            chalk.bgRedBright("Error connecting to database:", e.message),
+        );
     }
 }
 
-connect().then(() => {
-    app.listen(PORT, () => {
-        console.info(chalk.green(`Server is running on http://localhost:${PORT}/api`));
-        console.info(chalk.yellow(`DATABASE ------> http://localhost:${PORT}/api/users`));
-        console.info(chalk.blue(`API DOC ------> http://localhost:${PORT}`));
+connect()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.info(
+                chalk.green(
+                    `Server is running on http://localhost:${PORT}/api`,
+                ),
+            );
+            console.info(
+                chalk.yellow(
+                    `DATABASE ------> http://localhost:${PORT}/api/users`,
+                ),
+            );
+            console.info(
+                chalk.blue(`API DOC ------> http://localhost:${PORT}`),
+            );
+        });
+    })
+    .catch((e) => {
+        console.error(
+            chalk.bgRedBright("Error starting the server:"),
+            e.message,
+        );
     });
-}).catch((e) => {
-    console.error(chalk.bgRedBright("Error starting the server:"), e.message);
-});
