@@ -75,14 +75,14 @@ function UpdateExam() {
     fetchExamData();
   }, [examId, examsData]);
 
-    return (
-        <div className="update-exam-container">
-            <h2>Update Exam</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-content">
-                    <div className="form-column">
-                        <label htmlFor="patientId">Patient ID:</label>
-                        <input type="text" id="patientId" name="medical_record_number" value={examData.medical_record_number} onChange={handleChange} />
+    // return (
+    //     <div className="update-exam-container">
+    //         <h2>Update Exam</h2>
+    //         <form onSubmit={handleSubmit}>
+    //             <div className="form-content">
+    //                 <div className="form-column">
+    //                     <label htmlFor="patientId">Patient ID:</label>
+    //                     <input type="text" id="patientId" name="medical_record_number" value={examData.medical_record_number} onChange={handleChange} />
 
   return (
     <div className="update-exam-container">
@@ -192,6 +192,6 @@ function UpdateExam() {
       </form>
     </div>
   );
-}
+
 
 export default UpdateExam;
