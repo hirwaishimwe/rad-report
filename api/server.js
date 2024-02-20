@@ -23,6 +23,7 @@ import router from "./routes/indexRoute.js";
 import session from "express-session";
 import swaggerDoc from "./routes/swagger-output.json" assert {type: "json"};
 import swaggerui from "swagger-ui-express";
+import {error} from "console";
 
 dotenv.config();
 
