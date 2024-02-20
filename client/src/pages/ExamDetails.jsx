@@ -13,9 +13,9 @@ function ExamDetails() {
         return <div>Exam not found</div>;
     }
     return (
-        <>
+        <div>
             <PatientExamInfo exam={exam} />
-        </>
+        </div>
     );
 }
 

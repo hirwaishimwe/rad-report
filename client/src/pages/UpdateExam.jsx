@@ -1,15 +1,21 @@
 import "./UpdateExam.css";
+import "react-toastify/dist/ReactToastify.css";
 
+import { Button, Spinner } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { ExamContext } from "../context/ExamContext";
+import { HiFire } from "react-icons/hi";
+import { Toast } from "flowbite-react";
+import { toast } from "react-toastify";
 import useApi from "../hooks/useApi";
 import { useContext } from "react";
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
     const { sendRequest } = useApi();
+    const [isLoading, setIsLoading] = useState(false);
     const { examId } = useParams();
     const navigate = useNavigate();
     const [examData, setExamData] = useState({
@@ -61,21 +67,48 @@ function UpdateExam() {
         }));
     };
     const handleUpdateAndNavigate = async () => {
+        setIsLoading(true); // Set loading state to true before navigating
         await fetchExams();
-        navigate("/admin");
+        setTimeout(() => {
+            setIsLoading(false); // Set loading state to false after 2 seconds
+            navigate("/admin");
+        }, 2000); // Wait for 2000 milliseconds (2 seconds) before navigating
     };
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+
+    //     const updatedExam = await sendRequest(
+    //         `users/${examId}`,
+    //         "PATCH",
+    //         examData,
+    //     );
+    //     if (updatedExam) {
+    //         console.log("Success:", updatedExam);
+    //         handleUpdateAndNavigate();
+    //     }
+    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const updatedExam = await sendRequest(
-            `users/${examId}`,
-            "PATCH",
-            examData,
-        );
-        if (updatedExam) {
-            console.log("Success:", updatedExam);
-            handleUpdateAndNavigate();
+        try {
+            const updatedExam = await sendRequest(
+                `users/${examId}`,
+                "PATCH",
+                examData,
+            );
+            if (updatedExam) {
+                console.log("Success:", updatedExam);
+                handleUpdateAndNavigate();
+                toast.success("Exam updated successfully", {
+                    position: "top-right",
+                });
+            }
+        } catch (error) {
+            console.error("Error updating exam:", error.message);
+            toast.error("Error updating exam. Please try again later.", {
+                position: "top-right",
+            });
         }
     };
 
@@ -205,8 +238,22 @@ function UpdateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn update-exam-btn">
-                        Update Exam
+                    <button
+                        type="submit"
+                        className="btn update-exam-btn"
+                        disabled={isLoading}
+                    >
+                        {isLoading ? (
+                            <>
+                                <Spinner
+                                    aria-label="Spinner button example"
+                                    size="sm"
+                                />
+                                <span className="pl-3">Updating...</span>
+                            </>
+                        ) : (
+                            "Update Exam"
+                        )}
                     </button>
                     <button
                         type="button"

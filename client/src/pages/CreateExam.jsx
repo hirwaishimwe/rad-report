@@ -3,6 +3,7 @@ import "./CreateExam.css";
 import { useContext, useState } from "react";
 
 import { ExamContext } from "../context/ExamContext";
+import { Spinner } from "flowbite-react";
 import useApi from "../hooks/useApi";
 import { useNavigate } from "react-router-dom";
 
@@ -23,8 +24,10 @@ function CreateExam() {
     const [icuAdmit, setIcuAdmit] = useState("");
     const [icuAdmitsCount, setIcuAdmitsCount] = useState("");
     const [mortality, setMortality] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (event) => {
+        setLoading(true);
         event.preventDefault();
         const newExam = {
             medical_record_number: medicalRecordNumber,
@@ -46,6 +49,7 @@ function CreateExam() {
             fetchExams();
             navigate("/admin");
         }
+        setLoading(false);
     };
 
     const handleChange = (e) => {
@@ -119,7 +123,8 @@ function CreateExam() {
 
                         <label htmlFor="zipCode">Zip Code:</label>
                         <input
-                            type="text"
+                            type="number"
+                            maxLength={5}
                             id="zipCode"
                             name="zipCode"
                             value={zipCode}
@@ -229,16 +234,22 @@ function CreateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn add-exam-btn">
-                        Add Exam
-                    </button>
-                    <button
-                        type="button"
-                        className="btn cancel-btn"
-                        onClick={() => navigate("/admin")}
-                    >
-                        Cancel
-                    </button>
+                    {loading ? (
+                        <Spinner aria-label="Loading" />
+                    ) : (
+                        <>
+                            <button type="submit" className="btn add-exam-btn">
+                                Add Exam
+                            </button>
+                            <button
+                                type="button"
+                                className="btn cancel-btn"
+                                onClick={() => navigate("/admin")}
+                            >
+                                Cancel
+                            </button>
+                        </>
+                    )}
                 </div>
             </form>
         </div>

@@ -2,6 +2,7 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
+        content: ["node_modules/flowbite-react/lib/esm/**/*.js"],
         extend: {
             fontSize: {
                 lg: "22px",
@@ -23,5 +24,5 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: ["flowbite/plugin"],
 };

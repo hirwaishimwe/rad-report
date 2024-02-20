@@ -1,6 +1,12 @@
-import React, { createContext, useEffect, useMemo, useState } from "react";
+import React, {
+    createContext,
+    useCallback,
+    useEffect,
+    useMemo,
+    useState,
+} from "react";
 
-import useApi from "../hooks/useApi"; // Adjust the path as necessary
+import useApi from "../hooks/useApi";
 
 export const ExamContext = createContext();
 
@@ -10,7 +16,7 @@ export const ExamProvider = ({ children }) => {
     const [error, setError] = useState(null);
     const { sendRequest } = useApi();
 
-    const fetchExams = async () => {
+    const fetchExams = useCallback(async () => {
         setLoading(true);
         try {
             const data = await sendRequest("users", "GET");
@@ -22,7 +28,7 @@ export const ExamProvider = ({ children }) => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [sendRequest]);
 
     useEffect(() => {
         fetchExams();
@@ -37,6 +43,10 @@ export const ExamProvider = ({ children }) => {
         }),
         [examsData, loading, error, fetchExams],
     );
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <ExamContext.Provider value={contextValue}>

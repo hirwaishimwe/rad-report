@@ -1,5 +1,3 @@
-import "./admin.css";
-
 import React, { useContext } from "react";
 
 import { ExamContext } from "../context/ExamContext";
@@ -13,6 +11,7 @@ function Admin() {
     const handleCreateNewExam = () => {
         navigate("/create-exam");
     };
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -24,11 +23,13 @@ function Admin() {
     if (!examsData) {
         return <div>No exams found</div>;
     }
+
     return (
-        <div class="admin">
+        <div className="flex flex-col items-center">
             <button
-                className="btn create-exam-btn"
                 onClick={handleCreateNewExam}
+                type="button"
+                className="inline-flex items-center my-5 px-7 py-2.5 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
                 Create Exam
             </button>
