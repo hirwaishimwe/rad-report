@@ -49,7 +49,7 @@ const navListMenuItems = [
         id: 4,
         title: "Docs",
         href: "http://localhost:8000/",
-        description: "Find the perfect solution for your needs.",
+        description: "Backend API documentation",
         icon: IoDocumentTextOutline,
     },
 ];
