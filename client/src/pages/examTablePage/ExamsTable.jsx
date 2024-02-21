@@ -117,14 +117,6 @@ function ExamsTable({ exams, isAdmin }) {
                 </div>
             </form>
 
-            {loading && <p>Loading...</p>}
-            <div>
-                {searchResults.map((exam) => (
-                    // Render search results here
-                    <div key={exam.id}>{/* Display exam information */}</div>
-                ))}
-            </div>
-
             <div className="max-w-9xl overflow-hidden overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-400 ">
                     <thead className="bg-gray-900">
