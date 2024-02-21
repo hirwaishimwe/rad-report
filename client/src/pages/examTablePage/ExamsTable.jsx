@@ -10,6 +10,29 @@ import { ExamContext } from "../../context/ExamContext";
 import useApi from "../../hooks/useApi";
 
 function ExamsTable({ exams, isAdmin }) {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const response = await sendRequest("users/search", "POST", {
+                medical_record_number: searchQuery,
+            });
+            setSearchResults(response);
+        } catch (error) {
+            console.error("Error searching exams:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
+
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
     const { sendRequest } = useApi();
@@ -51,6 +74,57 @@ function ExamsTable({ exams, isAdmin }) {
 
     return (
         <div className="overflow-x-auto max-w-9xl ">
+            <form className="max-w-md ml-auto my-2" onSubmit={handleSearch}>
+                <label
+                    htmlFor="default-search"
+                    className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >
+                    Search
+                </label>
+                <div className="relative">
+                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg
+                            className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                            />
+                        </svg>
+                    </div>
+                    <input
+                        type="search"
+                        id="default-search"
+                        className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search MRN or Patient ID"
+                        value={searchQuery}
+                        onChange={handleChange}
+                        required
+                    />
+                    <button
+                        type="submit"
+                        className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            {loading && <p>Loading...</p>}
+            <div>
+                {searchResults.map((exam) => (
+                    // Render search results here
+                    <div key={exam.id}>{/* Display exam information */}</div>
+                ))}
+            </div>
+
             <div className="max-w-9xl overflow-hidden overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-400 ">
                     <thead className="bg-gray-900">
@@ -284,7 +358,7 @@ function ExamsTable({ exams, isAdmin }) {
                                                     handleUpdate(_id)
                                                 }
                                                 type="button"
-                                                className="inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                className="inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-green-700  hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                                             >
                                                 Update{" "}
                                                 <span className="mx-1">
