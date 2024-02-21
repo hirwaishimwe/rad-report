@@ -18,6 +18,7 @@ import { FaChevronDown, FaXRay } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import React from "react";
 import { RiAdminLine } from "react-icons/ri";
@@ -43,6 +44,13 @@ const navListMenuItems = [
         href: "/admin",
         description: "Find the perfect solution for your needs.",
         icon: RiAdminLine,
+    },
+    {
+        id: 4,
+        title: "Docs",
+        href: "http://localhost:8000/",
+        description: "Find the perfect solution for your needs.",
+        icon: IoDocumentTextOutline,
     },
 ];
 
