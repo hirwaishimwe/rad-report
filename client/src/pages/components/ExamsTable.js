@@ -101,3 +101,4 @@ function ExamsTable({ exams, isAdmin }) {
   );
 }
 export default ExamsTable;
+

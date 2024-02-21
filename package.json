@@ -1,0 +1,14 @@
+{
+    "name": "rad-report",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "concurrently \"cd client && pnpm start  \" \"cd api && pnpm dev  \""
+    },
+    "keywords": [],
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

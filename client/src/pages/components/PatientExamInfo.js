@@ -53,3 +53,4 @@ const PatientExamInfo = ({ exam }) => {
 };
 
 export default PatientExamInfo;
+
