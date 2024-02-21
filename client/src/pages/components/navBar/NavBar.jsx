@@ -29,7 +29,7 @@ function NavListMenu() {
             <MenuItem key={id}>
                 <Link to={href} onClick={() => setIsMobileMenuOpen(false)}>
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center justify-center bg-blue-gray-50 p-2 rounded-md">
+                        <div className="flex items-center justify-center bg-blue-gray-50 p-2 ">
                             <Icon
                                 strokeWidth={2}
                                 className="h-6 text-gray-900 w-6"
