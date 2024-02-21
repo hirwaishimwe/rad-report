@@ -17,6 +17,7 @@ function NavBar() {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
+      console.log(data);
       setExams(data);
     }
   };
@@ -28,7 +29,7 @@ function NavBar() {
         exam => exam.medical_record_number === searchExam
       );
       if (examFound) {
-        navigate(`/exam/${examFound._id}`);
+        navigate(`/patient/${examFound.medical_record_number}`);
       } else {
         console.log("No exam found with that ID");
       }

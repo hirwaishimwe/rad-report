@@ -73,5 +73,5 @@ If you have any questions or need support, feel free to reach out to one of the 
 - Hirwa Ishimwe | hirwaishimwe2@gmail.com
 - Christopher Alphonse | christopheralphonse96@gmail.com
 - Derinell Rojas | droja@bu.edu
-- Rifflene Altidor |
+- Rifflene Altidor | raltidor@falcon.bentley.edu
 - Jerison Feliz | jerisondev@gmail.com
