@@ -30,7 +30,7 @@ function ExamsTable({ exams, isAdmin }) {
         if (response) {
             toast.warn(`Exam ${id} has been deleted!`, {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true, 
@@ -42,7 +42,7 @@ function ExamsTable({ exams, isAdmin }) {
                 setTimeout(() => {
                     navigate("/admin");
                     fetchExams();
-                  }, 1500);
+                  }, 3000);
 
         }
     }
@@ -323,7 +323,7 @@ function ExamsTable({ exams, isAdmin }) {
                                                     <RiDeleteBinLine />
                                                     <ToastContainer
                                                         position="top-right"
-                                                        autoClose={5000}
+                                                        autoClose={3000}
                                                         hideProgressBar={false}
                                                         newestOnTop={false}
                                                         closeOnClick
