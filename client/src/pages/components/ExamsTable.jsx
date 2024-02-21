@@ -9,6 +9,9 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { TbEdit } from "react-icons/tb";
 import useApi from "../../hooks/useApi";
 
+import {ToastContainer, toast, Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function ExamsTable({ exams, isAdmin }) {
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
@@ -25,7 +28,22 @@ function ExamsTable({ exams, isAdmin }) {
     async function handleDelete(id) {
         const response = await sendRequest(`users/${id}`, "DELETE");
         if (response) {
-            fetchExams();
+            toast.warn(`Exam ${id} has been deleted!`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true, 
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+                setTimeout(() => {
+                    navigate("/admin");
+                    fetchExams();
+                  }, 1500);
+
         }
     }
     const handleSort = (column) => {
@@ -292,6 +310,7 @@ function ExamsTable({ exams, isAdmin }) {
                                                 </span>
                                             </button>
                                             <button
+                                            
                                                 onClick={() =>
                                                     handleDelete(_id)
                                                 }
@@ -302,8 +321,25 @@ function ExamsTable({ exams, isAdmin }) {
                                                 <span className="mx-1">
                                                     {" "}
                                                     <RiDeleteBinLine />
+                                                    <ToastContainer
+                                                        position="top-right"
+                                                        autoClose={5000}
+                                                        hideProgressBar={false}
+                                                        newestOnTop={false}
+                                                        closeOnClick
+                                                        rtl={false}
+                                                        pauseOnFocusLoss
+                                                        draggable
+                                                        pauseOnHover
+                                                        theme="light"
+                                                        transition="Bounce"
+                                                    />
+{/* Same as */}
+<ToastContainer />
                                                 </span>
+                                                
                                             </button>
+                                            
                                         </td>
                                     )}
                                 </tr>
