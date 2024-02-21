@@ -2,10 +2,10 @@ import "./CreateExam.css";
 
 import { useContext, useState } from "react";
 
-import { ExamContext } from "../context/ExamContext";
 import { Spinner } from "flowbite-react";
-import useApi from "../hooks/useApi";
 import { useNavigate } from "react-router-dom";
+import { ExamContext } from "../../context/ExamContext";
+import useApi from "../../hooks/useApi";
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
