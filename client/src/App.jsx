@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
@@ -8,7 +9,7 @@ import CreateExam from "./pages/CreateExam";
 import ExamDetails from "./pages/ExamDetails";
 import { ExamProvider } from "./context/ExamContext";
 import Exams from "./pages/Exams";
-import Navbar from "./pages/components/NavBar";
+import { NavbarWithMegaMenu } from "./pages/components/NavBar";
 import PageNotFound from "./PageNotFound";
 import PatientDetails from "./pages/PatientDetails";
 import UpdateExam from "./pages/UpdateExam";
@@ -17,7 +18,7 @@ function App() {
     return (
         <ExamProvider>
             <div className="App">
-                <Navbar />
+                <NavbarWithMegaMenu />
                 <Routes>
                     <Route path="/" element={<Exams />} />
                     <Route path="/about" element={<AboutUs />} />

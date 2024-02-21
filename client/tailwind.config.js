@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-        content: ["node_modules/flowbite-react/lib/esm/**/*.js"],
         extend: {
             fontSize: {
                 lg: "22px",
@@ -23,6 +25,7 @@ module.exports = {
                 custom: "1000px",
             },
         },
+        content: ["node_modules/flowbite-react/lib/esm/**/*.js"],
     },
     plugins: ["flowbite/plugin"],
-};
+});
