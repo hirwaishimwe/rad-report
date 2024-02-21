@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { ExamContext } from "../../context/ExamContext";
-import ExamsTable from "../components/exam/ExamDetails";
+import ExamsTable from "../../pages/examTablePage/ExamsTable";
 
 function Admin() {
     const { examsData, loading, error } = useContext(ExamContext);
