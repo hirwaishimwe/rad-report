@@ -102,7 +102,7 @@ function ExamsTable({ exams, isAdmin }) {
                     <input
                         type="search"
                         id="default-search"
-                        className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        className="block border border-gray-300 focus:border-gray-300 focus:ring-gray-300 w-full p-4 ps-10 text-sm text-gray-900 bg-gray-50 dark:placeholder-gray-400 dark:text-white border-transparent focus:border-transparent focus:ring-0"
                         placeholder="Search MRN or Patient ID"
                         value={searchQuery}
                         onChange={handleChange}
@@ -110,7 +110,7 @@ function ExamsTable({ exams, isAdmin }) {
                     />
                     <button
                         type="submit"
-                        className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700"
                     >
                         Search
                     </button>
@@ -152,7 +152,7 @@ function ExamsTable({ exams, isAdmin }) {
                             </th>
                             <th
                                 onClick={() => handleSort("age")}
-                                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointertext-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                             >
                                 Age
                                 <LuChevronsUpDown
