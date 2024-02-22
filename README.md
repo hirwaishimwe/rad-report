@@ -65,6 +65,13 @@ PORT=8000
 NODE_ENV=DEVELOPMENT
 ```
 
+- Create a .env file in the client directory and specify the required environment variables like database connection details and other settings.
+- Add the following configurations:
+
+```plaintext
+REACT_APP_API_URL=http://localhost:8000/api
+```
+
 ## Support
 
 If you have any questions or need support, feel free to reach out to one of the developers.
