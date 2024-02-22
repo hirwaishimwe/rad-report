@@ -1,7 +1,7 @@
 {
-    "name": "My App",
-    "short_name": "MyApp",
-    "description": "A simple web app",
+    "name": "rad-report",
+    "short_name": "rad-report",
+    "description": "rad-report",
     "icons": [
         {
             "src": "/path/to/icon.png",

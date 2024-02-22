@@ -2,10 +2,9 @@ import "./CreateExam.css";
 
 import { useContext, useState } from "react";
 
-import { ExamContext } from "../context/ExamContext";
-import { Spinner } from "flowbite-react";
-import useApi from "../hooks/useApi";
 import { useNavigate } from "react-router-dom";
+import { ExamContext } from "../../context/ExamContext";
+import useApi from "../../hooks/useApi";
 
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
@@ -234,22 +233,16 @@ function CreateExam() {
                 </div>
 
                 <div className="form-actions">
-                    {loading ? (
-                        <Spinner aria-label="Loading" />
-                    ) : (
-                        <>
-                            <button type="submit" className="btn add-exam-btn">
-                                Add Exam
-                            </button>
-                            <button
-                                type="button"
-                                className="btn cancel-btn"
-                                onClick={() => navigate("/admin")}
-                            >
-                                Cancel
-                            </button>
-                        </>
-                    )}
+                    <button type="submit" className="btn add-exam-btn">
+                        Add Exam
+                    </button>
+                    <button
+                        type="button"
+                        className="btn cancel-btn"
+                        onClick={() => navigate("/admin")}
+                    >
+                        Cancel
+                    </button>
                 </div>
             </form>
         </div>

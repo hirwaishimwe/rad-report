@@ -13,46 +13,13 @@ import {
     Navbar,
     Typography,
 } from "@material-tailwind/react";
-import { FaChevronDown, FaXRay } from "react-icons/fa";
 
+import React from "react";
+import { FaChevronDown } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { HiUserGroup } from "react-icons/hi2";
-import { IoDocumentTextOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import React from "react";
-import { RiAdminLine } from "react-icons/ri";
-
-const navListMenuItems = [
-    {
-        id: 1,
-        title: "Exams",
-        href: "/",
-        description: "Look at all the data, from the database",
-        icon: FaXRay,
-    },
-    {
-        id: 2,
-        title: "About Us",
-        href: "/about",
-        description: "Meet and learn about our dedication",
-        icon: HiUserGroup,
-    },
-    {
-        id: 3,
-        title: "Admin",
-        href: "/admin",
-        description: "Find the perfect solution for your needs.",
-        icon: RiAdminLine,
-    },
-    {
-        id: 4,
-        title: "Docs",
-        href: "http://localhost:8000/",
-        description: "Backend API documentation",
-        icon: IoDocumentTextOutline,
-    },
-];
+import { navListMenuItems } from "./navListMenuItems";
 
 function NavListMenu() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -62,7 +29,7 @@ function NavListMenu() {
             <MenuItem key={id}>
                 <Link to={href} onClick={() => setIsMobileMenuOpen(false)}>
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center justify-center bg-blue-gray-50 p-2 rounded-md">
+                        <div className="flex items-center justify-center bg-blue-gray-50 p-2 ">
                             <Icon
                                 strokeWidth={2}
                                 className="h-6 text-gray-900 w-6"
@@ -141,17 +108,6 @@ function NavListMenu() {
 function NavList() {
     return (
         <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-            <Typography
-                as="a"
-                href="/"
-                variant="small"
-                color="blue-gray"
-                className="font-medium"
-            >
-                <ListItem className="flex items-center gap-2 py-2 pr-4">
-                    Home
-                </ListItem>
-            </Typography>
             <NavListMenu />
         </List>
     );

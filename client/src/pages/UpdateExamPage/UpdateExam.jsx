@@ -1,17 +1,16 @@
-import "./UpdateExam.css";
 import "react-toastify/dist/ReactToastify.css";
+import "./UpdateExam.css";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { ExamContext } from "../context/ExamContext";
-import useApi from "../hooks/useApi";
-import { useContext } from "react";
+import { ExamContext } from "../../context/ExamContext";
+import useApi from "../../hooks/useApi";
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
     const { sendRequest } = useApi();
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const { examId } = useParams();
     const navigate = useNavigate();
     const [examData, setExamData] = useState({
