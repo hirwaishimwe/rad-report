@@ -2,17 +2,19 @@
 import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
+import {
+    AboutUs,
+    Admin,
+    CreateExam,
+    ExamDetails,
+    Exams,
+    PageNotFound,
+    PatientDetails,
+    UpdateExam,
+} from "./pages";
 
-import AboutUs from "./pages/AboutUs";
-import Admin from "./pages/Admin";
-import CreateExam from "./pages/CreateExam";
-import ExamDetails from "./pages/ExamDetails";
 import { ExamProvider } from "./context/ExamContext";
-import Exams from "./pages/Exams";
-import { NavbarWithMegaMenu } from "./pages/components/NavBar";
-import PageNotFound from "./PageNotFound";
-import PatientDetails from "./pages/PatientDetails";
-import UpdateExam from "./pages/UpdateExam";
+import { NavbarWithMegaMenu } from "./pages/components/navBar/NavBar";
 
 function App() {
     return (

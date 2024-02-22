@@ -2,9 +2,9 @@ import "./AboutUs.css";
 
 import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 
-import { FaGithub } from "react-icons/fa";
 import React from "react";
-import teamMembers from "./teamMembers";
+import { FaGithub } from "react-icons/fa";
+import teamMembers from "../data/teamMembers";
 
 function AboutUs() {
     return (
@@ -22,10 +22,7 @@ function AboutUs() {
                         Quaerat animi fugiat
                     </p>
                 </div>
-                <ul
-                    role="list"
-                    className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
-                >
+                <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                     {teamMembers.map(
                         ({ id, name, linkedin, email, image, role, git }) => (
                             <li key={id}>

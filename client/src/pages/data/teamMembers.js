@@ -1,9 +1,9 @@
-import ChristopherAlphonse from "./images/Christopher_Alphonse.jpg";
-import DerinellRojas from "./images/Derinell_Rojas.jpg";
-import DimitriLegaspi from "./images/Dimitri_Legaspi.jpg";
-import HirwaIshimwe from "./images/Hirwa_Ishimwe.jpg";
-import JerisonFeliz from "./images/Jerison_Feliz.jpg";
-import Rifflene from "./images/rifflene.png";
+import ChristopherAlphonse from "../images/Christopher_Alphonse.jpg";
+import DerinellRojas from "../images/Derinell_Rojas.jpg";
+import DimitriLegaspi from "../images/Dimitri_Legaspi.jpg";
+import HirwaIshimwe from "../images/Hirwa_Ishimwe.jpg";
+import JerisonFeliz from "../images/Jerison_Feliz.jpg";
+import Rifflene from "../images/rifflene.png";
 const teamMembers = [
     {
         id: 1,

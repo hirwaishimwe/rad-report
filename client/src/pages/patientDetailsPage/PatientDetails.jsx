@@ -1,26 +1,23 @@
-import "./PatientDetails.css"; // Import CSS file
+import "./PatientDetails.css";
 
 import React, { useContext } from "react";
 
-import { ExamContext } from "../context/ExamContext";
-import ExamsTable from "./components/ExamsTable";
 import { useParams } from "react-router-dom";
+import { ExamContext } from "../../context/ExamContext";
+import ExamsTable from "../../pages/examTablePage/ExamsTable";
 
 function PatientDetails() {
     const { patientId } = useParams();
     const { examsData } = useContext(ExamContext);
 
-    // Find the specific exam by matching medical_record_number with patientId
     const exam = examsData.find(
         (exam) => exam.medical_record_number === patientId,
     );
 
-    // Filter all exams related to the patientId
     const patientExams = examsData.filter(
         (exam) => exam && exam.medical_record_number === patientId,
     );
 
-    // Display a message if no exams are found for the patient
     if (patientExams.length === 0) {
         return <div>Patient Exams not found</div>;
     }

@@ -1,18 +1,41 @@
 "use client";
 
-import { Link, useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import { ExamContext } from "../../context/ExamContext";
 import { LuChevronsUpDown } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbEdit } from "react-icons/tb";
+import { ExamContext } from "../../context/ExamContext";
 import useApi from "../../hooks/useApi";
 
 import {ToastContainer, toast, Bounce} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ExamsTable({ exams, isAdmin }) {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const response = await sendRequest("users/search", "POST", {
+                medical_record_number: searchQuery,
+            });
+            setSearchResults(response);
+        } catch (error) {
+            console.error("Error searching exams:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
+
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
     const { sendRequest } = useApi();
@@ -69,6 +92,49 @@ function ExamsTable({ exams, isAdmin }) {
 
     return (
         <div className="overflow-x-auto max-w-9xl ">
+            <form className="max-w-md ml-auto my-2" onSubmit={handleSearch}>
+                <label
+                    htmlFor="default-search"
+                    className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >
+                    Search
+                </label>
+                <div className="relative">
+                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg
+                            className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                            />
+                        </svg>
+                    </div>
+                    <input
+                        type="search"
+                        id="default-search"
+                        className="block border border-gray-300 focus:border-gray-300 focus:ring-gray-300 w-full p-4 ps-10 text-sm text-gray-900 bg-gray-50 dark:placeholder-gray-400 dark:text-white border-transparent focus:border-transparent focus:ring-0"
+                        placeholder="Search MRN or Patient ID"
+                        value={searchQuery}
+                        onChange={handleChange}
+                        required
+                    />
+                    <button
+                        type="submit"
+                        className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700"
+                    >
+                        Search
+                    </button>
+                </div>
+            </form>
+
             <div className="max-w-9xl overflow-hidden overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-400 ">
                     <thead className="bg-gray-900">
@@ -104,7 +170,7 @@ function ExamsTable({ exams, isAdmin }) {
                             </th>
                             <th
                                 onClick={() => handleSort("age")}
-                                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointertext-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                             >
                                 Age
                                 <LuChevronsUpDown
@@ -302,7 +368,7 @@ function ExamsTable({ exams, isAdmin }) {
                                                     handleUpdate(_id)
                                                 }
                                                 type="button"
-                                                className="inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                className="inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-green-700  hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                                             >
                                                 Update{" "}
                                                 <span className="mx-1">
