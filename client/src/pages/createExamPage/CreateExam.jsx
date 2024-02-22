@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { ExamContext } from "../../context/ExamContext";
 import useApi from "../../hooks/useApi";
 
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function CreateExam() {
     const { fetchExams } = useContext(ExamContext);
     const navigate = useNavigate();
@@ -42,14 +45,45 @@ function CreateExam() {
             icu_admits_count: icuAdmitsCount,
             mortality: mortality,
         };
+        try{
         const result = await sendRequest("users", "POST", newExam);
         if (result) {
             console.log("Exam created:", result);
-            fetchExams();
-            navigate("/admin");
+            toast.success("Exam created successfully!", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: "bounce",
+              });
+              setTimeout(() => {
+                navigate("/admin");
+                fetchExams();
+              }, 1500);
+            } else {
+                throw new Error("Creation failed");
+            } 
+    } catch (error) {
+        console.error("Failed to create exam:", error);
+        toast.error("Failed to create exam", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: "bounce",
+            });
         }
         setLoading(false);
     };
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -243,6 +277,19 @@ function CreateExam() {
                     >
                         Cancel
                     </button>
+                    <ToastContainer
+              position="top-right"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              transition={Bounce}
+            />
                 </div>
             </form>
         </div>
