@@ -1,7 +1,9 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExamContext } from '../context/ExamContext';
-import useApi from '../hooks/useApi';
+import { ExamContext } from '../../context/ExamContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import useApi from '../../hooks/useApi';
 import './CreateExam.css';
 
 function CreateExam() {
@@ -21,9 +23,11 @@ function CreateExam() {
     const [icuAdmit, setIcuAdmit] = useState('');
     const [icuAdmitsCount, setIcuAdmitsCount] = useState('');
     const [mortality, setMortality] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async event => {
         event.preventDefault();
+        setLoading(true);
         const newExam = {
             medical_record_number: medicalRecordNumber,
             age: age,
@@ -36,18 +40,28 @@ function CreateExam() {
             exam_id: examId,
             icu_admit: icuAdmit,
             icu_admits_count: icuAdmitsCount,
-            mortality: mortality
+            mortality: mortality,
         };
-        const result = await sendRequest('users', 'POST', newExam);
-        if (result) {
-            console.log('Exam created:', result);
-            fetchExams();
-            navigate('/admin');
+        try {
+            const result = await sendRequest('users', 'POST', newExam);
+            if (result) {
+                toast.success('Exam created successfully!');
+                setTimeout(() => {
+                    navigate('/admin');
+                    fetchExams();
+                }, 2000);
+            } else {
+                throw new Error('Creation failed');
+            }
+        } catch (error) {
+            console.error('Failed to create exam:', error);
+            toast.error('Exam could not be created!');
         }
+        setLoading(false);
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = event => {
+        const { name, value } = event.target;
         switch (name) {
             case 'medicalRecordNumber':
                 setMedicalRecordNumber(value);
@@ -92,10 +106,11 @@ function CreateExam() {
 
     return (
         <div className="create-exam-container">
+            <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} closeOnClick pauseOnHover draggable />
             <h2 className="create-exam">Create Exam</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-content">
-                    {/* Column 1 */}
+
                     <div className="form-column">
                         <label htmlFor="medicalRecordNumber">Patient ID:</label>
                         <input
@@ -150,7 +165,6 @@ function CreateExam() {
                         </select>
                     </div>
 
-                    {/* Column 2 */}
                     <div className="form-column">
                         <label htmlFor="examId">Exam ID:</label>
                         <input
@@ -205,7 +219,7 @@ function CreateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn add-exam-btn">Add Exam</button>
+                    <button type="submit" className="btn add-exam-btn" disabled={loading}>Add Exam</button>
                     <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import ExamsTable from './components/ExamsTable';
+import ExamsTable from '../components/examsTable/ExamsTable';
 import { useContext } from 'react';
-import { ExamContext } from '../context/ExamContext';
+import { ExamContext } from '../../context/ExamContext';
 import './PatientDetails.css'
 
 function PatientDetails() {

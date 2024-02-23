@@ -1,5 +1,5 @@
 const getApiStatus = async (req, res) => {
-    const htmlResponse = `
+  const htmlResponse = `
     <html lang="en-us">
     <head>
         <title>Rad-Report-API</title>
@@ -37,7 +37,7 @@ h4{
     </body>
     </html>
   `;
-    res.status(200).send(htmlResponse);
+  res.status(200).send(htmlResponse);
 };
 
 export default getApiStatus;

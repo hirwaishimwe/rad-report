@@ -1,6 +1,6 @@
-import ExamsTable from './components/ExamsTable'
+import ExamsTable from '../components/examsTable/ExamsTable'
 import React, { useContext } from 'react';
-import { ExamContext } from '../context/ExamContext';
+import { ExamContext } from '../../context/ExamContext';
 
 function Exams({ exams }) {
     const { examsData, loading, error } = useContext(ExamContext);

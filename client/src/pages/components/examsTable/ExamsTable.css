@@ -68,3 +68,46 @@ a:focus {
     width: 50px;
   }
 }
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.control-group label {
+  margin-right: 10px;
+}
+
+.control-group select,
+.control-group input {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+
+.control-group:last-child {
+  margin-right: 0;
+  }
+  
+  @media (max-width: 768px) {
+  .table-controls {
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  
+  .control-group {
+  margin-bottom: 10px;
+  }
+  
+  .control-group label {
+  display: block;
+  }
+  }

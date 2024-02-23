@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { ExamContext } from '../context/ExamContext';
-import useApi from '../hooks/useApi';
+import { ExamContext } from '../../context/ExamContext';
+import useApi from '../../hooks/useApi';
 import './UpdateExam.css';
+import "react-toastify/dist/ReactToastify.css";
+
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
