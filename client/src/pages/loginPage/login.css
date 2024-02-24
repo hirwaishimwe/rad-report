@@ -1,0 +1,86 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* new workout form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login {
+display: flex;
+flex-direction: column;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;   
+}
+  
+
+form button {
+  background: rgb(0, 0, 0);
+  border: 0;
+  color: #ffffff;
+  padding: 7px;
+  font-family: "Poppins";
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* auth forms */
+ form.login {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 170px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  
+}

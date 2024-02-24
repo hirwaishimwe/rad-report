@@ -7,8 +7,10 @@ import { ExamContext } from "../../context/ExamContext";
 import useApi from "../../hooks/useApi";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 function CreateExam() {
+  const {user} = useAuthContext()
   const { fetchExams } = useContext(ExamContext);
   const navigate = useNavigate();
   const { sendRequest } = useApi();
@@ -45,6 +47,7 @@ function CreateExam() {
       mortality: mortality,
     };
     try {
+    
       const result = await sendRequest("users", "POST", newExam);
       if (result) {
         console.log("Exam created:", result);
@@ -61,7 +64,7 @@ function CreateExam() {
         });
         setTimeout(() => {
           navigate("/admin");
-          fetchExams();
+            fetchExams();    
         }, 1500);
       } else {
         throw new Error("Creation failed");

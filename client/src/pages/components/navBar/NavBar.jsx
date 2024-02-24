@@ -1,4 +1,7 @@
 import "./NavBar.css";
+import { useLogout } from "../../../hooks/useLogout";
+import { useAuthContext } from "../../../hooks/useAuthContext";
+
 
 import {
     Button,
@@ -19,12 +22,15 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { navListMenuItems } from "./navListMenuItems";
+import { NavListMenuItems } from "./navListMenuItems";
+
+
 
 function NavListMenu() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-    const renderItems = navListMenuItems.map(
+    const navMenuItems = NavListMenuItems();
+    const renderItems = navMenuItems.map(
         ({ id, icon: Icon, title, description, href }) => (
             <MenuItem key={id}>
                 <Link to={href} onClick={() => setIsMobileMenuOpen(false)}>
@@ -114,6 +120,7 @@ function NavList() {
 }
 
 export function NavbarWithMegaMenu() {
+    const {user} = useAuthContext()
     const [openNav, setOpenNav] = React.useState(false);
 
     React.useEffect(() => {
@@ -122,7 +129,8 @@ export function NavbarWithMegaMenu() {
             () => window.innerWidth >= 960 && setOpenNav(false),
         );
     }, []);
-
+    const {logout} = useLogout()
+    
     return (
         <Navbar className="mx-auto max-w-9xl px-4 py-5">
             <div className="flex items-center justify-between text-blue-gray-900">
@@ -133,17 +141,27 @@ export function NavbarWithMegaMenu() {
                     className="mr-4 cursor-pointer py-1.5 lg:ml-2"
                 >
                     <Link to="/">Rad-Report</Link>
+                    <div className="welcome">
+                    {user && ( 
+                        <span>Welcome, {user.username.toUpperCase()} </span>
+                    )}
+                    </div>
+                   
+
                 </Typography>
                 <div className="hidden lg:block">
                     <NavList />
                 </div>
                 <div className="hidden gap-2 lg:flex">
-                    <Button variant="text" size="sm" color="blue-gray">
+                    {user && (<Link to="/login"> <Button varient="text" size="sm" color="blue-gray" onClick={() => { logout()}}>Log out</Button></Link>)}
+                    {!user && ( <React.Fragment>
+                   <Button variant="text" size="sm" color="blue-gray">
                         <Link to="/login"> Log In </Link>
                     </Button>
                     <Button variant="gradient" size="sm">
                         <Link to="/register"> Register </Link>
-                    </Button>
+                    </Button> </React.Fragment>)}
+                     
                 </div>
                 <IconButton
                     variant="text"

@@ -52,3 +52,9 @@
 .navbar .search-bar input::placeholder {
   color: #7f8c8d;
 }
+
+.welcome{
+  font-size: 13px;
+ font-style: italic;
+ color: #7f7f80;
+}

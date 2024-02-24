@@ -12,6 +12,8 @@ import {
     PatientDetails,
     UpdateExam,
 } from "./pages";
+import Register from "./pages/registerPage/register";
+import Login from "./pages/loginPage/login";
 
 import { ExamProvider } from "./context/ExamContext";
 import { NavbarWithMegaMenu } from "./pages/components/navBar/NavBar";
@@ -22,7 +24,8 @@ function App() {
             <div className="App">
                 <NavbarWithMegaMenu />
                 <Routes>
-                    <Route path="/" element={<Exams />} />
+                    <Route path="/" element={<Login />} />
+                    <Route path="/exam" element={<Exams />} />
                     <Route path="/about" element={<AboutUs />} />
                     <Route path="/exam/:examId" element={<ExamDetails />} />
                     <Route
@@ -35,6 +38,8 @@ function App() {
                         path="/update-exam/:examId"
                         element={<UpdateExam />}
                     />
+                     <Route path="/register" element={<Register/>} />
+                     <Route path="/login" element={<Login/>} />
                     <Route path="/*" element={<PageNotFound />} />
                 </Routes>
             </div>

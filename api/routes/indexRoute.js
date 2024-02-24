@@ -4,11 +4,14 @@ import {
     getAllUsers,
     getUserById,
     patchUserById,
+    loginUser,
+    registerUser,
 } from "../controller/userController.js";
 
 import { deleteAllPatients } from "../controller/deletePatients.js";
 import express from "express";
 import getApiStatus from "../controller/indexController.js";
+import requireAuth from "../middleware/requireAuth.js";
 
 /**
  * @swagger
@@ -108,7 +111,13 @@ import getApiStatus from "../controller/indexController.js";
 
 const router = express.Router();
 
+
+router.post('/api/login', loginUser)
+router.post('/api/register', registerUser)
 router.get("/api", getApiStatus);
+
+router.use(['/api/users', '/api/users/:userId', '/api/users/deleteDatabase/:secret_code'], requireAuth);
+
 router.post("/api/users", createUser);
 router.get("/api/users", getAllUsers);
 router.get("/api/users/:userId", getUserById);
