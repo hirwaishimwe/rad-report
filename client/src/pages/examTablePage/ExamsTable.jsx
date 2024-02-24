@@ -6,47 +6,40 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { TbEdit } from "react-icons/tb";
 import ReactPaginate from "react-paginate";
 import { ExamContext } from "../../context/ExamContext";
-import useApi from "../../hooks/useApi";
 
 function ExamsTable({ exams, isAdmin }) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const { fetchExams } = useContext(ExamContext);
-  const navigate = useNavigate();
-  const { sendRequest } = useApi();
+  const [searchExam, setSearchExam] = useState("");
   const [sortingCriteria, setSortingCriteria] = useState({
     column: "",
     direction: "asc",
   });
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 10;
+  const navigate = useNavigate();
+  const { sendRequest, fetchExams } = useContext(ExamContext);
 
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
   };
 
-  const offset = currentPage * itemsPerPage;
-  const pageCount = Math.ceil(exams.length / itemsPerPage);
-  const currentData = exams.slice(offset, offset + itemsPerPage);
-
-  const handleSearch = async e => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const response = await sendRequest("users/search", "POST", {
-        medical_record_number: searchQuery,
-      });
-      setSearchResults(response);
-    } catch (error) {
-      console.error("Error searching exams:", error);
-    } finally {
-      setLoading(false);
-    }
+  const handleSearchExam = e => {
+    setSearchExam(e.target.value);
   };
 
-  const handleChange = e => {
-    setSearchQuery(e.target.value);
+  const handleSubmit = async e => {
+    e.preventDefault();
+    try {
+      const examFound = exams.find(
+        exam => exam.medical_record_number === searchExam
+      );
+      if (examFound) {
+        navigate(`/patient/${examFound.medical_record_number}`);
+      } else {
+        console.log("No exam found with that ID");
+      }
+    } catch (error) {
+      console.error("Error searching for exam:", error);
+    }
   };
 
   const handleUpdate = id => {
@@ -79,16 +72,25 @@ function ExamsTable({ exams, isAdmin }) {
     if (a[column] > b[column]) return 1 * direction;
     return 0;
   });
+
+  const capitalizeFirstLetter = str => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
+  const offset = currentPage * itemsPerPage;
+  const pageCount = Math.ceil(exams.length / itemsPerPage);
+  const currentData = sortedExams.slice(offset, offset + itemsPerPage);
+
   return (
-    <div className="overflow-x-auto max-w-9xl">
-      <form className="max-w-md ml-auto my-2" onSubmit={handleSearch}>
+    <div className="overflow-x-auto max-w-9xl text-base">
+      <form className="max-w-md ml-auto my-2" onSubmit={handleSubmit}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
         >
           Search
         </label>
-        <div className="relative">
+        <div className="relative mx-2">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
               className="w-4 h-4 text-gray-500 dark:text-gray-400"
@@ -109,11 +111,11 @@ function ExamsTable({ exams, isAdmin }) {
           <input
             type="search"
             id="default-search"
-            className="block border border-gray-300 focus:border-gray-300 focus:ring-gray-300 w-full p-4 ps-10 text-sm text-gray-900 bg-gray-50 dark:placeholder-gray-400 dark:text-white border-transparent focus:border-transparent focus:ring-0"
+            className="block border border-gray-200 focus:border-gray-300 focus:ring-gray-300 w-full p-4 ps-10 text-sm text-gray-900 bg-gray-50 dark:placeholder-gray-400 dark:text-white border-transparent focus:border-transparent focus:ring-0"
             placeholder="Search MRN or Patient ID"
-            value={searchQuery}
-            onChange={handleChange}
-            required
+            value={searchExam}
+            onChange={handleSearchExam}
+            name="search_exam"
           />
           <button
             type="submit"
@@ -152,7 +154,7 @@ function ExamsTable({ exams, isAdmin }) {
                   }}
                 />
               </th>
-              <th className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image
               </th>
               <th
@@ -291,12 +293,12 @@ function ExamsTable({ exams, isAdmin }) {
 
               return (
                 <tr key={_id} className={index % 2 === 0 ? "bg-gray-50" : ""}>
-                  <td className="px-3 py-4 whitespace-nowrap">
+                  <td className="px-3 py-4 whitespace-nowrap text-base">
                     <Link
                       to={`/patient/${medical_record_number}`}
                       className="text-blue-500 hover:underline"
                     >
-                      {medical_record_number}
+                      {capitalizeFirstLetter(medical_record_number)}
                     </Link>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
