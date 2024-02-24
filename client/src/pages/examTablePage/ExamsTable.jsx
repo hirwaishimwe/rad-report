@@ -1,28 +1,34 @@
-"use client";
-
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { LuChevronsUpDown } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbEdit } from "react-icons/tb";
+import ReactPaginate from "react-paginate";
 import { ExamContext } from "../../context/ExamContext";
 import useApi from "../../hooks/useApi";
-import { Pagination } from "./Pagination";
 
 function ExamsTable({ exams, isAdmin }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { fetchExams } = useContext(ExamContext);
+  const navigate = useNavigate();
+  const { sendRequest } = useApi();
+  const [sortingCriteria, setSortingCriteria] = useState({
+    column: "",
+    direction: "asc",
+  });
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 10;
 
-  const [activePage, setActivePage] = useState(1);
-  const rowsPerPage = 3;
-  const count = exams.length;
-  const totalPages = Math.ceil(count / rowsPerPage);
-  const calculatedRows = exams.slice(
-    (activePage - 1) * rowsPerPage,
-    activePage * rowsPerPage
-  );
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
+  const offset = currentPage * itemsPerPage;
+  const pageCount = Math.ceil(exams.length / itemsPerPage);
+  const currentData = exams.slice(offset, offset + itemsPerPage);
 
   const handleSearch = async e => {
     e.preventDefault();
@@ -43,24 +49,17 @@ function ExamsTable({ exams, isAdmin }) {
     setSearchQuery(e.target.value);
   };
 
-  const { fetchExams } = useContext(ExamContext);
-  const navigate = useNavigate();
-  const { sendRequest } = useApi();
-  const [sortingCriteria, setSortingCriteria] = useState({
-    column: "",
-    direction: "asc",
-  });
-
-  function handleUpdate(id) {
+  const handleUpdate = id => {
     navigate(`/update-exam/${id}`);
-  }
+  };
 
-  async function handleDelete(id) {
+  const handleDelete = async id => {
     const response = await sendRequest(`users/${id}`, "DELETE");
     if (response) {
       fetchExams();
     }
-  }
+  };
+
   const handleSort = column => {
     setSortingCriteria(prevCriteria => ({
       column,
@@ -80,9 +79,8 @@ function ExamsTable({ exams, isAdmin }) {
     if (a[column] > b[column]) return 1 * direction;
     return 0;
   });
-
   return (
-    <div className="overflow-x-auto max-w-9xl ">
+    <div className="overflow-x-auto max-w-9xl">
       <form className="max-w-md ml-auto my-2" onSubmit={handleSearch}>
         <label
           htmlFor="default-search"
@@ -91,7 +89,7 @@ function ExamsTable({ exams, isAdmin }) {
           Search
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
               className="w-4 h-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -127,7 +125,7 @@ function ExamsTable({ exams, isAdmin }) {
       </form>
 
       <div className="max-w-9xl overflow-hidden overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-400 ">
+        <table className="min-w-full divide-y divide-gray-400">
           <thead className="bg-gray-900">
             <tr>
               <th
@@ -269,7 +267,7 @@ function ExamsTable({ exams, isAdmin }) {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-300">
-            {exams.map((exam, index) => {
+            {currentData.map((exam, index) => {
               if (!exam) {
                 console.warn(`Exam at index ${index} is`, exam);
                 return null;
@@ -361,12 +359,20 @@ function ExamsTable({ exams, isAdmin }) {
             })}
           </tbody>
         </table>
-        <Pagination
-          activePage={activePage}
-          count={count}
-          rowsPerPage={rowsPerPage}
-          totalPages={totalPages}
-          setActivePage={setActivePage}
+      </div>
+      <div className="flex justify-center my-4">
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          breakLabel={"..."}
+          breakClassName={"break-me"}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          subContainerClassName={"pages pagination"}
+          activeClassName={"active"}
         />
       </div>
     </div>
