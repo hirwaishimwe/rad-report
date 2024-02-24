@@ -142,7 +142,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("exam_id")}
-                className="px-6 py-3 hover:bg-gray-300 cursor-pointer bg-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-1 py-1 hover:bg-gray-300 cursor-pointer bg-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Exam ID{" "}
                 <LuChevronsUpDown
@@ -152,12 +152,12 @@ function ExamsTable({ exams, isAdmin }) {
                   }}
                 />
               </th>
-              <th className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image
               </th>
               <th
                 onClick={() => handleSort("age")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Age
                 <LuChevronsUpDown
@@ -169,7 +169,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("sex")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Sex{" "}
                 <LuChevronsUpDown
@@ -181,7 +181,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("pro_nouns")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Pro Nouns{" "}
                 <LuChevronsUpDown
@@ -193,7 +193,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("latest_bmi")}
-                className="px-6 py-3 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 BMI
                 <LuChevronsUpDown
@@ -205,7 +205,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("latest_weight")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Weight{" "}
                 <LuChevronsUpDown
@@ -217,7 +217,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("zip_code")}
-                className="px-6 py-3 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Zip Code
                 <LuChevronsUpDown
@@ -229,7 +229,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("mortality")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 Mortality{" "}
                 <LuChevronsUpDown
@@ -241,7 +241,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("icu_admit")}
-                className="px-6 py-3 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200 hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 ICU Admit{" "}
                 <LuChevronsUpDown
@@ -253,7 +253,7 @@ function ExamsTable({ exams, isAdmin }) {
               </th>
               <th
                 onClick={() => handleSort("icu_admits_count")}
-                className="px-6 py-3 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-2.5 py-2.5 bg-gray-200  hover:bg-gray-300 cursor-pointer text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
                 ICU Admits{" "}
                 <LuChevronsUpDown
@@ -263,7 +263,7 @@ function ExamsTable({ exams, isAdmin }) {
                   }}
                 />
               </th>
-              {isAdmin && <th className="px-6 py-3 bg-gray-200"></th>}
+              {isAdmin && <th className="px-2.5 py-2.5 bg-gray-200"></th>}
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-300">
