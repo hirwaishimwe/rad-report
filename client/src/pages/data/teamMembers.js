@@ -8,7 +8,7 @@ const teamMembers = [
     {
         id: 1,
         name: "Hirwa Ishimwe",
-        role: "Lead/Front-End Developer",
+        role: "Lead/Full-Stack Developer",
         email: "hirwaishimwe2@gmail.com",
         linkedin: "https://www.linkedin.com/in/hirwa-ishimwe",
         git: "https://github.com/hirwaishimwe",
