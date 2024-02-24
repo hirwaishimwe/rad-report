@@ -14,7 +14,7 @@ function ExamsTable({ exams, isAdmin }) {
     direction: "asc",
   });
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 10;
+  const itemsPerPage = 15;
   const navigate = useNavigate();
   const { sendRequest, fetchExams } = useContext(ExamContext);
 
@@ -363,17 +363,54 @@ function ExamsTable({ exams, isAdmin }) {
         </table>
         <div className="flex justify-center my-4">
           <ReactPaginate
-            previousLabel={"Previous"}
-            nextLabel={"Next"}
-            breakLabel={"..."}
+            previousLabel={
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            }
+            nextLabel={
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            }
+            breakLabel={<span className="text-gray-500">...</span>}
             breakClassName={"break-me"}
             pageCount={pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
             onPageChange={handlePageClick}
-            containerClassName={"pagination"}
-            subContainerClassName={"pages pagination"}
-            activeClassName={"active"}
+            containerClassName={"flex items-center space-x-2 text-gray-700"}
+            activeClassName={"bg-gray-200"}
+            pageClassName={"rounded-full"}
+            previousClassName={
+              "rounded-full px-3 py-1 bg-gray-200 hover:bg-gray-300"
+            }
+            nextClassName={
+              "rounded-full px-3 py-1 bg-gray-200 hover:bg-gray-300"
+            }
+            disabledClassName={"text-gray-400 pointer-events-none"}
           />
         </div>
       </div>
