@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
-
-import { ExamContext } from "../../../context/ExamContext";
-import ExamsTable from "../../examTablePage/ExamsTable";
+import ExamsTable from '../components/examsTable/ExamsTable'
+import React, { useContext } from 'react';
+import { ExamContext } from '../../context/ExamContext';
 
 function Exams({ exams }) {
     const { examsData, loading, error } = useContext(ExamContext);
@@ -16,7 +15,9 @@ function Exams({ exams }) {
     if (!examsData) {
         return <div>No exams found</div>;
     }
-    return <ExamsTable exams={examsData} />;
+    return (
+        <ExamsTable exams={examsData} />
+    )
 }
 
 export default Exams;

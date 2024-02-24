@@ -1,4 +1,6 @@
 function PageNotFound() {
+    
+
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-100">
             <div className="max-w-xl mx-auto px-6 overflow-hidden">
@@ -14,5 +16,6 @@ function PageNotFound() {
         </div>
     );
 }
+
 
 export default PageNotFound;

@@ -1,34 +1,33 @@
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { ExamContext } from '../../context/ExamContext';
+import useApi from '../../hooks/useApi';
+import './UpdateExam.css';
 import "react-toastify/dist/ReactToastify.css";
-import "./UpdateExam.css";
 
-import { useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-
-import { ExamContext } from "../../context/ExamContext";
-import useApi from "../../hooks/useApi";
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
     const { sendRequest } = useApi();
-    const [isLoading, setIsLoading] = useState(false);
     const { examId } = useParams();
     const navigate = useNavigate();
     const [examData, setExamData] = useState({
-        medical_record_number: "",
-        age: "",
-        sex: "",
-        pro_nouns: "",
-        zip_code: "",
-        latest_bmi: "",
-        latest_weight: "",
-        png_filename: "",
-        exam_id: "",
-        icu_admit: "",
-        icu_admits_count: "",
-        mortality: "",
+        medical_record_number: '',
+        age: '',
+        sex: '',
+        pro_nouns: '',
+        zip_code: '',
+        latest_bmi: '',
+        latest_weight: '',
+        png_filename: '',
+        exam_id: '',
+        icu_admit: '',
+        icu_admits_count: '',
+        mortality: ''
     });
     async function getExamData(examId) {
-        const exam = examsData.find((exam) => exam._id.toString() === examId);
+        const exam = examsData.find(exam => exam._id.toString() === examId);
 
         return {
             medical_record_number: exam.medical_record_number,
@@ -56,35 +55,23 @@ function UpdateExam() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setExamData((prevData) => ({
+        setExamData(prevData => ({
             ...prevData,
-            [name]: value,
+            [name]: value
         }));
     };
     const handleUpdateAndNavigate = async () => {
-        setIsLoading(true);
         await fetchExams();
-        setTimeout(() => {
-            setIsLoading(false);
-            navigate("/admin");
-        }, 3000);
+        navigate('/admin');
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const updatedExam = await sendRequest(
-                `users/${examId}`,
-                "PATCH",
-                examData,
-            );
-            if (updatedExam) {
-                console.log("Success:", updatedExam);
-                handleUpdateAndNavigate();
-            }
-        } catch (error) {
-            console.error("Error updating exam:", error.message);
+        const updatedExam = await sendRequest(`users/${examId}`, 'PATCH', examData);
+        if (updatedExam) {
+            console.log('Success:', updatedExam);
+            handleUpdateAndNavigate();
         }
     };
 
@@ -95,58 +82,24 @@ function UpdateExam() {
                 <div className="form-content">
                     <div className="form-column">
                         <label htmlFor="patientId">Patient ID:</label>
-                        <input
-                            type="text"
-                            id="patientId"
-                            name="medical_record_number"
-                            value={examData.medical_record_number}
-                            onChange={handleChange}
-                        />
+                        <input type="text" id="patientId" name="medical_record_number" value={examData.medical_record_number} onChange={handleChange} />
 
                         <label htmlFor="age">Age:</label>
-                        <input
-                            type="number"
-                            id="age"
-                            name="age"
-                            value={examData.age}
-                            onChange={handleChange}
-                        />
+                        <input type="number" id="age" name="age" value={examData.age} onChange={handleChange} />
 
                         <label htmlFor="zipCode">Zip Code:</label>
-                        <input
-                            type="text"
-                            id="zipCode"
-                            name="zip_code"
-                            value={examData.zip_code}
-                            onChange={handleChange}
-                        />
+                        <input type="text" id="zipCode" name="zip_code" value={examData.zip_code} onChange={handleChange} />
 
                         <label htmlFor="IcuAdmitCount">ICU Admit Count:</label>
-                        <input
-                            type="number"
-                            id="IcuAdmitCount"
-                            name="icu_admits_count"
-                            value={examData.icu_admits_count}
-                            onChange={handleChange}
-                        />
+                        <input type="number" id="IcuAdmitCount" name="icu_admits_count" value={examData.icu_admits_count} onChange={handleChange} />
 
                         <label htmlFor="sex">Sex:</label>
-                        <select
-                            id="sex"
-                            name="sex"
-                            value={examData.sex}
-                            onChange={handleChange}
-                        >
+                        <select id="sex" name="sex" value={examData.sex} onChange={handleChange}>
                             <option value="M">M</option>
                             <option value="F">F</option>
                         </select>
                         <label htmlFor="sex">Pronouns:</label>
-                        <select
-                            id="pronouns"
-                            name="pro_nouns"
-                            value={examData.pro_nouns}
-                            onChange={handleChange}
-                        >
+                        <select id="pronouns" name="pro_nouns" value={examData.pro_nouns} onChange={handleChange}>
                             <option value="He/Him">He/Him</option>
                             <option value="She/Her">She/Her</option>
                             <option value="They/Them">They/Them</option>
@@ -156,57 +109,23 @@ function UpdateExam() {
 
                     <div className="form-column">
                         <label htmlFor="examId">Exam ID:</label>
-                        <input
-                            type="text"
-                            id="examId"
-                            name="exam_id"
-                            value={examData.exam_id}
-                            onChange={handleChange}
-                        />
+                        <input type="text" id="examId" name="exam_id" value={examData.exam_id} onChange={handleChange} />
 
                         <label htmlFor="imageURL">Image URL:</label>
-                        <input
-                            type="text"
-                            id="imageURL"
-                            name="png_filename"
-                            value={examData.png_filename}
-                            onChange={handleChange}
-                        />
+                        <input type="text" id="imageURL" name="png_filename" value={examData.png_filename} onChange={handleChange} />
                         <label htmlFor="bmi">BMI:</label>
-                        <input
-                            type="text"
-                            id="bmi"
-                            name="latest_bmi"
-                            value={examData.latest_bmi}
-                            onChange={handleChange}
-                        />
+                        <input type="text" id="bmi" name="latest_bmi" value={examData.latest_bmi} onChange={handleChange} />
 
                         <label htmlFor="weight">Weight:</label>
-                        <input
-                            type="number"
-                            id="weight"
-                            name="latest_weight"
-                            value={examData.latest_weight}
-                            onChange={handleChange}
-                        />
+                        <input type="number" id="weight" name="latest_weight" value={examData.latest_weight} onChange={handleChange} />
 
                         <label htmlFor="IcuAdmit">ICU Admit:</label>
-                        <select
-                            id="IcuAdmit"
-                            name="icu_admit"
-                            value={examData.icu_admit}
-                            onChange={handleChange}
-                        >
+                        <select id="IcuAdmit" name="icu_admit" value={examData.icu_admit} onChange={handleChange} >
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
                         </select>
                         <label htmlFor="mortality">Mortality:</label>
-                        <select
-                            id="mortality"
-                            name="mortality"
-                            value={examData.mortality}
-                            onChange={handleChange}
-                        >
+                        <select id="mortality" name="mortality" value={examData.mortality} onChange={handleChange} >
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
                         </select>
@@ -214,28 +133,13 @@ function UpdateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button
-                        type="submit"
-                        className="btn update-exam-btn"
-                        disabled={isLoading}
-                    >
-                        {isLoading ? (
-                            <span className="pl-3">Updating...</span>
-                        ) : (
-                            "Update Exam "
-                        )}
-                    </button>
-                    <button
-                        type="button"
-                        className="btn cancel-btn"
-                        onClick={() => navigate("/admin")}
-                    >
-                        Cancel
-                    </button>
+                    <button type="submit" className="btn update-exam-btn">Update Exam</button>
+                    <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>
         </div>
     );
 }
+
 
 export default UpdateExam;

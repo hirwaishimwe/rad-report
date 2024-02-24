@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const useApi = () => {
     const [response, setResponse] = useState(null);
@@ -10,8 +10,7 @@ const useApi = () => {
             const options = {
                 method: method,
                 headers: {
-                    "access-control-allow-origin": "*",
-                    "Content-type": "application/json; charset=UTF-8",
+                    'Content-Type': 'application/json',
                 },
                 body: body ? JSON.stringify(body) : null,
             };
@@ -21,7 +20,7 @@ const useApi = () => {
             return data;
         } catch (err) {
             setError(err);
-            console.error("Error:", err);
+            console.error('Error:', err);
         }
     };
 
