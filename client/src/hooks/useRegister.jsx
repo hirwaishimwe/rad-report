@@ -1,21 +1,33 @@
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
 
-export const useSignup = () => {
+export const useRegister = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
+  const { user } = useAuthContext()
 
-  const signup = async (username, password) => {
+  const register = async (username, password) => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('http://localhost:8000/api/signup', {
+    const token = user?.token; // Optional chaining to safely access token property
+    const headers = {
+      "access-control-allow-origin": "*",
+      "Content-type": "application/json; charset=UTF-8",
+    };
+
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+
+    const response = await fetch('http://localhost:8000/api/register', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: headers,
       body: JSON.stringify({ username, password })
-    })
-    const json = await response.json()
+    });
+
+    const json = await response.json();
 
     if (!response.ok) {
       setIsLoading(false)
@@ -33,5 +45,5 @@ export const useSignup = () => {
     }
   }
 
-  return { signup, isLoading, error }
+  return { register, isLoading, error }
 }

@@ -5,17 +5,29 @@ export const useLogin = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
+  const { user } = useAuthContext()
 
   const login = async (username, password) => {
     setIsLoading(true)
     setError(null)
 
+    const token = user?.token; // Optional chaining to safely access token property
+    const headers = {
+      "access-control-allow-origin": "*",
+      "Content-type": "application/json; charset=UTF-8",
+    };
+
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+
     const response = await fetch('http://localhost:8000/api/login', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: headers,
       body: JSON.stringify({ username, password })
-    })
-    const json = await response.json()
+    });
+
+    const json = await response.json();
 
     if (!response.ok) {
       setIsLoading(false)
