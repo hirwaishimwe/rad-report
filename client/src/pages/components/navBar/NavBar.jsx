@@ -38,7 +38,7 @@ function NavBar() {
           <li><Link to="/exam">Exams</Link></li>
           <li><Link to="/admin">Admin</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="http://localhost:8000/" target="_blank" rel="noopener noreferrer" >API Doc</Link></li>
+          <li><Link to="https://radiology-report-api.onrender.com" target="_blank" rel="noopener noreferrer" >API Doc</Link></li>
           {user && (
           <li className="welcome">
           <span>Welcome, {user.username}</span>
