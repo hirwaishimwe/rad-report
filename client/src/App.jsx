@@ -7,7 +7,7 @@ import ExamDetails from "./pages/components/patientExamInfo/PatientExamInfo";
 import Navbar from './pages/components/navBar/NavBar.jsx'
 import PatientDetails from './pages/patientDetailsPage/PatientDetails';
 import CreateExam from './pages/createExamPage/CreateExam';
-import UpdateExam from './pages/UpdateExamPage/UpdateExam';
+import UpdateExam from './pages/updateExamPage/UpdateExam';
 import PageNotFound from './pages/pageNotFoundPage/PageNotFound';
 import AboutUs from "./pages/aboutPage/AboutUs";
 import Login from "./pages/loginPage/Login"
