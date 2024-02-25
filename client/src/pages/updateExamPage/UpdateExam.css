@@ -3,8 +3,16 @@
     margin: 50px auto;
     margin-top: 0px;
     margin-bottom: 100px;
+    background-image: linear-gradient(to bottom, #d9ebff 0%, #e3e3e3 100%);
     padding: 30px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.update-exam {
+    text-align: center;
+    color: #000000;
+    padding: 0px;
+    margin: 5px;
 }
 
 .form-content {

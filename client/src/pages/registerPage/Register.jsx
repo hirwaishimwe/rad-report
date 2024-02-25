@@ -24,7 +24,7 @@ const Register = () => {
     navigate('/exam')
 } 
   return (
-    <form className="register" onSubmit={handleSubmit}>
+    <form className="register-form" onSubmit={handleSubmit}>
       <div className="title"><h3>Register</h3></div>
       
       <label>Username:</label>

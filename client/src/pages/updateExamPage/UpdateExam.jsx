@@ -80,7 +80,7 @@ function UpdateExam() {
 
     return (
         <div className="update-exam-container">
-            <h2>Update Exam</h2>
+            <h2 className="update-exam"> Update Exam</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-content">
                     <div className="form-column">
