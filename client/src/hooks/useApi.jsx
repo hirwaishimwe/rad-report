@@ -8,8 +8,8 @@ const useApi = () => {
 
     const sendRequest = async (path, method, body = null) => {
         try {
-            if (!user) {
-                console.log("User is not authenticated.");
+            if (!user || !user.token) {
+                console.log("User is not authenticated or token is missing.");
                 return;
             }
             const url = `${process.env.REACT_APP_API_URL}/${path}`;
@@ -28,9 +28,10 @@ const useApi = () => {
         } catch (err) {
             setError(err);
             console.error("Error:", err);
+            return err; // Return the error
         }
     };
-
+    
     return { sendRequest, response, error };
 };
 

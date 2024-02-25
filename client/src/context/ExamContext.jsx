@@ -18,18 +18,18 @@ export const ExamProvider = ({ children }) => {
     const { sendRequest } = useApi();
 
     const fetchExams = useCallback(async () => {
-        if (user) {
-            setLoading(true);
-            try {
+        setLoading(true);
+        try {
+            if (user) {
                 const data = await sendRequest("users", "GET");
                 if (data) {
                     setExamsData(data);
                 }
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
             }
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
         }
     }, [sendRequest, user]);
 
