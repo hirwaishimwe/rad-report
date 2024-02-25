@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import { ExamContext } from '../../../context/ExamContext';
 import ReactPaginate from "react-paginate";
 import useApi from '../../../hooks/useApi';
@@ -24,9 +25,13 @@ function ExamsTable({ exams, isAdmin }) {
   async function handleDelete(id) {
     const response = await sendRequest(`users/${id}`, 'DELETE');
     if (response) {
-      fetchExams();
+        toast.success('Exam deleted successfully!', {
+            onClose: () => {
+                fetchExams();
+            }
+        });
     }
-  }
+}
 
   function sortExams(exams) {
     return exams.sort((a, b) => {
@@ -63,6 +68,14 @@ function ExamsTable({ exams, isAdmin }) {
 
   return (
     <div className="exams-table-container">
+      <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            closeOnClick
+            pauseOnHover
+            draggable
+        />
       <div className="table-controls">
         <div className="control-group">
           <label htmlFor="sortKey">Sort by:</label>
