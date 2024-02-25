@@ -1,6 +1,8 @@
 import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import { ExamContext } from '../../../context/ExamContext';
+import ReactPaginate from "react-paginate";
 import useApi from '../../../hooks/useApi';
 import './ExamsTable.css';
 
@@ -13,7 +15,9 @@ function ExamsTable({ exams, isAdmin }) {
   const [sortOrder, setSortOrder] = useState('asc');
   const [filterKey, setFilterKey] = useState('');
   const [filterValue, setFilterValue] = useState('');
-
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 10;
+  const offset = currentPage * itemsPerPage;
   function handleUpdate(id) {
     navigate(`/update-exam/${id}`);
   }
@@ -21,9 +25,13 @@ function ExamsTable({ exams, isAdmin }) {
   async function handleDelete(id) {
     const response = await sendRequest(`users/${id}`, 'DELETE');
     if (response) {
-      fetchExams();
+        toast.success('Exam deleted successfully!', {
+            onClose: () => {
+                fetchExams();
+            }
+        });
     }
-  }
+}
 
   function sortExams(exams) {
     return exams.sort((a, b) => {
@@ -52,14 +60,27 @@ function ExamsTable({ exams, isAdmin }) {
 
   const sortedExams = sortExams(exams);
   const filteredExams = filterExams(sortedExams);
+  const currentData = filteredExams.slice(offset, offset + itemsPerPage);
+  const pageCount = Math.ceil(filteredExams.length / itemsPerPage);
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
 
   return (
     <div className="exams-table-container">
+      <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            closeOnClick
+            pauseOnHover
+            draggable
+        />
       <div className="table-controls">
         <div className="control-group">
           <label htmlFor="sortKey">Sort by:</label>
           <select id="sortKey" onChange={(e) => setSortKey(e.target.value)}>
-            <option value="">Select</option>
+            <option value="">All</option>
             <option value="age">Age</option>
             <option value="sex">Sex</option>
             <option value="latest_bmi">BMI</option>
@@ -76,7 +97,7 @@ function ExamsTable({ exams, isAdmin }) {
         <div className="control-group">
           <label htmlFor="filterKey">Filter by:</label>
           <select id="filterKey" onChange={(e) => setFilterKey(e.target.value)}>
-            <option value="">Select</option>
+            <option value="">All</option>
             <option value="sex">Sex</option>
             <option value="zip_code">Zip Code</option>
             <option value="icu_admit">ICU Admit</option>
@@ -103,7 +124,7 @@ function ExamsTable({ exams, isAdmin }) {
           </tr>
         </thead>
         <tbody>
-          {filteredExams.map((exam) => (
+          {currentData.map((exam) => (
             <tr key={exam._id}>
               <td>
                 <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
@@ -132,6 +153,23 @@ function ExamsTable({ exams, isAdmin }) {
           ))}
         </tbody>
       </table>
+      <div className="pagination-container">
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          breakLabel="..."
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+          pageClassName={"pagination-button"}
+          previousClassName={"pagination-button"}
+          nextClassName={"pagination-button"}
+          disabledClassName={"disabled"}
+        />
+      </div>
     </div>
   );
 }

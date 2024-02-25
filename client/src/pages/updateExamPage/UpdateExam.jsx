@@ -4,8 +4,8 @@ import { useContext } from 'react';
 import { ExamContext } from '../../context/ExamContext';
 import useApi from '../../hooks/useApi';
 import './UpdateExam.css';
+import { toast, ToastContainer, Bounce } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
 
 function UpdateExam() {
     const { examsData, fetchExams } = useContext(ExamContext);
@@ -66,18 +66,21 @@ function UpdateExam() {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        const updatedExam = await sendRequest(`users/${examId}`, 'PATCH', examData);
-        if (updatedExam) {
-            console.log('Success:', updatedExam);
-            handleUpdateAndNavigate();
-        }
-    };
+    const updatedExam = await sendRequest(`users/${examId}`, 'PATCH', examData);
+    if (updatedExam) {
+        toast.success('Exam updated successfully!', {
+            onClose: () => {
+                handleUpdateAndNavigate();
+            }
+        });
+    }
+};
 
     return (
         <div className="update-exam-container">
-            <h2>Update Exam</h2>
+            <h2 className="update-exam"> Update Exam</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-content">
                     <div className="form-column">
@@ -133,13 +136,25 @@ function UpdateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn update-exam-btn">Update Exam</button>
+                    <button type="submit" className="btn update-exam-btn">Update</button>
                     <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>
+            <ToastContainer
+                position="top-right"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition={Bounce}
+            />
         </div>
     );
 }
-
 
 export default UpdateExam;

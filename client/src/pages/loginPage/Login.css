@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 170px;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #a3c1e3 0%, #9d9d9d 100%);
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.login-form .title {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.login-form label,
+.login-form input {
+  display: block;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  background: rgb(0, 0, 0);
+  border: 0;
+  color: #ffffff;
+  padding: 7px;
+  font-family: "Poppins";
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form .error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.login-form input.error {
+  border: 1px solid var(--error);
+}

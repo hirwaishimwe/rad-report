@@ -3,7 +3,15 @@
 import {body, validationResult} from "express-validator";
 
 import Exam from "../models/examModel.js";
+import User from  "../models/userModel.js";
+
 import asyncHandler from "express-async-handler";
+
+import jwt from 'jsonwebtoken'
+
+const createToken = (_id) => {
+  return jwt.sign({_id}, process.env.SECRET_KEY, {expiresIn: '20d' })
+  }
 
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
@@ -160,3 +168,26 @@ export const patchUserById = asyncHandler(async (req, res) => {
         });
     }
 });
+
+
+export const loginUser = async (req, res) => {
+  const {username, password} = req.body
+  try{
+    const user = await User.login(username,password)
+    const token = createToken(user._id)
+    res.status(200).json({username, token})
+  }catch(error){
+    res.status(400).json({error: error.message})
+  }
+}
+
+export const registerUser = async (req, res) => {
+  const {username, password} = req.body 
+  try{
+    const user = await User.register(username, password)
+    const token = createToken(user._id)
+    res.status(200).json({username, token})
+  } catch (error) {
+    res.status(400).json({error: error.message})
+  }  
+}

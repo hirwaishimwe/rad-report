@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    image: radiology-report-api:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - api/.env
+
+  client:
+    image: radiology-report-client:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - client/.env
