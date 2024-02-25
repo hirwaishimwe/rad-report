@@ -31,14 +31,14 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="nav-group">
-        <Link to="/" className="logo">
+        <Link to="/exam" className="logo">
           <img src={logo} alt="Logo" style={ {height: '50px' }} />
         </Link>
         <ul>
           <li><Link to="/exam">Exams</Link></li>
           <li><Link to="/admin">Admin</Link></li>
-          <li><Link to="http://localhost:8000/" target="_blank" rel="noopener noreferrer" >API Doc</Link></li>
           <li><Link to="/about">About</Link></li>
+          <li><Link to="http://localhost:8000/" target="_blank" rel="noopener noreferrer" >API Doc</Link></li>
           {user && (
           <li className="welcome">
           <span>Welcome, {user.username}</span>

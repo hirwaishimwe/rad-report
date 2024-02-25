@@ -67,7 +67,7 @@ function ExamsTable({ exams, isAdmin }) {
         <div className="control-group">
           <label htmlFor="sortKey">Sort by:</label>
           <select id="sortKey" onChange={(e) => setSortKey(e.target.value)}>
-            <option value="">Select</option>
+            <option value="">All</option>
             <option value="age">Age</option>
             <option value="sex">Sex</option>
             <option value="latest_bmi">BMI</option>
@@ -84,7 +84,7 @@ function ExamsTable({ exams, isAdmin }) {
         <div className="control-group">
           <label htmlFor="filterKey">Filter by:</label>
           <select id="filterKey" onChange={(e) => setFilterKey(e.target.value)}>
-            <option value="">Select</option>
+            <option value="">All</option>
             <option value="sex">Sex</option>
             <option value="zip_code">Zip Code</option>
             <option value="icu_admit">ICU Admit</option>
