@@ -136,7 +136,7 @@ function UpdateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn update-exam-btn">Update Exam</button>
+                    <button type="submit" className="btn update-exam-btn">Update</button>
                     <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>

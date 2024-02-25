@@ -219,7 +219,7 @@ function CreateExam() {
                 </div>
 
                 <div className="form-actions">
-                    <button type="submit" className="btn add-exam-btn" disabled={loading}>Add Exam</button>
+                    <button type="submit" className="btn add-exam-btn" disabled={loading}>Create</button>
                     <button type="button" className="btn cancel-btn" onClick={() => navigate('/admin')}>Cancel</button>
                 </div>
             </form>
