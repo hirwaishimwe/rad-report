@@ -9,6 +9,8 @@ function NavBar() {
   const navigate = useNavigate();
   const [searchExam, setSearchExam] = useState("");
   const [exams, setExams] = useState([]);
+  const { logout } = useLogout();
+  const { user } = useAuthContext();
 
   const handleSearchExam = e => {
     setSearchExam(e.target.value);
@@ -16,26 +18,25 @@ function NavBar() {
 
   const fetchExam = async () => {
     const url = "http://localhost:8000/api/users/";
-    const response = await fetch(url);
-    if (response.ok) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Failed to fetch exams");
       const data = await response.json();
       setExams(data);
+    } catch (error) {
+      console.error("Error fetching exams:", error);
     }
   };
 
   const handleSubmit = async e => {
     e.preventDefault();
-    try {
-      const examFound = exams.find(
-        exam => exam.medical_record_number === searchExam
-      );
-      if (examFound) {
-        navigate(`/patient/${examFound.medical_record_number}`);
-      } else {
-        console.log("No exam found with that ID");
-      }
-    } catch (error) {
-      console.error("Error searching for exam:", error);
+    const examFound = exams.find(
+      exam => exam.medical_record_number === searchExam
+    );
+    if (examFound) {
+      navigate(`/patient/${examFound.medical_record_number}`);
+    } else {
+      console.log("No exam found with that ID");
     }
   };
 
@@ -43,17 +44,13 @@ function NavBar() {
     fetchExam();
   }, []);
 
-  function handleLogin() {
-    navigate("/login");
-  }
+  // function handleLogin() {
+  //   navigate("/login");
+  // }
 
   // const handleSignOut = () => {
   //   logout();
   // };
-
-  const { logout } = useLogout();
-
-  const { user } = useAuthContext();
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
@@ -61,9 +58,9 @@ function NavBar() {
     navigate("/login");
   };
 
-  function handleRegister() {
-    navigate("/register");
-  }
+  // function handleRegister() {
+  //   navigate("/register");
+  // }
   return (
     <nav className="navbar">
       <div className="nav-group">
@@ -81,13 +78,13 @@ function NavBar() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link
-              to="https://radiology-report-api.onrender.com"
+            <a
+              href="https://radiology-report-api.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               API Doc
-            </Link>
+            </a>
           </li>
           {user && (
             <li className="welcome">
@@ -97,8 +94,8 @@ function NavBar() {
         </ul>
       </div>
       <div className="search-group">
-        <div className="search-bar">
-          <form onSubmit={handleSubmit}>
+        {user && (
+          <form onSubmit={handleSubmit} className="search-bar">
             <input
               value={searchExam}
               onChange={handleSearchExam}
@@ -110,21 +107,20 @@ function NavBar() {
             />
             <button type="submit">Search</button>
           </form>
-        </div>
-        {user && (
+        )}
+        {user ? (
           <div className="btn" onClick={handleSignOut}>
             Log Out
           </div>
-        )}
-        {!user && (
-          <div className="btn" onClick={handleLogin}>
-            Log In
-          </div>
-        )}
-        {!user && (
-          <div className="btn" onClick={handleRegister}>
-            Register
-          </div>
+        ) : (
+          <>
+            <div className="btn" onClick={() => navigate("/login")}>
+              Log In
+            </div>
+            <div className="btn" onClick={() => navigate("/register")}>
+              Register
+            </div>
+          </>
         )}
       </div>
     </nav>
