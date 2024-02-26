@@ -10,7 +10,7 @@ export const useLogin = () => {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch('http://localhost:8000/api/login', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
             method: 'POST',
             headers: {
                 "Content-type": "application/json; charset=UTF-8",

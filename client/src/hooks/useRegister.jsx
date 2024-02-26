@@ -21,7 +21,7 @@ export const useRegister = () => {
       headers.Authorization = `Bearer ${token}`;
     }
 
-    const response = await fetch('http://localhost:8000/api/register', {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify({ username, password })
