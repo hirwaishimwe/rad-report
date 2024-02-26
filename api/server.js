@@ -12,7 +12,7 @@ import chalk from "chalk";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import errorHandler from "./middleware/errorMiddleWare.js";
+import errorHandler from "./middleware/errorHandler.js";
 import expressWinston from "express-winston";
 import {fileURLToPath} from "url";
 import helmet from "helmet";

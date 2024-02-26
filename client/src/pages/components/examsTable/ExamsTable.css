@@ -1,0 +1,137 @@
+.exams-table-container {
+  padding: 10px 40px;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #e3e3e3 100%);
+  color: #000000;
+  overflow-x: auto;
+  padding-bottom: 50px;
+}
+
+.exams-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.25), 15px 8px 15px rgba(0, 0, 0, 0.25);
+
+}
+
+.exams-table th,
+.exams-table td {
+  text-align: left;
+  padding: 6px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.exams-table th {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.exams-table td {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.exams-table .exam-image {
+  width: 50px;
+  height: auto;
+}
+
+a:link,
+a:visited {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.patient_id {
+  max-width: 85px;
+}
+
+@media screen and (max-width: 600px) {
+  .exams-table-container {
+    padding: 5px;
+  }
+
+  .exams-table th,
+  .exams-table td {
+    padding: 3px;
+    font-size: 0.7em;
+  }
+
+  .exams-table .exam-image {
+    width: 50px;
+  }
+}
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.control-group label {
+  margin-right: 10px;
+}
+
+.control-group select,
+.control-group input {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.pagination-button {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 4px;
+  background-color: #f3f3f3;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:hover {
+  background-color: #e2e2e2;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination-button.disabled {
+  background-color: #f3f3f3;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.pagination-button a {
+  text-decoration: none; 
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination-button a:hover {
+  text-decoration: none; 
+}

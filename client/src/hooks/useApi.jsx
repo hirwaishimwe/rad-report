@@ -1,17 +1,23 @@
 import { useState } from "react";
+import { useAuthContext } from "./useAuthContext";
 
 const useApi = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
+    const { user } = useAuthContext();
 
     const sendRequest = async (path, method, body = null) => {
         try {
+            if (!user || !user.token) {
+                console.log("User is not authenticated or token is missing.");
+                return;
+            }
             const url = `${process.env.REACT_APP_API_URL}/${path}`;
             const options = {
                 method: method,
                 headers: {
-                    "access-control-allow-origin": "*",
                     "Content-type": "application/json; charset=UTF-8",
+                    "Authorization": `Bearer ${user.token}`,
                 },
                 body: body ? JSON.stringify(body) : null,
             };
@@ -22,9 +28,10 @@ const useApi = () => {
         } catch (err) {
             setError(err);
             console.error("Error:", err);
+            return err; // Return the error
         }
     };
-
+    
     return { sendRequest, response, error };
 };
 
