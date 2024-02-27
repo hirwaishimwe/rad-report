@@ -44,23 +44,12 @@ function NavBar() {
     fetchExam();
   }, []);
 
-  // function handleLogin() {
-  //   navigate("/login");
-  // }
-
-  // const handleSignOut = () => {
-  //   logout();
-  // };
-
   const handleSignOut = () => {
     localStorage.removeItem("token");
     logout();
     navigate("/login");
   };
 
-  // function handleRegister() {
-  //   navigate("/register");
-  // }
   return (
     <nav className="navbar">
       <div className="nav-group">

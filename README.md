@@ -10,6 +10,7 @@ The purpose of this project is to create a web application that allows doctors t
 
 ## Features
 
+- Authentication: Secure user authentication and authorization with JWT authentication.
 - Exams Overview: Access a centralized dashboard to view all patient exams.
 - Exam Management: Create detailed exam entries with patient information and X-ray images.
 - Edit and Delete: Easily modify or remove existing exam records from the admin page.
@@ -17,6 +18,28 @@ The purpose of this project is to create a web application that allows doctors t
 - Responsive Design: Accessible on various devices, ensuring critical information is always at hand.
 
 ## Getting Started
+
+### Authentication
+
+This project uses JWT to ensure secure access to its resources. Below you will find the steps necessary to authenticate yourself and interact securely with our API/application.
+
+Please note that certain actions within the application may require specific user permissions. Unauthorized users will be restricted from accessing protected routes and performing sensitive operations.
+
+### Register
+
+To register for an account:
+
+1. Click on the "Register" button on the application's navigation bar.
+2. Provide the required information, such as Usernae and password.
+3. Submit the register form to create your account securely.
+
+### Login
+
+To log in to the application:
+
+1. Click on the "Login" button on the application's navigation bar.
+2. Enter your registered username and password.
+3. Upon successful authentication, you will be redirected to your user dashboard.
 
 ### Prerequisites
 
