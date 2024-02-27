@@ -2,13 +2,14 @@ import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import logo from "./logo.png";
 import { useLogout } from "../../../hooks/useLogout";
+import { ExamContext } from '../../../context/ExamContext';
 import { useAuthContext } from "../../../hooks/useAuthContext";
 import { useState, useEffect } from "react";
 
 function NavBar() {
   const navigate = useNavigate();
   const [searchExam, setSearchExam] = useState("");
-  const [exams, setExams] = useState([]);
+  const { examsData} = useContext(ExamContext);
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
@@ -16,21 +17,9 @@ function NavBar() {
     setSearchExam(e.target.value);
   };
 
-  const fetchExam = async () => {
-    const url = "http://localhost:8000/api/users/";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error("Failed to fetch exams");
-      const data = await response.json();
-      setExams(data);
-    } catch (error) {
-      console.error("Error fetching exams:", error);
-    }
-  };
-
   const handleSubmit = async e => {
     e.preventDefault();
-    const examFound = exams.find(
+    const examFound = examsData.find(
       exam => exam.medical_record_number === searchExam
     );
     if (examFound) {
@@ -39,10 +28,6 @@ function NavBar() {
       console.log("No exam found with that ID");
     }
   };
-
-  useEffect(() => {
-    fetchExam();
-  }, []);
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
