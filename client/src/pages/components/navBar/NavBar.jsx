@@ -4,7 +4,7 @@ import logo from "./logo.png";
 import { useLogout } from "../../../hooks/useLogout";
 import { ExamContext } from '../../../context/ExamContext';
 import { useAuthContext } from "../../../hooks/useAuthContext";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 function NavBar() {
   const navigate = useNavigate();
