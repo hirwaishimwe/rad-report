@@ -112,6 +112,7 @@ function ExamsTable({ exams, isAdmin }) {
             <th>Patient ID</th>
             <th>Exam ID</th>
             <th>Image</th>
+            <th>Pronouns</th>
             <th>Age</th>
             <th>Sex</th>
             <th>BMI</th>
@@ -135,6 +136,7 @@ function ExamsTable({ exams, isAdmin }) {
               <td>
                 <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
               </td>
+              <td>{exam.pro_nouns}</td>
               <td>{exam.age}</td>
               <td>{exam.sex.toUpperCase()}</td>
               <td>{exam.latest_bmi}</td>
