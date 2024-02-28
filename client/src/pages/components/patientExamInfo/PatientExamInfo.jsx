@@ -1,6 +1,17 @@
+import { useParams } from 'react-router-dom'; 
+import { useContext } from 'react';
+import { ExamContext } from '../../../context/ExamContext';
 import './PatientExamInfo.css';
 
-const PatientExamInfo = ({ exam }) => {
+function PatientExamInfo() {
+  const { examId } = useParams();
+  const { examsData } = useContext(ExamContext);
+  const exam = examsData.find(exam => exam._id === examId);
+
+  if (!exam) {
+    return <div>Exam Not Found</div>;
+}
+
   return (
     <div className="patient-exam-info">
       <div className="info-section patient-info">

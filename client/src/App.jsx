@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ExamProvider } from './context/ExamContext';
 import Exams from "./pages/examsPage/Exams";
 import Admin from "./pages/adminPage/Admin";
-import ExamDetails from "./pages/components/patientExamInfo/PatientExamInfo";
+import PatientExamInfo from "./pages/components/patientExamInfo/PatientExamInfo";
 import Navbar from './pages/components/navBar/NavBar.jsx'
 import PatientDetails from './pages/patientDetailsPage/PatientDetails';
 import CreateExam from './pages/createExamPage/CreateExam';
@@ -26,7 +26,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/exam" element={<Exams />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/exam/:examId" element={<ExamDetails />} />
+            <Route path="/exam/:examId" element={<PatientExamInfo />} />
             <Route path="/patient/:patientId" element={<PatientDetails />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/create-exam" element={<CreateExam />} />
