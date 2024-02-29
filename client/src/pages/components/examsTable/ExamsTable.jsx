@@ -1,22 +1,35 @@
-import "./ExamsTable.css";
-
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-
+import React,{ useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import { ExamContext } from '../../../context/ExamContext';
 import ReactPaginate from "react-paginate";
-import { ExamContext } from "../../../context/ExamContext";
-import useApi from "../../../hooks/useApi";
+import useApi from '../../../hooks/useApi';
+import './ExamsTable.css';
+
+import {
+  ChakraProvider,
+  Button, 
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from '@chakra-ui/react'
 
 function ExamsTable({ exams, isAdmin }) {
+  const [itemToDelete, setItemToDelete] = useState(null)
+  const isOpen = itemToDelete !== null
+  const cancelRef = React.useRef();
+  const onClose = () => setItemToDelete(null)
   const { fetchExams } = useContext(ExamContext);
   const navigate = useNavigate();
   const { sendRequest } = useApi();
 
-  const [sortKey, setSortKey] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [filterKey, setFilterKey] = useState("");
-  const [filterValue, setFilterValue] = useState("");
+  const [sortKey, setSortKey] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
+  const [filterKey, setFilterKey] = useState('');
+  const [filterValue, setFilterValue] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 10;
   const offset = currentPage * itemsPerPage;
@@ -24,29 +37,28 @@ function ExamsTable({ exams, isAdmin }) {
     navigate(`/update-exam/${id}`);
   }
 
-  async function handleDelete(id) {
-    const response = await sendRequest(`users/${id}`, "DELETE");
+  async function handleDelete() {
+    const id = itemToDelete
+    const response = await sendRequest(`users/${id}`, 'DELETE');
     if (response) {
-      toast.success("Exam deleted successfully!", {
-        onClose: () => {
-          fetchExams();
-        },
-      });
+        toast.success('Exam deleted successfully!', {
+            onClose: () => {
+                fetchExams();
+            }
+        });
     }
-  }
+}
 
   function sortExams(exams) {
     return exams.sort((a, b) => {
-      const valueA =
-        typeof a[sortKey] === "string" ? a[sortKey].toLowerCase() : a[sortKey];
-      const valueB =
-        typeof b[sortKey] === "string" ? b[sortKey].toLowerCase() : b[sortKey];
+      const valueA = typeof a[sortKey] === 'string' ? a[sortKey].toLowerCase() : a[sortKey];
+      const valueB = typeof b[sortKey] === 'string' ? b[sortKey].toLowerCase() : b[sortKey];
 
       if (valueA < valueB) {
-        return sortOrder === "asc" ? -1 : 1;
+        return sortOrder === 'asc' ? -1 : 1;
       }
       if (valueA > valueB) {
-        return sortOrder === "asc" ? 1 : -1;
+        return sortOrder === 'asc' ? 1 : -1;
       }
       return 0;
     });
@@ -71,19 +83,22 @@ function ExamsTable({ exams, isAdmin }) {
   };
 
   return (
+    <ChakraProvider>
     <div className="exams-table-container">
       <ToastContainer
-        position="top-right"
-        autoClose={1500}
-        hideProgressBar={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-      />
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            closeOnClick
+            pauseOnHover
+            draggable
+        />
+
+        
       <div className="table-controls">
         <div className="control-group">
           <label htmlFor="sortKey">Sort by:</label>
-          <select id="sortKey" onChange={e => setSortKey(e.target.value)}>
+          <select id="sortKey" onChange={(e) => setSortKey(e.target.value)}>
             <option value="">All</option>
             <option value="age">Age</option>
             <option value="sex">Sex</option>
@@ -92,7 +107,7 @@ function ExamsTable({ exams, isAdmin }) {
             <option value="zip_code">Zip Code</option>
             <option value="icu_admits_count">ICU Admits Count</option>
           </select>
-          <select id="sortOrder" onChange={e => setSortOrder(e.target.value)}>
+          <select id="sortOrder" onChange={(e) => setSortOrder(e.target.value)}>
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
@@ -100,19 +115,14 @@ function ExamsTable({ exams, isAdmin }) {
 
         <div className="control-group">
           <label htmlFor="filterKey">Filter by:</label>
-          <select id="filterKey" onChange={e => setFilterKey(e.target.value)}>
+          <select id="filterKey" onChange={(e) => setFilterKey(e.target.value)}>
             <option value="">All</option>
             <option value="sex">Sex</option>
             <option value="zip_code">Zip Code</option>
             <option value="icu_admit">ICU Admit</option>
             <option value="mortality">Mortality</option>
           </select>
-          <input
-            id="filterValue"
-            type="text"
-            placeholder="Enter value..."
-            onChange={e => setFilterValue(e.target.value)}
-          />
+          <input id="filterValue" type="text" placeholder="Enter value..." onChange={(e) => setFilterValue(e.target.value)} />
         </div>
       </div>
       <table className="exams-table">
@@ -134,22 +144,16 @@ function ExamsTable({ exams, isAdmin }) {
           </tr>
         </thead>
         <tbody>
-          {currentData.map(exam => (
+          {currentData.map((exam) => (
             <tr key={exam._id}>
               <td>
-                <Link to={`/patient/${exam.medical_record_number}`}>
-                  {exam.medical_record_number}
-                </Link>
+                <Link to={`/patient/${exam.medical_record_number}`}>{exam.medical_record_number}</Link>
               </td>
               <td>
                 <Link to={`/exam/${exam._id}`}>{exam.exam_id}</Link>
               </td>
               <td>
-                <img
-                  src={exam.png_filename}
-                  alt={`Exam for ${exam.patientId}`}
-                  className="exam-image"
-                />
+                <img src={exam.png_filename} alt={`Exam for ${exam.patientId}`} className="exam-image" />
               </td>
               <td>{exam.pro_nouns}</td>
               <td>{exam.age}</td>
@@ -162,18 +166,8 @@ function ExamsTable({ exams, isAdmin }) {
               <td>{exam.icu_admits_count}</td>
               {isAdmin && (
                 <td>
-                  <button
-                    className="btn update-btn"
-                    onClick={() => handleUpdate(exam._id)}
-                  >
-                    Update
-                  </button>
-                  <button
-                    className="btn delete-btn"
-                    onClick={() => handleDelete(exam._id)}
-                  >
-                    Delete
-                  </button>
+                  <button className="btn update-btn" onClick={() => handleUpdate(exam._id)}>Update</button>
+                  <button className="btn delete-btn" onClick={() => setItemToDelete(exam._id)}>Delete</button>
                 </td>
               )}
             </tr>
@@ -196,8 +190,35 @@ function ExamsTable({ exams, isAdmin }) {
           nextClassName={"pagination-button"}
           disabledClassName={"disabled"}
         />
+                <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+              Delete Customer
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              Are you sure? You can't undo this action afterwards.
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='red' onClick={handleDelete} ml={3}>
+                Delete
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
       </div>
     </div>
+    </ChakraProvider>
   );
 }
 
