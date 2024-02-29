@@ -1,15 +1,17 @@
-import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
-import logo from "./logo.png";
-import { useLogout } from "../../../hooks/useLogout";
-import { ExamContext } from '../../../context/ExamContext';
+
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import { ExamContext } from "../../../context/ExamContext";
 import { useAuthContext } from "../../../hooks/useAuthContext";
-import { useState, useEffect, useContext } from "react";
+import { useLogout } from "../../../hooks/useLogout";
+import logo from "./logo.png";
 
 function NavBar() {
   const navigate = useNavigate();
   const [searchExam, setSearchExam] = useState("");
-  const { examsData} = useContext(ExamContext);
+  const { examsData } = useContext(ExamContext);
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
@@ -83,17 +85,17 @@ function NavBar() {
           </form>
         )}
         {user ? (
-          <div className="btn" onClick={handleSignOut}>
+          <button className="btn" onClick={handleSignOut}>
             Log Out
-          </div>
+          </button>
         ) : (
           <>
-            <div className="btn" onClick={() => navigate("/login")}>
+            <button className="btn" onClick={() => navigate("/login")}>
               Log In
-            </div>
-            <div className="btn" onClick={() => navigate("/register")}>
+            </button>
+            <button className="btn" onClick={() => navigate("/register")}>
               Register
-            </div>
+            </button>
           </>
         )}
       </div>
