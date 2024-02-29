@@ -45,6 +45,29 @@ To log in to the application:
 
 Before installation, ensure you have Git, Node.js, and npm installed on your system.
 
+## Configuration
+
+To ensure the application runs smoothly, configure the necessary environment variables:
+
+- Create a .env file in the api directory and specify the required environment variables like database connection details and other settings.
+- Add the following configurations:
+
+```plaintext
+MONGO_URI=mongodb+srv://rad:123@radreportapp.ksdi4qw.mongodb.net/?retryWrites=true&w=majority
+DB_Message=Connected to MongoDB
+FRONTEND_URL=http://localhost:3000
+PORT=8000
+NODE_ENV=DEVELOPMENT
+SECRET_KEY=ASK ONE OF THE DEVS
+```
+
+- Create a .env file in the client directory and specify the required environment variables like database connection details and other settings.
+- Add the following configurations:
+
+```plaintext
+REACT_APP_API_URL=http://localhost:8000/api
+```
+
 ### Installation
 
 1. Clone the Repository
@@ -71,28 +94,6 @@ Before installation, ensure you have Git, Node.js, and npm installed on your sys
    cd api/
    npm i
    npm run dev
-```
-
-## Configuration
-
-To ensure the application runs smoothly, configure the necessary environment variables:
-
-- Create a .env file in the api directory and specify the required environment variables like database connection details and other settings.
-- Add the following configurations:
-
-```plaintext
-MONGO_URI=mongodb+srv://rad:123@radreportapp.ksdi4qw.mongodb.net/?retryWrites=true&w=majority
-DB_Message=Connected to MongoDB
-FRONTEND_URL=http://localhost:3000
-PORT=8000
-NODE_ENV=DEVELOPMENT
-```
-
-- Create a .env file in the client directory and specify the required environment variables like database connection details and other settings.
-- Add the following configurations:
-
-```plaintext
-REACT_APP_API_URL=http://localhost:8000/api
 ```
 
 ## Support
