@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { useAuthContext } from './useAuthContext'
+import { useState } from "react";
+import { useAuthContext } from "./useAuthContext";
 
 export const useRegister = () => {
-  const [error, setError] = useState(null)
-  const [isLoading, setIsLoading] = useState(null)
-  const { dispatch } = useAuthContext()
-  const { user } = useAuthContext()
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(null);
+  const { dispatch } = useAuthContext();
+  const { user } = useAuthContext();
 
   const register = async (username, password) => {
-    setIsLoading(true)
-    setError(null)
+    setIsLoading(true);
+    setError(null);
 
     const token = user?.token; // Optional chaining to safely access token property
     const headers = {
@@ -22,28 +22,28 @@ export const useRegister = () => {
     }
 
     const response = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
-      method: 'POST',
+      method: "POST",
       headers: headers,
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify({ username, password }),
     });
 
     const json = await response.json();
 
     if (!response.ok) {
-      setIsLoading(false)
-      setError(json.error)
+      setIsLoading(false);
+      setError(json.error);
     }
     if (response.ok) {
       // save the user to local storage
-      localStorage.setItem('user', JSON.stringify(json))
+      localStorage.setItem("user", JSON.stringify(json));
 
       // update the auth context
-      dispatch({type: 'LOGIN', payload: json})
+      dispatch({ type: "LOGIN", payload: json });
 
       // update loading state
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
-  return { register, isLoading, error }
-}
+  return { register, isLoading, error };
+};

@@ -1,6 +1,4 @@
-import "./Login.css";
-
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
@@ -25,32 +23,79 @@ const Login = () => {
   };
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <div className="title">
-        {" "}
-        <h3>Login</h3>{" "}
+    <div className="flex justify-center items-center min-h-screen overflow-hidden overflow-y-hidden">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md p-8 rounded-md bg-white shadow-lg">
+        <h1 className="text-center text-3xl font-bold text-blue-600 tracking-widest">
+          Radiology Reports
+        </h1>
+        <h2 className="mt-4 text-center  tracking-tighter text-zinc-600">
+          Log in to your account
+        </h2>
+
+        <form className="mt-6 space-y-6" onSubmit={handleSubmit}>
+          <div>
+            <label
+              htmlFor="username"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Username
+            </label>
+            <div className="mt-2">
+              <input
+                id="username"
+                name="username"
+                type="text"
+                required
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+                className="block w-full px-4 py-2 rounded-md border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Password
+            </label>
+            <div className="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                className="block w-full px-4 py-2 rounded-md border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              disabled={isLoading}
+            >
+              {isLoading ? "Logging in..." : "Log in"}
+            </button>
+          </div>
+        </form>
+
+        <p className="mt-4 text-center text-sm text-gray-600">
+          Don't have an account?{" "}
+          <a
+            href="/register"
+            className="font-semibold text-blue-600 hover:text-blue-800"
+          >
+            Register
+          </a>
+        </p>
       </div>
-
-      <label htmlFor="text">Username:</label>
-      <input
-        id="text"
-        type="text"
-        onChange={e => setUsername(e.target.value)}
-        value={username}
-        placeholder="Please enter a valid username"
-      />
-
-      <label htmlFor="password">Password:</label>
-      <input
-        id="password"
-        type="password"
-        onChange={e => setPassword(e.target.value)}
-        value={password}
-        placeholder="Please enter a valid password"
-      />
-      <button disabled={isLoading}>Log In</button>
-      {error && <div className="error">{error}</div>}
-    </form>
+    </div>
   );
 };
 

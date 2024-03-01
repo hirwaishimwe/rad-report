@@ -1,6 +1,4 @@
-import "./NavBar.css";
-
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { ExamContext } from "../../../context/ExamContext";
@@ -38,66 +36,67 @@ function NavBar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav-group">
-        <Link to="/exam" className="logo">
-          <img src={logo} alt="Logo" style={{ height: "50px" }} />
-        </Link>
-        <ul>
-          <li>
-            <Link to="/exam">Exams</Link>
-          </li>
-          <li>
-            <Link to="/admin">Admin</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <a
-              href="https://radiology-report-api.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              API Doc
-            </a>
-          </li>
-          {user && (
-            <li className="welcome">
-              <span>Welcome, {user.username}</span>
+    <nav className="bg-gray-900 text-white">
+      <div className="container mx-auto flex justify-between py-4 px-8">
+        <div className="flex items-center">
+          <Link to="/">
+            <img src={logo} alt="Logo" style={{ height: "50px" }} />
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <ul className="flex">
+            <li className="mr-4">
+              <Link to="/exam">Exams</Link>
             </li>
-          )}
-        </ul>
-      </div>
-      <div className="search-group">
-        {user && (
-          <form onSubmit={handleSubmit} className="search-bar">
-            <input
-              value={searchExam}
-              onChange={handleSearchExam}
-              type="search"
-              name="search_exam"
-              id="search_exam"
-              placeholder="Search by patient ID"
-              required
-            />
-            <button type="submit">Search</button>
-          </form>
-        )}
-        {user ? (
-          <button className="btn" onClick={handleSignOut}>
-            Log Out
-          </button>
-        ) : (
-          <>
-            <button className="btn" onClick={() => navigate("/login")}>
-              Log In
-            </button>
-            <button className="btn" onClick={() => navigate("/register")}>
-              Register
-            </button>
-          </>
-        )}
+            <li className="mr-4">
+              <Link to="/admin">Admin</Link>
+            </li>
+            <li className="mr-4">
+              <Link to="/about">About</Link>
+            </li>
+            {user && (
+              <li className="mr-4">
+                <a
+                  href="https://radiology-report-api.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  API Doc
+                </a>
+              </li>
+            )}
+          </ul>
+          <div className="ml-auto flex items-center">
+            {user && (
+              <form onSubmit={handleSubmit} className="mr-4">
+                <input
+                  value={searchExam}
+                  onChange={handleSearchExam}
+                  type="search"
+                  name="search_exam"
+                  id="search_exam"
+                  placeholder="Search by patient ID"
+                  className="px-4 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="ml-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none"
+                >
+                  Search
+                </button>
+              </form>
+            )}
+            {user && (
+              <button
+                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none"
+                onClick={handleSignOut}
+              >
+                Log Out
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </nav>
   );

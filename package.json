@@ -10,8 +10,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2"
-  },
-  "dependencies": {
-    "react-paginate": "^8.2.0"
   }
 }

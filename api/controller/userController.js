@@ -1,17 +1,15 @@
 // Create User and validating user data
 
-import {body, validationResult} from "express-validator";
-
-import Exam from "../models/examModel.js";
-import User from  "../models/userModel.js";
+import { body, validationResult } from "express-validator";
 
 import asyncHandler from "express-async-handler";
+import jwt from "jsonwebtoken";
+import Exam from "../models/examModel.js";
+import User from "../models/userModel.js";
 
-import jwt from 'jsonwebtoken'
-
-const createToken = (_id) => {
-  return jwt.sign({_id}, process.env.SECRET_KEY, {expiresIn: '20d' })
-  }
+const createToken = _id => {
+  return jwt.sign({ _id }, process.env.SECRET_KEY, { expiresIn: "20d" });
+};
 
 //creating user with test
 export const createUser = asyncHandler(async (req, res) => {
@@ -55,27 +53,27 @@ export const createUser = asyncHandler(async (req, res) => {
       .withMessage("Please indicate the mortality status (Y/N)"),
   ]);
 
-    // Check for validation errors
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({errors: errors.array()});
-    }
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
 
-    const userData = req.body;
-    userData.age = parseInt(userData.age);
-    const userExists = await Exam.findOne({
-        medical_record_number: userData.medical_record_number,
-        sex: userData.sex,
-        age: userData.age,
-        pro_nouns: userData.pro_nouns,
-        zip_code: userData.zip_code,
-        latest_bmi: userData.latest_bmi,
-        latest_weight: userData.latest_weight,
-        png_filename: userData.png_filename,
-        exam_id: userData.exam_id,
-        icu_admit: userData.icu_admit,
-        mortality: userData.mortality,
-    });
+  const userData = req.body;
+  userData.age = parseInt(userData.age);
+  const userExists = await Exam.findOne({
+    medical_record_number: userData.medical_record_number,
+    sex: userData.sex,
+    age: userData.age,
+    pro_nouns: userData.pro_nouns,
+    zip_code: userData.zip_code,
+    latest_bmi: userData.latest_bmi,
+    latest_weight: userData.latest_weight,
+    png_filename: userData.png_filename,
+    exam_id: userData.exam_id,
+    icu_admit: userData.icu_admit,
+    mortality: userData.mortality,
+  });
 
   if (userExists) {
     return res.status(400).json({
@@ -95,99 +93,98 @@ export const createUser = asyncHandler(async (req, res) => {
 
 // Get All Users
 export const getAllUsers = asyncHandler(async (req, res) => {
-    try {
-        const users = await Exam.find();
-        res.status(200).json(users);
-    } catch (error) {
-        res.status(500).json({
-            message: error.message,
-        });
-    }
+  try {
+    const users = await Exam.find();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 });
 
 // Get User by ID
 export const getUserById = asyncHandler(async (req, res) => {
-    const {userId} = req.params;
-    const user = await Exam.findById(userId);
-    if (!user) {
-        res.status(404).json({
-            error: "User not found",
-            message: "User not found for the provided Id",
-        });
-    } else {
-        res.status(200).json(user);
-    }
+  const { userId } = req.params;
+  const user = await Exam.findById(userId);
+  if (!user) {
+    res.status(404).json({
+      error: "User not found",
+      message: "User not found for the provided Id",
+    });
+  } else {
+    res.status(200).json(user);
+  }
 });
 
 // Delete a User
 export const deleteUserById = asyncHandler(async (req, res) => {
   const userId = req.params.userId;
 
-    try {
-        const deletedUser = await Exam.findByIdAndDelete(userId);
-        if (!deletedUser) {
-            return res.status(404).json({
-                error: "User not found",
-                message: "User not found for the provided Id",
-            });
-        }
-        res.status(200).json({message: "User deleted successfully"});
-    } catch (e) {
-        res.status(500).json({
-            error: "Server Error",
-            message: "There was a problem deleting the user",
-        });
+  try {
+    const deletedUser = await Exam.findByIdAndDelete(userId);
+    if (!deletedUser) {
+      return res.status(404).json({
+        error: "User not found",
+        message: "User not found for the provided Id",
+      });
     }
+    res.status(200).json({ message: "User deleted successfully" });
+  } catch (e) {
+    res.status(500).json({
+      error: "Server Error",
+      message: "There was a problem deleting the user",
+    });
+  }
 });
 
 // PATCH
 export const patchUserById = asyncHandler(async (req, res) => {
-    const userId = req.params.userId;
-    const userBody = req.body;
+  const userId = req.params.userId;
+  const userBody = req.body;
 
-    try {
-        const user = await Exam.findByIdAndUpdate(userId, userBody, {
-            new: true,
-            runValidators: true,
-        });
+  try {
+    const user = await Exam.findByIdAndUpdate(userId, userBody, {
+      new: true,
+      runValidators: true,
+    });
 
-        if (!user) {
-            return res.status(404).json({
-                error: "User not found",
-                message: "User not found for the provided Id",
-            });
-        }
-        res.status(200).json({
-            message: "User updated successfully",
-            user: user,
-        });
-    } catch (error) {
-        res.status(500).json({
-            error: "Server Error",
-            message: "There was a problem updating the user",
-        });
+    if (!user) {
+      return res.status(404).json({
+        error: "User not found",
+        message: "User not found for the provided Id",
+      });
     }
+    res.status(200).json({
+      message: "User updated successfully",
+      user: user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: "Server Error",
+      message: "There was a problem updating the user",
+    });
+  }
 });
 
-
 export const loginUser = async (req, res) => {
-  const {username, password} = req.body
-  try{
-    const user = await User.login(username,password)
-    const token = createToken(user._id)
-    res.status(200).json({username, token})
-  }catch(error){
-    res.status(400).json({error: error.message})
+  const { username, password } = req.body;
+  try {
+    const user = await User.login(username, password);
+    const token = createToken(user._id);
+    res.status(200).json({ username, token });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-}
+};
 
 export const registerUser = async (req, res) => {
-  const {username, password} = req.body 
-  try{
-    const user = await User.register(username, password)
-    const token = createToken(user._id)
-    res.status(200).json({username, token})
+  const { username, password } = req.body;
+  try {
+    const user = await User.register(username, password);
+    const token = createToken(user._id);
+    res.status(200).json({ username, token });
   } catch (error) {
-    res.status(400).json({error: error.message})
-  }  
-}
+    res.status(400).json({ error: error.message });
+  }
+};
