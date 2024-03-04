@@ -1,14 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "latest": true,
+    "node": true
   },
-  "extends": ["google", "plugin:react/recommended", "eslint:recommended"],
+  "extends": ["eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["import", "node"],
+  "plugins": ["import", "react"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],

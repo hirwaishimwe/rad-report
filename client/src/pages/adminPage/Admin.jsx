@@ -1,5 +1,3 @@
-import "./admin.css";
-
 import React, { useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -15,18 +13,20 @@ function Admin() {
   const handleCreateNewExam = () => {
     navigate("/create-exam");
   };
+
   if (!user) {
     return (
-      <div className="access">
-        {" "}
-        <div>
-          {" "}
-          Access Denied
-          <div> Please Log In</div>
+      <div className="flex justify-center items-center h-screen">
+        <div className="text-center">
+          <div className="text-2xl font-bold mb-4">Access Denied</div>
+          <div className="mb-4">
+            Please <a href="/login">Log In</a> to access this page.
+          </div>
         </div>
       </div>
     );
   }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -38,6 +38,7 @@ function Admin() {
   if (!examsData) {
     return <div>No exams found</div>;
   }
+
   return (
     <div className="admin">
       <button className="btn create-exam-btn" onClick={handleCreateNewExam}>
