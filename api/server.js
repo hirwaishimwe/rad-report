@@ -45,15 +45,21 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.authenticate("session"));
 
-const RateLimiterHandler = rateLimit({
+const RateLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 15 request per 1 minute(s)
   max: 15,
+});
+
+const SpeedLimiter = slowDown({
+  windowMs: 30 * 1000,
+  delayAfter: 1,
+  delayMs: 500,
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(expressStatic(join(__dirname, "public")));
 
-app.use(RateLimiterHandler);
+app.use(RateLimiter, SpeedLimiter);
 
 app.use(
   cors({
