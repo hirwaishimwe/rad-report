@@ -19,7 +19,6 @@ import mongoose from "mongoose";
 import passport from "passport";
 import swaggerui from "swagger-ui-express";
 import { fileURLToPath } from "url";
-import { MongoDB } from "winston-mongodb";
 import errorHandler from "./middleware/errorHandler.js";
 import router from "./routes/indexRoute.js";
 import swaggerDoc from "./routes/swagger-output.json" assert { type: "json" };
@@ -67,12 +66,6 @@ app.use(
 app.use(
   expressWinston.logger({
     transports: [
-      // new transports.Console(),
-      new transports.File({
-        level: "warn",
-        filename: "logs/logsWarnings.log",
-      }),
-
       new transports.File({
         level: "error",
         filename: "logs/logErrors.log",
@@ -80,12 +73,6 @@ app.use(
       new transports.File({
         level: "success",
         filename: "logs/logSuccess.log",
-      }),
-      new transports.Console(),
-      new MongoDB({
-        db: MONGO_URI,
-        collection: "logs",
-        level: "info",
       }),
     ],
     format: format.combine(
