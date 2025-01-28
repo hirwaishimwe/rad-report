@@ -22,6 +22,7 @@ import { fileURLToPath } from "url";
 import errorHandler from "./middleware/errorHandler.js";
 import router from "./routes/indexRoute.js";
 import swaggerDoc from "./routes/swagger-output.json" assert { type: "json" };
+import slowDown from 'express-slow-down';
 
 dotenv.config();
 
